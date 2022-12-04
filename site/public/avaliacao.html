@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINSTATION</title>
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/avaliacao.css">
+    <link rel="shortcut icon" href="assets/icons/lgo3.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d8b9cb0dbc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="main deslogado" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li class="liLogin"><button><img src="assets/icons/in.png" width="30px">Login</button></li>
+                    <li class="liCadastro"><a href="cadastro.html"><img src="assets/icons/on.png" width="25px">Cadastre-se</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main logado esconder" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa2" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li><a href="upload.html"><button class="userOption"><i class="fa-solid fa-upload"></i></button></a></li>
+                    <li><button class="userOption"><i class="fa-solid fa-bell"></i></button></li>
+                    <li><button class="userOption"><i class="fa-solid fa-paper-plane"></i></button></li>
+                    <div class="divLi" onclick="modalLogin()">
+                        <li><img src="" class="userButton" id="iconeUser"></li>
+                        <li class="userSeta"><i class="fa-solid fa-angle-down"></i></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="userModal">
+                <div class="modalHeader">
+                    <img onclick="perfilUsuario()" src="" class="userButton" id="iconeUser2">
+                    <div class="userInfo">
+                        <p id="userName"></p>
+                        <div class="userPerfil">
+                            <button onclick="perfilUsuario()" class="userProfile">Ver Perfil</button>
+                            <button class="userProfile">Editar Perfil</button>
+                        </div>
+                    </div>
+                </div>
+                <span></span>
+                <button class="userModalOption"><i class="fa-solid fa-palette"></i>Meus Desenhos</button>
+                <button class="userModalOption"><i class="fa-solid fa-heart"></i>Meus Likes</button>
+                <button class="userModalOption"><i class="fa-solid fa-scroll"></i>Histórico</button>
+                <button class="userModalOption"><i class="fa-solid fa-gear"></i>Opções</button>
+                <button onclick="deslogar()" class="userModalOption"><i class="fa-solid fa-right-from-bracket"></i>Sair</button>
+            </div>
+        </div>
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalL" class="modalLogin">
+        <div class="lFormulario">
+            <div class="lHeader">
+                <img src="assets/icons/lgo3.png" width="100px" alt="">
+                <h1><b class="tBin">BIN</b><b class="tStation">STATION</b></h1>
+            </div>
+            <div class="lCampo">
+                <label for="inEmail">Seu E-mail</label>
+                <input type="email" id="inEmail" placeholder="N.l.Bin@sptech.school">
+            </div>
+            <div class="lCampo">
+                <label for="inSenha">Sua senha</label>
+                <input type="password" id="inSenha" placeholder="********">
+            </div>
+            <button id="bEntrar" onclick="entrar()">Entrar</button>
+            <div class="lFooter">
+                <div><b><a href="login.html">Esqueceu a senha?</a></b></div>
+                <div><b><a href="cadastro.html">Cadastre-se</a></b></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="erroLogin">
+        <p>Erro ao entrar!<br>Email ou Senha incorretas.</p>
+        <video src="assets/gif/GifRed.mp4" id="videoLogin" width="50px"></video>
+        <span id="loading3"></span>
+    </div>
+
+    <div class="conteudoAvaliacao">
+        <div class="gradiente">
+            <div class="avaliacao">
+                <h2>Faça uma avaliação sobre nosso site</h2>
+
+                <div class="caixa">
+                    <div class="star">
+                        <button onclick="estrala1()" id="b1"><i class="fa-solid fa-star"></i></button>
+                        <button onclick="estrala2()" id="b2"><i class="fa-solid fa-star"></i></button>
+                        <button onclick="estrala3()" id="b3"><i class="fa-solid fa-star"></i></button>
+                        <button onclick="estrala4()" id="b4"><i class="fa-solid fa-star"></i></button>
+                        <button onclick="estrala5()" id="b5"><i class="fa-solid fa-star"></i></button>
+                    </div>
+                    <textarea id="mensagem" cols="30" rows="10"></textarea>
+                </div>
+                <button onclick="enviar()" class="enviar">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <div class="erro">
+        <div id="logado" class="caixaErro log">
+            <span id="mensagemErro">Você precisa estar logado para avaliar o site!</span>
+            <video id="videoErro1" src="assets/gif/GifRed.mp4"></video>
+            <span id="loading"></span>
+        </div>
+        <div id="vazio" class="caixaErro vazio">
+            <span id="mensagemErro">Você precisa escrever algo para avaliar o site!</span>
+            <video id="videoErro" src="assets/gif/GifRed.mp4"></video>
+            <span id="loading"></span>
+        </div>
+        <div id="zero" class="caixaErro vazio">
+            <span id="mensagemErro">Você precisa escolher uma quantidade de estrelas!</span>
+            <video id="videoErro2" src="assets/gif/GifRed.mp4"></video>
+            <span id="loading"></span>
+        </div>
+        <div id="confirmado" class="caixaErro vazio">
+            <span id="mensagemErro">Obrigado pela sua avaliacao!</span>
+            <video id="videoErro3" src="assets/gif/gif2.mp4"></video>
+            <span id="loading2"></span>
+        </div>
+        <div id="duplicidade" class="caixaErro vazio">
+            <span id="mensagemErro">Você ja avaliou o site!<br>Deseja apagar sua avaliação?</span>
+            <video id="videoErro4" src="assets/gif/GifRed.mp4" height="90px"></video>
+            <button class="apagar" onclick="confirmar()">Apagar!</button>
+        </div>
+    </div>
+    <div class="confirmarApagar">
+        <div class="caixaApagar">
+            <span>Essa ação não tem volta!<br>Deseja confirmar?</span>
+            <div class="divBotoes">
+                <button onclick="voltar()">Voltar</button>
+                <button onclick="apagar()" class="apagar">Apagar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="divResposta" class="imgPublicada">
+        <video id="confirmacao" src="assets/gif/gif2.mp4"></video>
+        <p>BIN<span>STATION</span></p>
+    </div>
+    
+</body>
+</html>
+<script>
+    function confirmar(){
+        var caixa = document.querySelector('.confirmarApagar')
+        caixa.style.display = "block"
+    }
+
+    function voltar(){
+        var caixa = document.querySelector('.confirmarApagar')
+        caixa.style.display = "none"
+    }
+
+    var estrelas = 0
+
+    function estrala1(){
+        b1.style.color = "white"
+        b2.style.color = "rgb(34,34,34)"
+        b3.style.color = "rgb(34,34,34)"
+        b4.style.color = "rgb(34,34,34)"
+        b5.style.color = "rgb(34,34,34)"
+        estrelas = 1
+    }
+    function estrala2(){
+        b1.style.color = "white"
+        b2.style.color = "white"
+        b3.style.color = "rgb(34,34,34)"
+        b4.style.color = "rgb(34,34,34)"
+        b5.style.color = "rgb(34,34,34)"
+        estrelas = 2
+    }
+    function estrala3(){
+        b1.style.color = "white"
+        b2.style.color = "white"
+        b3.style.color = "white"
+        b4.style.color = "rgb(34,34,34)"
+        b5.style.color = "rgb(34,34,34)"
+        estrelas = 3
+    }
+    function estrala4(){
+        b1.style.color = "white"
+        b2.style.color = "white"
+        b3.style.color = "white"
+        b4.style.color = "white"
+        b5.style.color = "rgb(34,34,34)"
+        estrelas = 4
+    }
+    function estrala5(){
+        b1.style.color = "white"
+        b2.style.color = "white"
+        b3.style.color = "white"
+        b4.style.color = "white"
+        b5.style.color = "white"
+        estrelas = 5
+    }
+
+    function enviar(){
+        var idUsuario = sessionStorage.getItem('IDUSUARIO_USUARIO')
+        var msgAvaliacao = mensagem.value
+        var erro = document.querySelector('.erro')
+
+        if(idUsuario == null){
+            erro.style.display = "flex"
+            logado.style.display = "flex"
+            videoErro1.play()
+
+            setTimeout(() => {
+                erro.style.display = "none"
+                logado.style.display = "none"
+            }, 5000)
+            return false
+        }else if(msgAvaliacao == ''){
+            erro.style.display = "flex"
+            vazio.style.display = "flex"
+            videoErro.play()
+
+            setTimeout(() => {
+                erro.style.display = "none"
+                vazio.style.display = "none"
+            }, 5000)
+            return false
+        }else if(estrelas == 0){
+            erro.style.display = "flex"
+            zero.style.display = "flex"
+            videoErro2.play()
+
+            setTimeout(() => {
+                erro.style.display = "none"
+                zero.style.display = "none"
+            }, 5000)
+            return false
+        }
+
+        fetch("/usuarios/avaliacao", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idUsuario,
+                msgAvaliacao,
+                estrelas: estrelas
+            })
+        }).then(function (resposta) {
+            if (resposta.ok) {
+                erro.style.display = "flex"
+                confirmado.style.display = "flex"
+                videoErro3.play()
+
+                setTimeout(() => {
+                    window.location = "index.html";
+                }, 5000)
+                return false
+            } else {
+
+                erro.style.display = "flex"
+                duplicidade.style.display = "flex"
+                videoErro4.play()
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+    }
+
+    function apagar(){
+        var usuario = sessionStorage.getItem('IDUSUARIO_USUARIO')
+
+        fetch(`/usuarios/deletarAvaliacao/${usuario}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }).then(function (resposta) {
+                if (resposta.ok) {
+                    divResposta.style.display = "flex"
+                    confirmacao.play()
+                    setTimeout(()=>{
+                        window.location = "/avaliacao.html";
+                    },3000)
+
+                }else {
+                    throw ("Houve um erro ao tentar apagar a avaliacao! Código da resposta: " + resposta.status);
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+    }
+</script>
+<script>//Window onload
+    window.onload = function() {
+        verificarLogin();
+    }; 
+</script>
+<script>//Função de logar e deslogar
+    function entrar() {
+        var erro = document.querySelector('.erroLogin')
+
+        var emailVar = inEmail.value;
+        var senhaVar = inSenha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NICKNAME_USUARIO = json.nickname;
+                    sessionStorage.IDUSUARIO_USUARIO = json.idUsuario;
+                    sessionStorage.ICONE_USUARIO = json.icone;
+                    sessionStorage.IDPERFIL_USUARIO = json.idUsuario;
+
+                        window.location = "/perfil.html";
+                })
+            } else {
+                erro.style.display = "flex"
+                loading3.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading3.style.display = "none"
+                }, 8000)
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function deslogar(){
+        sessionStorage.removeItem('EMAIL_USUARIO')
+        sessionStorage.removeItem('NICKNAME_USUARIO')
+        sessionStorage.removeItem('IDUSUARIO_USUARIO')
+        sessionStorage.removeItem('ICONE_USUARIO')
+        sessionStorage.removeItem('fecharModal')
+
+        window.location = "/index.html";
+    }
+</script>
+<script>//Aparecer Modal Login
+    sessionStorage.removeItem('fecharModal')
+    function iniciarModal(id){
+        if(sessionStorage.fecharModal !== id){
+            const modal = document.getElementById(id);
+            modal.classList.add('mostrar');
+            modal.addEventListener('click', (e) => {
+                if(e.target.id == id){
+                    modal.classList.remove('mostrar')
+                    sessionStorage.fecharModal = id
+                }
+            })
+        }
+    }
+
+    const botaoLogin = document.querySelector('.liLogin')
+    botaoLogin.addEventListener('click', function() {
+        sessionStorage.clear()
+        iniciarModal('modalL')
+    })
+
+    function modalLogin(){
+        var login1 = document.querySelector('.userModal')
+        login1.classList.toggle('mostrarModal1')
+    }
+</script>
+<script>//Aparição do Header
+
+    function verificarLogin(){
+        var idUsuario = sessionStorage.getItem('IDUSUARIO_USUARIO');
+        var icone = sessionStorage.getItem('ICONE_USUARIO');
+        var nome = sessionStorage.getItem('NICKNAME_USUARIO');
+        var logado = document.querySelector('.logado');
+        var deslogado = document.querySelector('.deslogado');
+
+        if(idUsuario != null){
+            deslogado.classList.add('esconder');
+            logado.classList.remove('esconder');
+            userName.innerHTML = nome
+            iconeUser.src = icone
+            iconeUser2.src = icone
+            sessionStorage.fecharModal = 'modalL'
+        }else{
+            deslogado.classList.remove('esconder');
+            logado.classList.add('esconder');
+            sessionStorage.removeItem('fecharModal')
+        }
+    }
+
+    function perfilUsuario(){
+        var idUsuario = sessionStorage.getItem('IDUSUARIO_USUARIO');
+        sessionStorage.removeItem('IDPERFIL_USUARIO');
+        sessionStorage.IDPERFIL_USUARIO = idUsuario
+
+        window.location = "/perfil.html";
+    }
+
+</script>
+<script>//Pesquisar
+    function irPesquisar(){
+    var user = sessionStorage.getItem('IDUSUARIO_USUARIO')
+    var logado = user != null
+    if(logado){
+        var textoPesquisa = inPesquisa2.value
+
+        sessionStorage.removeItem('CONTEUDO_PESQUISA')
+        sessionStorage.CONTEUDO_PESQUISA = textoPesquisa
+
+        window.location = "./pesquisar.html";
+
+    }else{
+        var textoPesquisa = inPesquisa.value
+
+        sessionStorage.removeItem('CONTEUDO_PESQUISA')
+        sessionStorage.CONTEUDO_PESQUISA = textoPesquisa
+
+        window.location = "./pesquisar.html";
+    }
+}
+</script>

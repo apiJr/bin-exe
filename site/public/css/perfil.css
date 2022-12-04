@@ -1,0 +1,557 @@
+body{
+    background-color: rgb(34, 34, 34);
+}
+.perfil{
+    margin-top: 100px;
+    /* background-image: url(img/mingchen-shen-citywallfinal2.jpg); */
+    background-size: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.fundoBanner{
+    object-fit: cover;
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+}
+.gradienteBanner{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    background-image: linear-gradient(to top, #111111, rgba(32, 32, 32, 0.034));
+}
+.icon{
+    width: 150px;
+    object-fit: cover;
+    height: 150px;
+    border-radius: 50%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+   /*  margin-top: 110px; */
+   margin-bottom: 20px;
+}
+.info h3{
+    font-size: 24px;
+
+}
+.info span{
+    font-size: 20px;
+}
+.pNavbar{
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(21,21,21);
+}
+.pNavbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.pNavbar li{
+    margin: 0 25px;
+    list-style: none;
+}
+
+.pNavbar a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+button i{
+    margin-right: 5px;
+}
+.bLi{
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: 55px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.bFollow{
+    background-color: #0053af;
+    width: 80px;
+    height: 30px;
+    margin: 0 10px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+.msg{
+    background-color: rgb(83, 196, 83);
+    width: 100px;
+    height: 30px;
+    margin: 0 5px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+.conteudos{
+    min-height: 480px;
+}
+.estrutura{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+.portifolio{
+    position: relative;
+    flex-basis: 20%;
+    height: 41vh;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+}
+.artePortifolio{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+.portifolio .destaqueHover{
+    transition: 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    height: 17vh;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    border-radius: 0 0 0px 0px;
+    background-image: linear-gradient(to top, #000000cb, rgba(32, 32, 32, 0.034));
+
+}
+.portifolio:hover .destaqueHover{
+    opacity: 1;
+}
+.sobre{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.sumario{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    color: white;
+    margin-top: 30px;
+}
+.sumario h3{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.sumario p{
+    font-size: 20px;
+    color: rgb(201, 201, 201);
+}
+.contatos{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    color: white;
+    margin-top: 40px;
+}
+.contatos h3{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.contatos p{
+    font-size: 20px;
+    color: rgb(201, 201, 201);
+}
+.likes{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.imgCurtida{
+    flex-basis: 20%;
+    position: relative;
+}
+.imgCurtida .destaqueHover{
+    transition: 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    height: 80px;   
+    left: 0;
+    top: 190px;
+    width: 100%;
+   text-align: center;
+    color: white;
+    background-image: linear-gradient(to top, #000000, rgba(32, 32, 32, 0.034));
+
+}
+.imgCurtida:hover .destaqueHover{
+    opacity: 1;
+}
+
+.portifolio .destaqueHover p{
+    font-size: 24px;
+}
+
+.seguindo{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: flex-start;
+}
+.artista{
+    flex-basis: 23%;
+    color: white;
+    position: relative;
+    background-color: rgb(21,21,21);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 340px;
+    margin: 10px 13px;
+}
+.capa img{
+    /* width: 92%; */
+    object-fit: cover;
+    height: 158px;
+    width: 281px/*  */;
+    margin: 9px;
+}
+.capa{
+    display: flex;
+    justify-content: center;
+}
+.icone{
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+.artista h4{
+    font-size: 27px;
+    margin-top: 50px;
+}
+.artista button{
+    width: 80px;
+    height: 30px;
+    margin: 0 5px;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    font-size: 14px;
+    background-color: #0053af;
+    margin-top: 10px;
+}
+.imgA1{
+    width: 88px;
+    height: 88px;
+    
+    
+}
+.imgA1 img{
+    width: 100%;
+}
+.artes{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.seguidores{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.active11::after{
+    content: '';
+    top: 177px;
+    height: 45px;
+    width: 103px;
+    background-color: rgba(75, 75, 75, 0.2);
+    position: absolute;
+    display: block;
+    z-index: 1;
+    left: 5px;
+    cursor: pointer;
+    animation: animacaoActive 0.3s ease-in-out;
+}
+.active12::after{
+    content: '';
+    top: 177px;
+    height: 45px;
+    width: 103px;
+    background-color: rgba(75, 75, 75, 0.2);
+    position: absolute;
+    display: block;
+    animation: animacaoActive 0.3s ease-in-out;
+    z-index: 1;
+    left: 108px;
+    cursor: pointer;
+}
+.active13::after{
+    content: '';
+    top: 177px;
+    height: 45px;
+    width: 107px;
+    background-color: rgba(75, 75, 75, 0.2);
+    position: absolute;
+    display: block;
+    animation: animacaoActive 0.3s ease-in-out;
+    z-index: 1;
+    left: 211px;
+    cursor: pointer;
+}
+.active14::after{
+    content: '';
+    top: 177px;
+    height: 45px;
+    width: 140px;
+    background-color: rgba(75, 75, 75, 0.2);
+    position: absolute;
+    display: block;
+    animation: animacaoActive 0.3s ease-in-out;
+    z-index: 1;
+    left: 318px;
+    cursor: pointer;
+}
+.active15::after{
+    content: '';
+    top: 177px;
+    height: 45px;
+    width: 153px;
+    background-color: rgba(75, 75, 75, 0.2);
+    position: absolute;
+    display: block;
+    animation: animacaoActive 0.3s ease-in-out;
+    z-index: 1;
+    left: 458px;
+    cursor: pointer;
+}
+@keyframes animacaoActive {
+    from{
+        height: 0px;
+    }
+    to{
+        height: 45px;
+    }
+}
+.b13{
+    width: 60px;
+}
+.b14{
+    width: 89px;
+}
+.b15{
+    width: 103px;
+}
+button:hover{
+    opacity: 0.8;
+}
+
+.editar{
+    position: absolute;
+    top: 440px;
+    z-index: 50;
+    right: 50px;
+    display: none;
+}
+.editar button{
+    width: 120px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: #0053af;
+    border: none;
+    outline: none;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+.modalEditar{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 50;
+    background-color: #0000007e;
+    display: none;
+}
+.modalEditar.mostrar{
+    display: block;
+}
+.editarPerfil{
+    position: absolute;
+    width: 800px;
+    height: 450px;
+    border-radius: 10px;
+    background-color: rgb(34,34,34);
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+#mudarIcone{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.divIcon label{
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    left: 45px;
+    top: 60px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+#inImagemIcone{
+    display: none;
+}
+#inImagemBanner{
+    display: none;
+}
+.divIcon{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.divIcon:hover label{
+    opacity: 1;
+}
+.divBanner{
+    height: 190px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.divBanner img{
+    height: 190px;
+    border-radius: 5px;
+}
+.divBanner label{
+    font-size: 70px;
+    color: white;
+    position: absolute;
+    left: 260px;
+    top: 90px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.divBanner:hover label{
+    opacity: 1;
+}
+.divNick{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.divNick input{
+    width: 250px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: rgb(21,21,21);
+    color: white;
+    font-size: 22px;
+    border-radius: 7px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.divDesc{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.divDesc textarea{
+    width: 350px;
+    height: 100px;
+    border: none;
+    outline: none;
+    background-color: rgb(21,21,21);
+    color: white;
+    font-size: 22px;
+    border-radius: 7px;
+    padding: 5px;
+    min-width: 350px;
+    max-width: 350px;
+    max-height: 100px;
+    min-height: 100px;
+}
+.divC{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+.divCaixa{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    /* align-items: center; */
+}
+.editarPerfil span{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.buttonAtt{
+    width: 100px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background-color: #0053af;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.idDesen{
+    display: none;
+}
+.mostrarCodigo{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    position: absolute;
+    top: 125px;
+    right: 10px;
+    font-size: 20px;
+    width: 30px;
+}

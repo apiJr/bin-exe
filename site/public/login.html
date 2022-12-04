@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="shortcut icon" href="assets/icons/lgo3.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d8b9cb0dbc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="main deslogado" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li class="liLogin"><button><img src="assets/icons/in.png" width="30px">Login</button></li>
+                    <li class="liCadastro"><a href="cadastro.html"><img src="assets/icons/on.png" width="25px">Cadastre-se</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main logado esconder" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa2" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li><a href="upload.html"><button class="userOption"><i class="fa-solid fa-upload"></i></button></a></li>
+                    <li><button class="userOption"><i class="fa-solid fa-bell"></i></button></li>
+                    <li><button class="userOption"><i class="fa-solid fa-paper-plane"></i></button></li>
+                    <div class="divLi" onclick="modalLogin()">
+                        <li><img src="" class="userButton" id="iconeUser"></li>
+                        <li class="userSeta"><i class="fa-solid fa-angle-down"></i></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="userModal">
+                <div class="modalHeader">
+                    <img onclick="perfilUsuario()" src="" class="userButton" id="iconeUser2">
+                    <div class="userInfo">
+                        <p id="userName"></p>
+                        <div class="userPerfil">
+                            <button onclick="perfilUsuario()" class="userProfile">Ver Perfil</button>
+                            <button class="userProfile">Editar Perfil</button>
+                        </div>
+                    </div>
+                </div>
+                <span></span>
+                <button class="userModalOption"><i class="fa-solid fa-palette"></i>Meus Desenhos</button>
+                <button class="userModalOption"><i class="fa-solid fa-heart"></i>Meus Likes</button>
+                <button class="userModalOption"><i class="fa-solid fa-scroll"></i>Histórico</button>
+                <button class="userModalOption"><i class="fa-solid fa-gear"></i>Opções</button>
+                <button onclick="deslogar()" class="userModalOption"><i class="fa-solid fa-right-from-bracket"></i>Sair</button>
+            </div>
+        </div>
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="erroLogin">
+        <p id="msgErroL">Erro ao entrar!<br>Email ou Senha incorretas.</p>
+        <video src="assets/gif/GifRed.mp4" id="videoLogin" width="50px"></video>
+        <span id="loading"></span>
+    </div>
+
+    <div class="lContainer">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+        <div class="lFormulario">
+            <div class="lHeader">
+                <a href="index.html"><img src="assets/icons/lgo3.png" width="100px"></a>
+                <h1><b class="tBin">BIN</b><b class="tStation">STATION</b></h1>
+            </div>
+            <div class="campo">
+                <label for="inEmail">Seu E-mail</label>
+                <input type="email" id="inEmail" placeholder="N.l.Bin@sptech.school">
+            </div>
+            <div class="campo">
+                <label for="inSenha">Sua senha</label>
+                <input type="password" id="inSenha" placeholder="********">
+            </div>
+            <button onclick="entrar()">Entrar</button>
+            <div class="footer">
+                <div><b><a class="trocarSenha">Esqueceu a senha?</a></b></div>
+                <div><b><a href="./cadastro.html">Cadastre-se</a></b></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="recuperarSenha" class="recuperarSenha">
+        <div class="caixaRecuperar">
+            <h3>Recuperar Senha</h3>
+            <span></span>
+            <p>Insira o seu Email</p>
+            <input type="text" id="inEmailR">
+            <p>Insira o seu código de recuperação</p>
+            <input type="text" id="inCodigoR">
+            <p>Insira sua nova senha</p>
+            <input type="password" id="inSenha1">
+            <p>Confirme sua senha</p>
+            <input type="password" id="inSenha2">
+            <button onclick="recuperar()">Atualizar Senha</button>
+        </div>
+    </div>
+
+    <div class="erro">
+        <div id="confirmado" class="trocouSenha vazio">
+            <span id="mensagemSenha">Senha alterada com sucesso!</span>
+            <video id="videoErro3" src="assets/gif/gif2.mp4"></video>
+            <span id="loading2"></span>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>//Função de logar e deslogar
+
+    function esqueceuSenha(id){
+        const modal = document.getElementById(id);
+        modal.classList.add('mostrar');
+        modal.addEventListener('click', (e) => {
+            if(e.target.id == id){
+                modal.classList.remove('mostrar')
+            }
+        })       
+    }
+
+    const trocarSenha = document.querySelector('.trocarSenha')
+    trocarSenha.addEventListener('click', function() {
+        esqueceuSenha('recuperarSenha')
+    })
+
+    function entrar() {
+        var erro = document.querySelector('.erroLogin')
+
+        var emailVar = inEmail.value;
+        var senhaVar = inSenha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+
+            erro.style.display = "flex"
+            loading.style.display = "block"
+            videoLogin.play()
+            setTimeout(() => {
+                erro.style.display = "none"
+                loading.style.display = "none"
+            }, 8000)            
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NICKNAME_USUARIO = json.nickname;
+                    sessionStorage.IDUSUARIO_USUARIO = json.idUsuario;
+                    sessionStorage.ICONE_USUARIO = json.icone;
+                    sessionStorage.IDPERFIL_USUARIO = json.idUsuario;
+
+                    window.location = "/perfil.html";
+                })
+            } else {
+                msgErroL.innerHTML = `Erro ao entrar!<br>Email ou Senha incorretas.`
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    async function recuperar(){
+        var email = inEmailR.value
+        var codigo = Number(inCodigoR.value)
+        var senha1 = inSenha1.value
+        var senha2 = inSenha2.value
+        var erro = document.querySelector('.erroLogin')
+        var confirm = document.querySelector('.erro')
+
+        if(email == '' || codigo == '' || senha1 == '' || (senha1 != senha2)){
+            if(email == ''){
+                msgErroL.innerHTML = `Você precisa preencher o email!`
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+            }else if(codigo == ''){
+                msgErroL.innerHTML = `Você precisa preencher o codigo de recuperação`
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+            }else if(senha1 == ''){
+                msgErroL.innerHTML = `Você precisa preencher a nova senha!`
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+            }else if(senha2 !== senha1){
+                msgErroL.innerHTML = `As duas senhas devem ser iguais!`
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+            }
+            return false
+        }else{
+            await fetch("/usuarios/recuperar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email,
+                    codigo
+                })
+            }).then(function(resposta){
+                if(resposta.ok){
+                    resposta.json().then(function(response){
+                        var atual = response[0]
+                    })
+                }else{
+                    msgErroL.innerHTML = `Email ou código de recuperação incorretos!`
+                    erro.style.display = "flex"
+                    loading.style.display = "block"
+                    videoLogin.play()
+                    setTimeout(() => {
+                        erro.style.display = "none"
+                        loading.style.display = "none"
+                    }, 8000)
+                    return false
+                }
+            })
+            await fetch(`/usuarios/atualizarSenha`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    senha1,
+                    email
+                })
+            }).then(function(resposta2){
+                    if(resposta2.ok){
+                        confirm.style.display = "flex"
+                        confirmado.style.display = "flex"
+                        videoErro3.play()
+
+                        setTimeout(() => {
+                            window.location = "./login.html"
+                        }, 5000)
+                    }else{
+                        msgErroL.innerHTML = `Não foi possível alterar a senha!`
+                        erro.style.display = "flex"
+                        loading.style.display = "block"
+                        videoLogin.play()
+                        setTimeout(() => {
+                            erro.style.display = "none"
+                            loading.style.display = "none"
+                        }, 8000)
+                        return false
+                    }
+                })
+        }
+    }
+
+    function deslogar(){
+        sessionStorage.removeItem('EMAIL_USUARIO')
+        sessionStorage.removeItem('NICKNAME_USUARIO')
+        sessionStorage.removeItem('IDUSUARIO_USUARIO')
+        sessionStorage.removeItem('ICONE_USUARIO')
+        sessionStorage.removeItem('fecharModal')
+
+        window.location = "/index.html";
+    }
+</script>

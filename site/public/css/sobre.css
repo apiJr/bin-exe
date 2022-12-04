@@ -1,0 +1,1815 @@
+body{
+    background-color: rgb(34,34,34  );
+}
+
+.background{
+    margin-top: 100px;
+    width: 100%;
+    height: 84vh;
+    background-image: url(../assets/destaque/backg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.gradiente{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #000000, rgba(0, 0, 0, 0.377));
+}
+.tituloSobre{
+    display: flex;
+    flex-direction: column;
+}
+.tituloSobre b{
+    margin-top: 150px;
+    font-size: 40px;
+    color: white;
+}
+.tituloSobre p{
+    align-self: flex-end;
+    font-size: 25px;
+    margin-top: 10px;
+    color: rgb(196, 196, 196);
+}
+.sobreAutor{
+    display: flex;
+    flex-direction: row;
+
+}
+.contexto{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    padding: 0 70px;
+    height: 650px;
+    margin-top: 50px;
+}
+.contexto b{
+    margin-top: 15px;
+    font-size: 45px;
+    color: white;
+}
+.contexto p{
+    margin-top: 15px;
+    font-size: 25px;
+    color: rgb(196, 196, 196);
+    /* text-align: justify; */
+}
+.mensagemNathan{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+.iconeNathan{
+    border-radius: 50%;
+    width: 67px;
+    height: 67px;
+    margin-right: 40px;
+}
+.mensagemNathan p{
+    font-size: 18px;
+    color: white;
+    z-index: 5;
+}
+.caixaMsg{
+    position: absolute;
+    left: 70px;
+    top: 8px;
+}
+.nome{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.desc{
+    color: rgb(196, 196, 196);
+    font-size: 16px;
+}
+.carrosselAutor{
+    width: 600px;
+    align-items: center;
+    display: flex;
+}
+.carrosselAutor img{
+    position: absolute;
+    width: 600px;
+}
+
+.imagem{
+    transition: 1s ease;
+}
+.i1{
+    opacity: 1;
+}
+.i2{
+    opacity: 0;
+}
+.i3{
+    opacity: 0;
+}
+.i4{
+    opacity: 0;
+}
+.i5{
+    opacity: 0;
+}
+.i6{
+    opacity: 0;
+}
+
+.oqueGosto{
+    display: flex;
+    flex-direction: row;
+    
+}
+.eu{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 650px;
+    height: 500px;
+}
+.eu h2{
+    color: white;
+    font-size: 45px;
+}
+.eu p{
+    align-self: center;
+    font-size: 25px;
+    margin-top: 10px;
+    color: rgb(196, 196, 196);
+    width: 500px;
+}
+.nav{
+    width: 700px;
+    height: 100px;
+    background-color: #757575;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    clip-path: polygon(
+        0px 30px,
+        30px 0px, 
+        670px 0px,
+        700px 30px,
+        700px 100px, 
+        0px 100px);
+    background-image: url(../assets/fundouni2.jpg);
+}
+.circuloOpcao{
+    border-radius: 50%;
+    background-color: #ffffffaf;
+    width: 86px;
+    height: 86px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 42px;
+    transition: 1s ease-in-out;
+}
+.logoL.logoAtiva ~.circuloOpcao{
+    left: 42px;
+}
+
+.logoLI.logoAtiva ~.circuloOpcao{
+    left: 218px;
+}
+.logoM.logoAtiva ~.circuloOpcao{
+    left: 393px;
+}
+.logoS.logoAtiva ~.circuloOpcao{
+    left: 569px;
+}
+
+.nav img{
+    width: 80px;
+    z-index: 2;
+}
+.imagemOqg{
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes aparecer {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.lol{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 10;
+    width: 700px;
+    height: 350px;
+    animation: aparecer 1s ease-in-out;
+    background-image: url(../assets/destaque/backgroundlol.jpg);
+}
+.degrau{
+    transform: skewY(-12deg);
+    width: 140px;
+    height: 200px;   
+    position: absolute;
+    /* transition: 1.5s ease-in-out; */
+}
+.span1{
+    background-color: rgba(255, 255, 255, 0.001);
+    bottom: 15px;
+    left: 0;
+    transition: 1s ease-in-out;
+    z-index: 20;
+}
+.span2{
+    background-color: rgba(255, 255, 255, 0.001);
+    left: 140px;
+    bottom: 45px;
+    transition: 1s ease-in-out;
+    z-index: 20;
+}
+.span3{
+    background-color: rgba(255, 255, 255, 0.001);
+    left: 280px;
+    bottom: 75px;
+    transition: 1s ease-in-out;
+    z-index: 20;
+}
+.span4{
+    background-color: rgba(255, 255, 255, 0.001);
+    left: 420px;
+    bottom: 105px;
+    transition: 1s ease-in-out;
+    z-index: 20;
+}
+.span5{
+    background-color: rgba(255, 255, 255, 0.001);
+    left: 560px;
+    bottom: 135px;
+    transition: 1s ease-in-out;
+    z-index: 20;
+}
+.caixa1{
+    /* background-color: rgb(124, 154, 180); */
+    bottom: 15px;
+    left: 0;
+    transition: 1s ease-in-out;
+    background-image: url(../assets/destaque/garenteste2.jpg);
+    background-size: cover;
+}
+
+.caixa2{
+    background-color: rgb(54, 96, 133);
+    left: 140px;
+    bottom: 45px;
+    transition: 1s ease-in-out;
+    background-size: cover;
+    background-image: url(../assets/destaque/kayleteste2.jpg);
+}
+
+.caixa3{
+    background-color: rgb(124, 154, 180);
+    left: 280px;
+    bottom: 75px;
+    transition: 1s ease-in-out;
+    background-size: cover;
+    background-image: url(../assets/destaque/viktor12deg.jpg);
+}
+
+.caixa4{
+    background-color: rgb(54, 96, 133);
+    left: 420px;
+    bottom: 105px;
+    transition: 1s ease-in-out;
+    background-size: cover;
+    background-image: url(../assets/destaque/sivir12deg.jpg);
+}
+
+.caixa5{
+    background-color: rgb(124, 154, 180);
+    left: 560px;
+    bottom: 135px;
+    transition: 1s ease-in-out;
+    background-size: cover;
+    background-image: url(../assets/destaque/kaisa12deg.jpg);
+}
+
+.span1:hover{
+    width: 280px;
+    height: 350px;
+    transform: skew(0,0);
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+}
+.span1:hover~.caixa1{
+    background-image: url(../assets/destaque/garen280.jpg);
+    width: 280px;
+    height: 350px;
+    transform: skew(0,0);
+    top: 0;
+    left: 0;
+    z-index: 15;
+    animation: garenGelo 8s ease-in-out;
+    animation-delay: 1s;
+}
+@keyframes garenGelo {
+    0% {background-image: url(../assets/destaque/garen280.jpg);}
+    25%{background-image: url(../assets/destaque/garen280Gelo.jpg);}
+}
+.span1:hover~.caixa2{
+    background-image: url(../assets/destaque/kayle105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 280px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span1:hover~.caixa3{
+    background-image: url(../assets/destaque/viktor105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 385px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span1:hover~.caixa4{
+    background-image: url(../assets/destaque/sivir105.jpg);
+    background-size: cover;
+    width: 105px;
+    height: 350px;
+    left: 490px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span1:hover~.caixa5{
+    background-image: url(../assets/destaque/kaisa105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 595px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span1:hover~.span2{
+    width: 105px;
+    height: 350px;
+    left: 280px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span1:hover~.span3{
+    width: 105px;
+    height: 350px;
+    left: 385px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span1:hover~.span4{
+    width: 105px;
+    height: 350px;
+    left: 490px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span1:hover~.span5{
+    width: 105px;
+    height: 350px;
+    left: 595px;
+    top: 0;
+    transform: skew(0,0);
+}
+
+.span2:hover{
+    width: 280px;
+    height: 350px;
+    transform: skew(0,0);
+    top: 0;
+    left: 105px;
+    z-index: 20;
+}
+.span2:hover ~ .caixa1{
+    background-image: url(../assets/destaque/garen105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 0px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span2:hover ~ .caixa2{
+    background-image: url(../assets/destaque/kayle280.jpg);
+    width: 280px;
+    height: 350px;
+    left: 105px;
+    top: 0;
+    animation: kayleFogo 8s ease-in-out;
+    animation-delay: 1s;
+    transform: skew(0,0);
+}
+@keyframes kayleFogo {
+    0% {background-image: url(../assets/destaque/kayle280.jpg);}
+    25%{background-image: url(../assets/destaque/kayle280fogo.jpg);}
+}
+.span2:hover~.caixa3{
+    background-image: url(../assets/destaque/viktor105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 385px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span2:hover~.caixa4{
+    background-image: url(../assets/destaque/sivir105.jpg);
+    background-size: cover;
+    width: 105px;
+    height: 350px;
+    left: 490px;
+    top: 0;
+    transform: skew(0,0);
+}.span2:hover~.caixa5{
+    background-image: url(../assets/destaque/kaisa105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 595px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span2:hover~.span3{
+    width: 105px;
+    height: 350px;
+    left: 385px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span2:hover~.span4{
+    width: 105px;
+    height: 350px;
+    left: 490px;
+    top: 0;
+    transform: skew(0,0);
+}.span2:hover~.span5{
+    width: 105px;
+    height: 350px;
+    left: 595px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span3:hover{
+    width: 280px;
+    height: 350px;
+    transform: skew(0,0);
+    top: 0;
+    left: 210px;
+    z-index: 20;
+}
+.span3:hover ~ .caixa1{
+    background-image: url(../assets/destaque/garen105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 0px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span3:hover ~ .caixa2{
+    background-image: url(../assets/destaque/kayle105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 105px;
+    top: 0;
+    transform: skew(0,0);
+}
+
+.span3:hover~.caixa3{
+    width: 280px;
+    height: 350px;
+    left: 210px;
+    top: 0;
+    transform: skew(0,0);
+    animation: viktorMagma 8s ease-in-out;
+    animation-delay: 1s;
+    background-image: url(../assets/destaque/viktor280.jpg);
+}
+@keyframes viktorMagma {
+    0% {background-image: url(../assets/destaque/viktor280.jpg);}
+    25%{background-image: url(../assets/destaque/viktor280magma.jpg);}
+}
+.span3:hover~.caixa4{
+    background-image: url(../assets/destaque/sivir105.jpg);
+    background-size: cover;
+    width: 105px;
+    height: 350px;
+    left: 490px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span3:hover~.caixa5{
+    background-image: url(../assets/destaque/kaisa105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 595px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span3:hover~.span4{
+    width: 105px;
+    height: 350px;
+    left: 490px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span3:hover~.span5{
+    width: 105px;
+    height: 350px;
+    left: 595px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span4:hover{
+    width: 280px;
+    height: 350px;
+    transform: skew(0,0);
+    top: 0;
+    left: 315px;
+    z-index: 20;
+}
+.span4:hover ~ .caixa1{
+    background-image: url(../assets/destaque/garen105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 0px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span4:hover ~ .caixa2{
+    background-image: url(../assets/destaque/kayle105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 105px;
+    top: 0;
+    transform: skew(0,0);
+}
+
+.span4:hover~.caixa3{
+    background-image: url(../assets/destaque/viktor105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 210px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span4:hover~.caixa4{
+    background-image: url(../assets/destaque/sivir280.jpg);
+    width: 280px;
+    height: 350px;
+    left: 315px;
+    top: 0;
+    transform: skew(0,0);
+    animation: sivirAreia 8s ease-in-out;
+    animation-delay: 1s;
+}
+@keyframes sivirAreia {
+    0% {background-image: url(../assets/destaque/sivir280.jpg);}
+    25%{background-image: url(../assets/destaque/sivir280areia.jpg);}
+}
+.span4:hover~.caixa5{
+    background-image: url(../assets/destaque/kaisa105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 595px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span4:hover~.span5{
+    width: 105px;
+    height: 350px;
+    left: 595px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span5:hover{
+    width: 280px;
+    height: 350px;
+    transform: skew(0,0);
+    top: 0;
+    left: 420px;
+    z-index: 20;
+}
+.span5:hover ~ .caixa1{
+    background-image: url(../assets/destaque/garen105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 0px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span5:hover ~ .caixa2{
+    background-image: url(../assets/destaque/kayle105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 105px;
+    top: 0;
+    transform: skew(0,0);
+}
+
+.span5:hover~.caixa3{
+    background-image: url(../assets/destaque/viktor105.jpg);
+    width: 105px;
+    height: 350px;
+    left: 210px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span5:hover~.caixa4{
+    background-image: url(../assets/destaque/sivir105.jpg);
+    background-size: cover;
+    width: 105px;
+    height: 350px;
+    left: 315px;
+    top: 0;
+    transform: skew(0,0);
+}
+.span5:hover~.caixa5{
+    background-image: url(../assets/destaque/kaisa280.jpg);
+    width: 280px;
+    height: 350px;
+    left: 420px;
+    top: 0;
+    transform: skew(0,0);
+    animation: kaisaCloud 8s ease-in-out;
+    animation-delay: 1s;
+}
+@keyframes kaisaCloud {
+    0% {background-image: url(../assets/destaque/kaisa280.jpg);}
+    25%{background-image: url(../assets/destaque/kaisa280cloud.jpg);}
+}
+
+.series{
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    top: 100px;
+    width: 700px;
+    height: 350px;
+    background-image: url(../assets/destaque/fundoNetflix.jpg);
+    opacity: 1;
+    z-index: 10;
+    animation: aparecer 1s ease-in-out;
+}
+.navNetflix{
+    width: 700px;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.navNetflix b{
+
+    font-size: 15px;
+    color: white;
+}
+.liNet{
+    margin: 0 25px;
+}
+.liHover{
+    position: relative;
+    cursor: pointer;
+}
+.liHover::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+.liHover:hover::after{
+    width: 100%;
+}
+.navNetflix img{
+    height: 100px;
+}
+.netflixLogo{
+    height: 64px;
+    width: 206px;
+    background-image: url(../assets/destaque/netteste.jpg);
+ 
+}
+.netflixLogo:hover{
+    animation: logoFlash 0.6s ease-in-out;
+    /* animation-delay: 0.2s;  */
+}
+@keyframes logoFlash {
+    0%{background-image: url(../assets/destaque/netteste.jpg);}
+    8%{background-image: url(../assets/destaque/animacao/f1.jpg);}
+    16%{background-image: url(../assets/destaque/animacao/f2.jpg);}
+    24%{background-image: url(../assets/destaque/animacao/f3.jpg);}
+    32%{background-image: url(../assets/destaque/animacao/f4.jpg);}
+    40%{background-image: url(../assets/destaque/animacao/f5.jpg);}
+    48%{background-image: url(../assets/destaque/animacao/f6.jpg);}
+    56%{background-image: url(../assets/destaque/animacao/f7.jpg);}
+    64%{background-image: url(../assets/destaque/animacao/f8.jpg);}
+    72%{background-image: url(../assets/destaque/animacao/f9.jpg);}
+    80%{background-image: url(../assets/destaque/animacao/f10.jpg);}
+    88%{background-image: url(../assets/destaque/animacao/f11.jpg);}
+    100%{background-image: url(../assets/destaque/netteste.jpg);}
+}
+.serie{
+    width: 200px;
+    height: 114px;
+    position: absolute;
+}
+.serie2{
+    width: 200px;
+    height: 78px;
+    position: absolute;
+}
+.s1{
+    top: 105px;
+    left: 34px;
+    background-image: url(../assets/destaque/suits.jpg);
+    transition: 1s ease-in-out;
+    background-size: cover;
+    z-index: 5;
+}
+.s1:hover{
+    left: 100px;
+    top: 24px;
+    width: 500px;
+    height: 285px;
+    z-index: 10;
+    animation: suits 8s infinite;
+    animation-delay: 2s;
+    background-image: url(../assets/destaque/animacao/suits1.jpg);
+}
+@keyframes suits {
+    0%{background-image: url(../assets/destaque/animacao/suits1.jpg);}
+    33%{background-image: url(../assets/destaque/animacao/suits2.jpg);}
+    66%{background-image: url(../assets/destaque/animacao/suits3.jpg);}
+    100%{background-image: url(../assets/destaque/animacao/suits1.jpg);}
+}
+.s2{
+    top: 105px;
+    left: 250px;
+    background-image: url(../assets/destaque/arcane.jpg);
+    background-size: cover;
+    transition: 1s ease-in-out;
+    z-index: 5;
+}
+.s2:hover{
+    left: 100px;
+    top: 24px;
+    width: 500px;
+    height: 285px;
+    z-index: 10;
+    animation: arcane 8s infinite;
+    animation-delay: 2s;
+    background-image: url(../assets/destaque/animacao/arcane3.jpg);
+}
+@keyframes arcane {
+    0%{background-image: url(../assets/destaque/animacao/arcane3.jpg);}
+    33%{background-image: url(../assets/destaque/animacao/arcane1.jpg);}
+    66%{background-image: url(../assets/destaque/animacao/arcane2.jpg);}
+    100%{background-image: url(../assets/destaque/animacao/arcane3.jpg);}
+}
+.s3{
+    top: 105px;
+    left: 470px;
+    background-image: url(../assets/destaque/himym.jpg);
+    background-size: cover;
+    transition: 1s ease-in-out;  
+    z-index: 5;
+}
+.s3:hover{
+    left: 100px;
+    top: 24px;
+    width: 500px;
+    height: 285px;
+    z-index: 10;
+    animation: himym 8s infinite;
+    animation-delay: 2s;
+    background-image: url(../assets/destaque/animacao/himym1.jpg);
+}
+@keyframes himym {
+    0%{background-image: url(../assets/destaque/animacao/himym1.jpg);}
+    33%{background-image: url(../assets/destaque/animacao/himym2.jpg);}
+    66%{background-image: url(../assets/destaque/animacao/himym3.jpg);}
+    100%{background-image: url(../assets/destaque/animacao/himym1.jpg);}
+}
+.s4{
+    top: 272px;
+    left: 34px;
+    background-image: url(../assets/destaque/gambito.jpg);
+    background-size: cover;
+}
+.s5{
+    top: 272px;
+    left: 250px;
+    background-image: url(../assets/destaque/gotham.jpg);
+    background-size: cover;
+}
+.s6{
+    top: 272px;
+    left: 470px;
+    background-image: url(../assets/destaque/cyberpunk.jpg);
+    background-size: cover;
+}
+
+.invisivel{
+    opacity: 0;
+    position: absolute;
+    left: -500px;
+}
+
+.musicas{
+    position: absolute;
+    display: none;
+    top: 100px;
+    opacity: 1;
+    width: 700px;
+    height: 350px;
+    background-color: #757575;
+    background-image: url(../assets/destaque/fundoSpotify.jpg);
+    overflow: hidden;
+    z-index: 10;
+    animation: aparecer 1s ease-in-out;
+}
+
+.disco{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    transition: 1s ease-in-out;
+    background-size: cover;
+}
+.rock1{
+    background-image: url(../assets/destaque/rock.jpg);
+    z-index: 5;
+    top: 110px;
+    left: 75px;
+}
+.rock2{
+    background-image: url(../assets/destaque/rock2.jpg);
+    z-index: 4;
+    transform: skew(-10deg, 10deg);
+    top: 119px;
+    left: 84px;
+    
+}
+.rock3{
+    background-image: url(../assets/destaque/rock3.jpg);
+    z-index: 3;
+    transform: skew(-20deg, 20deg);
+    top: 128px;
+    left: 93px;
+}
+.rock1:hover{
+    background-image: url(../assets/destaque/rock1.jpg);
+    width: 150px;
+    height: 150px;
+    left: 78px;
+    top: 71px;
+    transform: skew(0,0);
+    z-index: 10;
+    animation: rock1 8s ease-in-out;
+    animation-delay: 1s;
+}
+.rock1:hover~.rock2{
+    background-image: url(../assets/destaque/rock2.jpg);
+    width: 150px;
+    height: 150px;
+    left: 273px;
+    top: 71px;
+    transform: skew(0,0);
+    z-index: 9;
+    animation: rock2 8s ease-in-out;
+    animation-delay: 1s;
+}
+.rock1:hover~.rock3{
+    background-image: url(../assets/destaque/rock3.jpg);
+    width: 150px;
+    height: 150px;
+    left: 468px;
+    top: 71px;
+    transform: skew(0,0);
+    z-index: 8;
+    animation: rock3 8s ease-in-out;
+    animation-delay: 1s;
+}
+@keyframes rock1 {
+    0%{background-image: url(../assets/destaque/rock1.jpg);}
+    20%{background-image: url(../assets/destaque/rock11.jpg);}
+}
+@keyframes rock2 {
+    0%{background-image: url(../assets/destaque/rock2.jpg);}
+    20%{background-image: url(../assets/destaque/rock22.jpg);}
+}
+@keyframes rock3 {
+    0%{background-image: url(../assets/destaque/rock3.jpg);}
+    20%{background-image: url(../assets/destaque/rock33.jpg);}
+}
+.trap1{
+    background-image: url(../assets/destaque/trap.jpg);
+    z-index: 5;
+    top: 110px;
+    left: 300px;
+}
+.trap2{
+    background-image: url(../assets/destaque/trap2.jpg);
+    z-index: 4;
+    transform: skew(-10deg, 10deg);
+    top: 119px;
+    left: 309px;
+}
+.trap3{
+    background-image: url(../assets/destaque/trap3.jpg);
+    z-index: 3;
+    transform: skew(-20deg, 20deg);
+    top: 128px;
+    left: 318px;
+}
+.trap1:hover{
+    width: 150px;
+    height: 150px;
+    left: 273px;
+    top: 71px;
+    transform: skew(0,0);
+    z-index: 10;
+    background-image: url(../assets/destaque/trap1.jpg);
+    animation: trap1 8s ease-in-out;
+    animation-delay: 1s;
+}
+.trap1:hover~.trap2{
+    width: 150px;
+    height: 150px;
+    left: 78px;
+    top: 71px;
+    transform: skew(0,0);
+    z-index: 9;
+    background-image: url(../assets/destaque/trap2.jpg);
+    animation: trap2 8s ease-in-out;
+    animation-delay: 1s;
+}
+.trap1:hover~.trap3{
+    width: 150px;
+    height: 150px;
+    left: 468px;
+    top: 71px;
+    transform: skew(0,0);
+    z-index: 8;
+    background-image: url(../assets/destaque/trap3.jpg);
+    animation: trap3 8s ease-in-out;
+    animation-delay: 1s;
+}
+@keyframes trap1 {
+    0%{background-image: url(../assets/destaque/trap1.jpg);}
+    20%{background-image: url(../assets/destaque/trap11.jpg);}
+}
+@keyframes trap2 {
+    0%{background-image: url(../assets/destaque/trap2.jpg);}
+    20%{background-image: url(../assets/destaque/trap22.jpg);}
+}
+@keyframes trap3 {
+    0%{background-image: url(../assets/destaque/trap3.jpg);}
+    20%{background-image: url(../assets/destaque/trap33.jpg);}
+}
+.anime1{
+    background-image: url(../assets/destaque/anime.jpg);
+    z-index: 5;
+    top: 110px;
+    left: 524px;
+}
+.anime2{
+    background-image: url(../assets/destaque/anime2.jpg);
+    z-index: 4;
+    transform: skew(-10deg, 10deg);
+    top: 119px;
+    left: 533px;
+}
+.anime3{
+    background-image: url(../assets/destaque/anime3.jpg);
+    z-index: 3;
+    transform: skew(-20deg, 20deg);
+    top: 128px;
+    left: 542px;
+}
+.anime1:hover{
+    width: 150px;
+    height: 150px;
+    left: 468px;
+    top: 71px;
+    transform: skew(0,0);
+    z-index: 10;
+    background-image: url(../assets/destaque/anime1.jpg);
+    animation: anime1 8s ease-in-out;
+    animation-delay: 1s;
+}
+.anime1:hover~.anime2{
+    width: 150px;
+    height: 150px;
+    left: 273px;
+    top: 71px;
+    transform: skew(0,0);
+    z-index: 9;
+    background-image: url(../assets/destaque/anime2.jpg);
+    animation: anime2 8s ease-in-out;
+    animation-delay: 1s;
+}
+.anime1:hover~.anime3{
+    width: 150px;
+    height: 150px;
+    left: 78px;
+    top: 71px;
+    transform: skew(0,0);
+    z-index: 8;
+    background-image: url(../assets/destaque/anime3.jpg);
+    animation: anime3 8s ease-in-out;
+    animation-delay: 1s;
+  
+}
+@keyframes anime1 {
+    0%{background-image: url(../assets/destaque/anime1.jpg);}
+    20%{background-image: url(../assets/destaque/anime11.jpg);}
+}
+@keyframes anime2 {
+    0%{background-image: url(../assets/destaque/anime2.jpg);}
+    20%{background-image: url(../assets/destaque/anime22.jpg);}
+}
+@keyframes anime3 {
+    0%{background-image: url(../assets/destaque/anime3.jpg);}
+    20%{background-image: url(../assets/destaque/anime33.jpg);}
+}
+
+.playlist1{
+    top: 330px;
+    left: 75px;
+    background-image: url(../assets/destaque/playlist1.jpg);
+}
+.playlist2{
+    top: 330px;
+    left: 300px;
+    background-color: aquamarine;
+}
+.playlist3{
+    top: 330px;
+    left: 542px;
+    background-color: aquamarine;
+}
+.navSpotify{
+    width: 700px;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.navSpotify b{
+    font-size: 15px;
+    color: white;
+}
+.liNet{
+    margin: 0 25px;
+}
+.liHover{
+    position: relative;
+    cursor: pointer;
+}
+.liHover::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+.liHover:hover::after{
+    width: 100%;
+}
+.navSpotify  img{
+    height: 100px;
+}
+.spotifyLogo{
+    height: 64px;
+    width: 206px;
+    background-image: url(../assets/destaque/spotifyLogo.jpg);
+}
+.spotifyLogo:hover{
+    animation: logoSpotify 1s ease-in-out;
+}
+@keyframes logoSpotify {
+    0%{background-image: url(../assets/destaque/animacao/s1.jpg);}
+    8%{background-image: url(../assets/destaque/animacao/s2.jpg);}
+    16%{background-image: url(../assets/destaque/animacao/s3.jpg);}
+    24%{background-image: url(../assets/destaque/animacao/s4.jpg);}
+    32%{background-image: url(../assets/destaque/animacao/s5.jpg);}
+    40%{background-image: url(../assets/destaque/animacao/s6.jpg);}
+    48%{background-image: url(../assets/destaque/animacao/s7.jpg);}
+    56%{background-image: url(../assets/destaque/animacao/s8.jpg);}
+    64%{background-image: url(../assets/destaque/animacao/s9.jpg);}
+    72%{background-image: url(../assets/destaque/animacao/s10.jpg);}
+    80%{background-image: url(../assets/destaque/animacao/s1.jpg);}
+    88%{background-image: url(../assets/destaque/spotifyLogo.jpg);}
+    100%{background-image: url(../assets/destaque/spotifyLogo.jpg);}
+}
+.mangas{
+    position: relative;
+    width: 700px;
+    height: 350px;
+    background-color: #757575;
+    overflow: hidden;
+    z-index: 10;
+    opacity: 1;
+    animation: aparecer 1s ease-in-out;
+    display: none;
+}
+
+.atual{
+    left: 0;
+    z-index: 100;
+    opacity: 1;
+}
+.boxS{
+    width: 95px;
+    height: 143px;
+    background-color: #494949;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+}
+
+.pagina71{
+    z-index: 5;
+    top: 27px;
+    left: 70px;
+}
+.pagina72{
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+.pagina73{
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.pagina74{
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.pagina71:hover{
+    width: 150px;
+    height: 200px;
+    top: 20px;
+    left: 30px;
+    z-index: 15;
+}
+.pagina71:hover .pagina72{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 160px;
+    animation: pagina72 1s ease-in-out;
+    z-index: 15;
+}
+.pagina71:hover .pagina73{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 320px;
+    animation: pagina73 1.5s ease-in-out;
+    z-index: 15;
+}
+.pagina71:hover .pagina74{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 480px;
+    animation: pagina74 2s ease-in-out;
+    z-index: 15;
+}
+@keyframes pagina72 {
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    50%{
+        top: 0px;
+        left: 0px;
+    }
+    100%{
+        top: 0px;
+        left: 160px;
+    }
+}
+@keyframes pagina73 {
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    33%{
+        top: 0px;
+        left: 0px;
+    }
+    66%{
+        top: 0px;
+        left: 160px;
+    }
+    100%{
+        top: 0px;
+        left: 320px;
+    }
+}
+@keyframes pagina74 {
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    25%{
+        top: 0px;
+        left: 0px;
+    }
+    50%{
+        top: 0px;
+        left: 160px;
+    }
+    75%{
+        top: 0px;
+        left: 320px;
+    }
+    100%{
+        top: 0px;
+        left: 480px;
+    }
+}
+.pagina75{
+    z-index: 5;
+    top: 27px;
+    left: 195px;
+}
+.pagina76{
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+.pagina77{
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.pagina78{
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.pagina75:hover{
+    width: 150px;
+    height: 200px;
+    top: 20px;
+    left: 190px;
+}
+.pagina75:hover .pagina76{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -160px;
+    animation: pagina76 1s ease-in-out;
+}
+.pagina75:hover .pagina77{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 160px;
+    animation: pagina72 1s ease-in-out;
+}
+.pagina75:hover .pagina78{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 320px;
+    animation: pagina73 1.5s ease-in-out;
+}
+@keyframes pagina76 {
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    50%{
+        top: 0px;
+        left: 0px;
+    }
+    100%{
+        top: 0px;
+        left: -160px;
+    }
+}
+.pagina79{
+    z-index: 5;
+    top: 27px;
+    left: 320px;
+}
+.pagina80{
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+.pagina81{
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.pagina82{
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.pagina79:hover{
+    width: 150px;
+    height: 200px;
+    top: 20px;
+    left: 350px;
+}
+.pagina79:hover .pagina80{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -320px;
+    animation: pagina80 1.5s ease-in-out;
+}
+.pagina79:hover .pagina81{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -160px;
+    animation: pagina76 1s ease-in-out;
+}
+.pagina79:hover .pagina82{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 160px;
+    animation: pagina72 1s ease-in-out;
+}
+@keyframes pagina80 {
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    33%{
+        top: 0px;
+        left: 0px;
+    }
+    66%{
+        top: 0px;
+        left: -160px;
+    }
+    100%{
+        top: 0px;
+        left: -320px;
+    }
+}
+.pagina83{
+    z-index: 5;
+    top: 27px;
+    left: 448px;
+}
+.pagina84{
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+.pagina85{
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.pagina86{
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.pagina83:hover{
+    width: 150px;
+    height: 200px;
+    top: 20px;
+    left: 350px;
+}
+.pagina83:hover .pagina84{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -160px;
+    animation: pagina76 1s ease-in-out;
+}
+.pagina83:hover .pagina85{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 160px;
+    animation: pagina72 1s ease-in-out;
+}
+.pagina83:hover .pagina86{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -320px;
+    animation: pagina80 1.5s ease-in-out;
+}
+
+.pagina87{
+    z-index: 5;
+    top: 27px;
+    left: 574px;
+}
+.pagina88{
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+.pagina89{
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.pagina90{
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.pagina87:hover{
+    width: 150px;
+    height: 200px;
+    top: 20px;
+    left: 510px;
+}
+.pagina87:hover .pagina88{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -160px;
+    animation: pagina76 1s ease-in-out;
+}
+.pagina87:hover .pagina89{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -320px;
+    animation: pagina80 1.5s ease-in-out;
+}
+.pagina87:hover .pagina90{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -480px;
+    animation: pagina90 2s ease-in-out;
+}
+
+@keyframes pagina90 {
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    25%{
+        top: 0px;
+        left: 0px;
+    }
+    50%{
+        top: 0px;
+        left: -160px;
+    }
+    75%{
+        top: 0px;
+        left: -320px;
+    }
+    100%{
+        top: 0px;
+        left: -480px;
+    }
+}
+.pagina91{
+    z-index: 5;
+    top: 181px;
+    left: 70px;
+}
+.pagina92{
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+.pagina93{
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.pagina94{
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.pagina91:hover{
+    width: 150px;
+    height: 200px;
+    top: 100px;
+    left: 30px;
+}
+.pagina91:hover .pagina92{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 160px;
+    animation: pagina72 1s ease-in-out;
+}
+.pagina91:hover .pagina93{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 320px;
+    animation: pagina73 1.5s ease-in-out;
+}
+.pagina91:hover .pagina94{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 480px;
+    animation: pagina74 2s ease-in-out;
+}
+.pagina95{
+    z-index: 5;
+    top: 181px;
+    left: 195px;
+}
+.pagina96{
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+.pagina97{
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.pagina98{
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.pagina95:hover{
+    width: 150px;
+    height: 200px;
+    top: 100px;
+    left: 190px;
+}
+.pagina95:hover .pagina96{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -160px;
+    animation: pagina76 1s ease-in-out;
+}
+.pagina95:hover .pagina97{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 160px;
+    animation: pagina72 1s ease-in-out;
+}
+.pagina95:hover .pagina98{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 320px;
+    animation: pagina73 1.5s ease-in-out;
+}
+.pagina99{
+    z-index: 5;
+    top: 181px;
+    left: 320px;
+}
+.pagina100{
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+.pagina101{
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.pagina102{
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+.pagina99:hover{
+    width: 150px;
+    height: 200px;
+    top: 100px;
+    left: 350px;
+}
+.pagina99:hover .pagina100{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -320px;
+    animation: pagina80 1.5s ease-in-out;
+}
+.pagina99:hover .pagina101{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -160px;
+    animation: pagina76 1s ease-in-out;
+}
+.pagina99:hover .pagina102{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 160px;
+    animation: pagina72 1s ease-in-out;
+}
+.pagina103{
+    z-index: 5;
+    top: 181px;
+    left: 447px;
+}
+.pagina104{
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+.pagina105{
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.pagina106{
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.pagina103:hover{
+    width: 150px;
+    height: 200px;
+    top: 100px;
+    left: 350px;
+}
+.pagina103:hover .pagina104{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -320px;
+    animation: pagina80 1.5s ease-in-out;
+}
+.pagina103:hover .pagina105{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -160px;
+    animation: pagina76 1s ease-in-out;
+}
+.pagina103:hover .pagina106{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 160px;
+    animation: pagina72 1s ease-in-out;
+}
+.pagina107{
+    z-index: 5;
+    top: 181px;
+    left: 574px;
+}
+.pagina108{
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+.pagina109{
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+.pagina110{
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.pagina107:hover{
+    width: 150px;
+    height: 200px;
+    top: 100px;
+    left: 510px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.pagina107:hover .pagina108{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -160px;
+    animation: pagina76 1s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.pagina107:hover .pagina109{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -320px;
+    animation: pagina80 1.5s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.pagina107:hover .pagina110{
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: -480px;
+    animation: pagina90 2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.menu{
+    position: absolute;
+    top: 27px;
+    left: 10px;
+    z-index: 10;
+}
+.menuAba{
+    position: absolute;
+    top: 13px;
+    left: 2px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(1, 117, 78);
+    transition: 1s ease-in-out;
+    z-index: 6;
+}
+.menu:hover~.menuAba{
+    width: 350px;
+    height: 150px;
+    border-radius: 0;
+    left: -100px;
+    top: 100px;
+    transform: rotate(90deg);
+    z-index: 9;
+}
+.menuAba:hover{
+    width: 350px;
+    height: 150px;
+    border-radius: 0;
+    left: -100px;
+    top: 100px;
+    transform: rotate(90deg);
+    z-index: 9;
+}
+
+.movimento img{
+    border-radius: 50%;
+    /* margin-left: 250px; */
+}
+.movimento{
+    position: absolute;
+}
+.pqArte{
+    width: 600px;
+    height: 500px;
+    position: relative;
+    /* background-color: rgb(21,21,21); */
+    margin-left: 100px;
+}
+.pqArte span{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+}
+#idNathan{
+    display: none;
+    animation: aparecerNome 1s ease-in-out;
+}
+@keyframes aparecerNome {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+/* [data-anime]{
+    opacity: 0;
+    transition: .3s;
+}
+[data-anime="left"]{
+    transform: translate3d(-50px,0,0);
+}
+[data-anime="right"]{
+    transform: translate3d(20px,0,0);
+}
+[data-anime].show{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+} */

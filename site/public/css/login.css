@@ -1,0 +1,212 @@
+body{
+    background-color: rgb(21,21,21);
+}
+.lContainer{
+    margin-top: 100px;
+    animation: animLogin 1s ease;
+}
+@keyframes animLogin {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.lFormulario{
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(34, 34, 34);
+    height: 470px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+    padding: 10px;
+}
+.lHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.lHeader a{
+    transition: 0.3s;
+}
+.lHeader a:hover{
+    opacity: 0.8;
+}
+.campo{
+    display: flex;
+    flex-direction: column;
+
+}
+.lFormulario button{
+    background-color: #0053af;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+button:hover{
+    opacity: 0.8;
+}
+.lFormulario .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+.campo label{
+    color: white;
+    font-size: 18px;
+    margin: 7px 0;
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin: 27px;
+    transition: 0.3s;
+}
+.footer a:hover{
+    color: #0053af;
+}
+
+.alerta_erro{
+    position: absolute;
+    top: 400px;
+    left: 920px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .card_erro {
+    display: none;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    width: 310px;
+    position: fixed;
+    border-radius: 4px;
+    border: #0053af 3px solid;
+    padding: 10px;
+    margin-right: 10%;
+  }
+  
+  .card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+.recuperarSenha{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.541);
+    position: fixed;
+    display: none;
+}
+.recuperarSenha.mostrar{
+    display: block;
+}
+
+.caixaRecuperar{
+    width: 420px;
+    height: 400px;
+    background-color: rgb(34,34,34);
+    border-radius: 7px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: center;
+}
+.caixaRecuperar h3{
+    font-size: 22px;
+    color: white;
+    margin-top: 10px;
+}
+.caixaRecuperar span{
+    width: 100%;
+    height: 4px;
+    background-color: #0053af;
+}
+.caixaRecuperar p{
+    color: rgb(207, 207, 207);
+    font-size: 22px;
+}
+.caixaRecuperar input{
+    width: 70%;
+    height: 30px;
+    background-color: rgb(21,21,21);
+    border: none;
+    outline: none;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.caixaRecuperar button{
+    height: 35px;
+    width: 40%;
+    background-color: #0053af;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 22px;
+}
+.trocouSenha{
+    width: 30vw;
+    height: 35vh;
+    background-color: rgb(34,34,34);
+    border-radius: 10px;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+#mensagemSenha{
+    margin-top: 15px;
+    font-size: 25px;
+    color: white;
+    width: 80%;
+    text-align: center;
+}
+#loading2{
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: #0053af;
+    animation: carregando 5s ease;
+    margin-top: 20px;
+}
+@keyframes carregando {
+    0%{width: 0px;}
+    100%{width: 100%;}
+}
+.trocouSenha video{
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.erro{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.301);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}

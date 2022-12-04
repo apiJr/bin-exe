@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINSTATION</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/pesquisar.css">
+    <script src="https://kit.fontawesome.com/d8b9cb0dbc.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="assets/icons/lgo3.png" type="image/x-icon">
+    <script src="js/script.js"></script>
+    <script src="js/grid.js"></script>
+
+</head>
+<body>
+    
+    <div class="main deslogado" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li class="liLogin"><button><img src="assets/icons/in.png" width="30px">Login</button></li>
+                    <li class="liCadastro"><a href="cadastro.html"><img src="assets/icons/on.png" width="25px">Cadastre-se</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main logado esconder" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa2" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li><a href="upload.html"><button class="userOption"><i class="fa-solid fa-upload"></i></button></a></li>
+                    <li><button class="userOption"><i class="fa-solid fa-bell"></i></button></li>
+                    <li><button class="userOption"><i class="fa-solid fa-paper-plane"></i></button></li>
+                    <div class="divLi" onclick="modalLogin()">
+                        <li><img src="" class="userButton" id="iconeUser"></li>
+                        <li class="userSeta"><i class="fa-solid fa-angle-down"></i></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="userModal">
+                <div class="modalHeader">
+                    <img onclick="perfilUsuario()" src="" class="userButton" id="iconeUser2">
+                    <div class="userInfo">
+                        <p id="userName"></p>
+                        <div class="userPerfil">
+                            <button onclick="perfilUsuario()" class="userProfile">Ver Perfil</button>
+                            <button class="userProfile">Editar Perfil</button>
+                        </div>
+                    </div>
+                </div>
+                <span></span>
+                <button class="userModalOption"><i class="fa-solid fa-palette"></i>Meus Desenhos</button>
+                <button class="userModalOption"><i class="fa-solid fa-heart"></i>Meus Likes</button>
+                <button class="userModalOption"><i class="fa-solid fa-scroll"></i>Histórico</button>
+                <button class="userModalOption"><i class="fa-solid fa-gear"></i>Opções</button>
+                <button onclick="deslogar()" class="userModalOption"><i class="fa-solid fa-right-from-bracket"></i>Sair</button>
+            </div>
+        </div>
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalL" class="modalLogin">
+        <div class="lFormulario">
+            <div class="lHeader">
+                <img src="assets/icons/lgo3.png" width="100px" alt="">
+                <h1><b class="tBin">BIN</b><b class="tStation">STATION</b></h1>
+            </div>
+            <div class="lCampo">
+                <label for="inEmail">Seu E-mail</label>
+                <input type="email" id="inEmail" placeholder="N.l.Bin@sptech.school">
+            </div>
+            <div class="lCampo">
+                <label for="inSenha">Sua senha</label>
+                <input type="password" id="inSenha" placeholder="********">
+            </div>
+            <button id="bEntrar" onclick="entrar()">Entrar</button>
+            <div class="lFooter">
+                <div><b><a href="login.html">Esqueceu a senha?</a></b></div>
+                <div><b><a href="cadastro.html">Cadastre-se</a></b></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="erroLogin">
+        <p>Erro ao entrar!<br>Email ou Senha incorretas.</p>
+        <video src="assets/gif/GifRed.mp4" id="videoLogin" width="50px"></video>
+        <span id="loading"></span>
+    </div>
+
+    <div class="conteudo">
+        <div class="cPesquisa">
+            <div class="areaPesquisa">
+                <img src="assets/lupaCinza.png" class="imgLupaM">
+                <input id="abaPesquisa" onkeyup="pesquisarTitulo()" type="text" placeholder="Pesquisa">
+            </div>
+            <ul>
+                <li><button onclick="trocarArte()" class="b11 active11">Artes</button></li>
+                <li><button onclick="trocarArtista()" class="b12">Artistas</button></li>
+                <li><button onclick="trocarDesenho()" class="b13">Desenhos</button></li>
+                <span class="slide"></span>
+            </ul>
+        </div>
+        <div class="filtro">
+            <select id="selOrdenar" onchange="filtro()">
+                <option value="relevante">Ordenar por relevância</option>
+                <option value="curtido">Ordenar por mais curtidos</option>
+                <option value="recente">Ordenar por mais recentes</option>
+                <option value="alta">Em alta</option>
+            </select>
+            <select id="selTipo" onchange="naoDisponivel()">
+                <option value="">Digital 2D</option>
+                <option value="">Digital 3D</option>
+                <option value="">Arte Tradicional</option> 
+            </select>
+            <div class="show">
+                <input onclick="mostrarNome()" type="checkbox" class="checkB">
+                <p>Mostrar titulo e artista do projeto</p>
+            </div>
+        </div>
+        <div class="resultado">
+            <div class="semResultado">
+                <img src="assets/lupaCinza.png" class="imgLupaG">
+                <p>O que você deseja pesquisar?<br>
+                Inicie sua busca digitando na caixa de busca acima.</p>
+            </div>
+        </div>
+    </div>
+    <div class="naoDisponivel">
+        <p>Filtro ainda não disponível</p>
+        <span></span>
+    </div>
+
+</body>
+</html>
+<script>//Funções Pesquisar
+    function naoDisponivel(){
+        var msgErro = document.querySelector('.naoDisponivel')
+
+        msgErro.style.display = "flex"
+        setTimeout(()=>{msgErro.style.display = "none"}, 5000)
+    }
+
+    const liB11 = document.querySelector('.b11');
+    const liB12 = document.querySelector('.b12');
+    const liB13 = document.querySelector('.b13');
+    function tirarClass(){
+        liB11.classList.remove('active11');
+        liB12.classList.remove('active12');
+        liB13.classList.remove('active13');
+    }
+    liB11.addEventListener('click', function(){
+        tirarClass();
+        liB11.classList.add('active11')
+    })
+    liB12.addEventListener('click', function(){
+        tirarClass();
+        liB12.classList.add('active12')
+    })
+    liB13.addEventListener('click', function(){
+        tirarClass();
+        liB13.classList.add('active13')
+    })
+
+    var banco = []
+    var desenhos = []
+
+    function pegarNomes(){
+        var textoPesquisa = sessionStorage.getItem('CONTEUDO_PESQUISA')
+
+        fetch("/artwork/pesquisar").then(function (resposta){
+            if(resposta.ok){
+                resposta.json().then(function(response){
+                    for(var i = 0; i < response.length; i++){
+                        banco.push(response[i])
+
+                        abaPesquisa.value = textoPesquisa
+                        pesquisarTitulo()
+                    }
+                    console.log('ok')
+                })
+            }
+        })
+    }
+
+    function filtro(){
+        var select = selOrdenar.value
+        var resultado = document.querySelector('.resultado')
+
+        fetch(`/artwork/filtro/${select}`).then(function (resposta){
+            if(resposta.ok){
+                banco = []
+                resposta.json().then(function(response){
+                    for(var i = 0; i < response.length; i++){
+                        banco.push(response[i])
+                    }
+                    console.log('ok')
+                })
+                abaPesquisa.value = ''
+                resultado.innerHTML = `
+                <div class="semResultado">
+                    <img src="assets/lupaCinza.png" class="imgLupaG">
+                    <p>O que você deseja pesquisar?<br>
+                    Inicie sua busca digitando na caixa de busca acima.</p>
+                </div>
+                `
+            }
+        })
+    }
+
+    function pegarDesenhos(){
+
+        fetch("/canvas/pesquisar").then(function (resposta){
+            if(resposta.ok){
+                resposta.json().then(function(response){
+                    for(var i = 0; i < response.length; i++){
+                        desenhos.push(response[i])
+                    }
+                })
+            }
+        })
+    }
+
+    window.onload = function(){
+        pegarNomes();
+        pegarDesenhos();
+        verificarLogin();
+    }
+
+    function pesquisarTitulo(){
+        var nome = abaPesquisa.value.toLowerCase()
+        var resultado = document.querySelector('.resultado')
+        resultado.innerHTML = ''
+        var contador = 1
+        var resultados = 0
+        
+        for(var i = 0; i < banco.length; i++){
+            var atual = banco[i]
+            if(atual.tituloPost.toLowerCase().indexOf(nome) != (-1)){
+                resultado.innerHTML += `
+                <div onclick="levarArtwork(${contador})" class="portifolio">
+                    <p class="idPost">${atual.idPostagem}</p>
+                    <img class="artePortifolio" src="${atual.capa}">
+                    <div class="destaqueHover">
+                        <b>${atual.tituloPost}</b><br>
+                        <p>${atual.nickname}</p>
+                    </div>
+                </div> 
+                `
+                contador++
+                resultados++
+            }
+        }
+        if(resultados == 0){
+            resultado.innerHTML = `
+            <div class="semResultado">
+                <img src="assets/lupaCinza.png" class="imgLupaG">
+                <p>Nenhum resultado encontrado!<br>
+                    Verifique o que foi digitado.</p>
+            </div>
+            `
+        }
+        if(nome == ''){
+            resultado.innerHTML = `
+            <div class="semResultado">
+                <img src="assets/lupaCinza.png" class="imgLupaG">
+                <p>O que você deseja pesquisar?<br>
+                Inicie sua busca digitando na caixa de busca acima.</p>
+            </div>
+            `
+        }
+        
+        mostrarNome()
+    }
+
+    function pesquisarNick(){
+        var nome = abaPesquisa.value.toLowerCase()
+        var resultado = document.querySelector('.resultado')
+        resultado.innerHTML = ''
+        var contador = 1
+        var resultados = 0
+
+        for(var i = 0; i < banco.length; i++){
+            var atual = banco[i]
+            if(atual.nickname.toLowerCase().indexOf(nome) != (-1)){
+                resultado.innerHTML += `
+                <div onclick="levarArtwork(${contador})" class="portifolio">
+                    <p class="idPost">${atual.idPostagem}</p>
+                    <img class="artePortifolio" src="${atual.capa}">
+                    <div class="destaqueHover">
+                        <b>${atual.tituloPost}</b><br>
+                        <p>${atual.nickname}</p>
+                    </div>
+                </div> 
+                `
+                contador++
+                resultados++
+            }
+        }
+        if(resultados == 0){
+            resultado.innerHTML = `
+            <div class="semResultado">
+                <img src="assets/lupaCinza.png" class="imgLupaG">
+                <p>Nenhum resultado encontrado!<br>
+                    Verifique o que foi digitado.</p>
+            </div>
+            `
+        }
+        if(nome == ''){
+            resultado.innerHTML = `
+            <div class="semResultado">
+                <img src="assets/lupaCinza.png" class="imgLupaG">
+                <p>O que você deseja pesquisar?<br>
+                Inicie sua busca digitando na caixa de busca acima.</p>
+            </div>
+            `
+        }
+
+        mostrarNome()
+    }
+
+    function pesquisarDesenho(){
+        var nome = abaPesquisa.value.toLowerCase()
+        var resultado = document.querySelector('.resultado')
+        resultado.innerHTML = ''
+        var contador = 1
+        var resultados = 0
+
+        for(var i = 0; i < desenhos.length; i++){
+            var atual = desenhos[i]
+            if(atual.nickname.toLowerCase().indexOf(nome) != (-1)){
+                resultado.innerHTML += `
+                <div onclick="levarArtworkD(${contador})" class="draw3">
+                    <p class="idDesen">${atual.idDesenho}</p>
+                    <img class="artePortifolio" src="${atual.desenhoBase64}">
+                    <div class="destaqueHover">
+                        <b>${atual.titulo}</b><br>
+                        <p>${atual.nickname}</p>
+                    </div>
+                </div> 
+                `
+                contador++
+                resultados++
+            }
+        }
+        if(resultados == 0){
+            resultado.innerHTML = `
+            <div class="semResultado">
+                <img src="assets/lupaCinza.png" class="imgLupaG">
+                <p>Nenhum resultado encontrado!<br>
+                    Verifique o que foi digitado.</p>
+            </div>
+            `
+        }
+        if(nome == ''){
+            resultado.innerHTML = `
+            <div class="semResultado">
+                <img src="assets/lupaCinza.png" class="imgLupaG">
+                <p>O que você deseja pesquisar?<br>
+                Inicie sua busca digitando na caixa de busca acima.</p>
+            </div>
+            `
+        }
+
+        mostrarNome()
+    }
+
+    function trocarArte(){
+        var input = document.querySelector('.areaPesquisa')
+        var resultado = document.querySelector('.resultado')
+        input.innerHTML = `
+            <img src="assets/lupaCinza.png" class="imgLupaM">
+            <input id="abaPesquisa" onkeyup="pesquisarTitulo()" type="text" placeholder="Pesquisa">
+        `
+        abaPesquisa.value = ''
+        resultado.innerHTML = `
+            <div class="semResultado">
+                <img src="assets/lupaCinza.png" class="imgLupaG">
+                <p>O que você deseja pesquisar?<br>
+                Inicie sua busca digitando na caixa de busca acima.</p>
+            </div>
+            `
+    }
+
+    function trocarArtista(){
+        var input = document.querySelector('.areaPesquisa')
+        var resultado = document.querySelector('.resultado')
+        input.innerHTML = `
+            <img src="assets/lupaCinza.png" class="imgLupaM">
+            <input id="abaPesquisa" onkeyup="pesquisarNick()" type="text" placeholder="Pesquisa">
+        `
+        abaPesquisa.value = ''
+        resultado.innerHTML = `
+            <div class="semResultado">
+                <img src="assets/lupaCinza.png" class="imgLupaG">
+                <p>O que você deseja pesquisar?<br>
+                Inicie sua busca digitando na caixa de busca acima.</p>
+            </div>
+            `
+    }
+
+    function trocarDesenho(){
+        var input = document.querySelector('.areaPesquisa')
+        var resultado = document.querySelector('.resultado')
+        input.innerHTML = `
+            <img src="assets/lupaCinza.png" class="imgLupaM">
+            <input id="abaPesquisa" onkeyup="pesquisarDesenho()" type="text" placeholder="Pesquisa">
+        `
+        abaPesquisa.value = ''
+        resultado.innerHTML = `
+            <div class="semResultado">
+                <img src="assets/lupaCinza.png" class="imgLupaG">
+                <p>O que você deseja pesquisar?<br>
+                Inicie sua busca digitando na caixa de busca acima.</p>
+            </div>
+            `
+    }
+
+    function mostrarNome(){
+        var checkBox = document.querySelector('.checkB')
+        var hover = document.querySelectorAll('.destaqueHover')
+
+        if(checkBox.checked){
+            for(var i = 0; i < hover.length; i++){
+                hover[i].style.opacity = "1"
+            }
+        }else{
+            for(var i = 0; i < hover.length; i++){
+                hover[i].style.opacity = "0"
+            }
+        }
+    }
+
+</script>
+<script>//Função de logar e deslogar
+
+    function iniciarModal(id){
+        if(sessionStorage.fecharModal !== id){
+            const modal = document.getElementById(id);
+            modal.classList.add('mostrar');
+            modal.addEventListener('click', (e) => {
+                if(e.target.id == id){
+                    modal.classList.remove('mostrar')
+                    sessionStorage.fecharModal = id
+                }
+            })
+        }
+    }
+
+    function entrar() {
+        var erro = document.querySelector('.erroLogin')
+
+        var emailVar = inEmail.value;
+        var senhaVar = inSenha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NICKNAME_USUARIO = json.nickname;
+                    sessionStorage.IDUSUARIO_USUARIO = json.idUsuario;
+                    sessionStorage.ICONE_USUARIO = json.icone;
+                    sessionStorage.IDPERFIL_USUARIO = json.idUsuario;
+
+                        window.location = "/perfil.html";
+                })
+            } else {
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function deslogar(){
+        sessionStorage.removeItem('EMAIL_USUARIO')
+        sessionStorage.removeItem('NICKNAME_USUARIO')
+        sessionStorage.removeItem('IDUSUARIO_USUARIO')
+        sessionStorage.removeItem('ICONE_USUARIO')
+        sessionStorage.removeItem('fecharModal')
+
+        window.location = "/index.html";
+    }
+</script>
+<script src="js/funcoes.js"></script>

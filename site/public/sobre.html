@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINSTATION</title>
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sobre.css">
+    <link rel="shortcut icon" href="assets/icons/lgo3.png" type="image/x-icon">
+    <script src="js/script.js"></script>
+    <script src="js/grid.js"></script>
+    <!-- <script src="js/funcoes.js"></script> -->
+    <script src="https://kit.fontawesome.com/d8b9cb0dbc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main deslogado" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li class="liLogin"><button><img src="assets/icons/in.png" width="30px">Login</button></li>
+                    <li class="liCadastro"><a href="cadastro.html"><img src="assets/icons/on.png" width="25px">Cadastre-se</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main logado esconder" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa2" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li><a href="upload.html"><button class="userOption"><i class="fa-solid fa-upload"></i></button></a></li>
+                    <li><button class="userOption"><i class="fa-solid fa-bell"></i></button></li>
+                    <li><button class="userOption"><i class="fa-solid fa-paper-plane"></i></button></li>
+                    <div class="divLi" onclick="modalLogin()">
+                        <li><img src="" class="userButton" id="iconeUser"></li>
+                        <li class="userSeta"><i class="fa-solid fa-angle-down"></i></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="userModal">
+                <div class="modalHeader">
+                    <img onclick="perfilUsuario()" src="" class="userButton" id="iconeUser2">
+                    <div class="userInfo">
+                        <p id="userName"></p>
+                        <div class="userPerfil">
+                            <button onclick="perfilUsuario()" class="userProfile">Ver Perfil</button>
+                            <button class="userProfile">Editar Perfil</button>
+                        </div>
+                    </div>
+                </div>
+                <span></span>
+                <button class="userModalOption"><i class="fa-solid fa-palette"></i>Meus Desenhos</button>
+                <button class="userModalOption"><i class="fa-solid fa-heart"></i>Meus Likes</button>
+                <button class="userModalOption"><i class="fa-solid fa-scroll"></i>Histórico</button>
+                <button class="userModalOption"><i class="fa-solid fa-gear"></i>Opções</button>
+                <button onclick="deslogar()" class="userModalOption"><i class="fa-solid fa-right-from-bracket"></i>Sair</button>
+            </div>
+        </div>
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalL" class="modalLogin">
+        <div class="lFormulario">
+            <div class="lHeader">
+                <img src="assets/icons/lgo3.png" width="100px" alt="">
+                <h1><b class="tBin">BIN</b><b class="tStation">STATION</b></h1>
+            </div>
+            <div class="lCampo">
+                <label for="inEmail">Seu E-mail</label>
+                <input type="email" id="inEmail" placeholder="N.l.Bin@sptech.school">
+            </div>
+            <div class="lCampo">
+                <label for="inSenha">Sua senha</label>
+                <input type="password" id="inSenha" placeholder="********">
+            </div>
+            <button id="bEntrar" onclick="entrar()">Entrar</button>
+            <div class="lFooter">
+                <div><b><a href="login.html">Esqueceu a senha?</a></b></div>
+                <div><b><a href="cadastro.html">Cadastre-se</a></b></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="erroLogin">
+        <p>Erro ao entrar!<br>Email ou Senha incorretas.</p>
+        <video src="assets/gif/GifRed.mp4" id="videoLogin" width="50px"></video>
+        <span id="loading"></span>
+    </div>
+
+    <div class="background">
+        <div class="gradiente">
+            <div class="tituloSobre">
+                <b id="textoIntroducao">"O seu portifólio precisa estar no BinStation."</b>
+                <p id="idNathan">-Nathan Rodrigo</p>
+            </div>
+        </div>
+    </div>
+    <div class="sobreAutor">
+        <div class="contexto">
+            <b data-anime="left">Quem é Nathan?</b>
+            <p data-anime="left">Nathan Rodrigo atualmente tem 21 anos e mora em São Paulo,
+                em meio a pandemia atravessando um momento difícil acabou
+                encontrando a arte como uma forma de escapar dos problemas
+                e acabou se apaixonando pelo assunto, e com uma vontade enorme
+                de aprender coisas novas e se expressar de forma criativa 
+                através delas investiu muito do seu tempo nisso, assim como
+                está sendo essa nova jornada na SPTech! O desejo de desenvolver
+                coisas novas e criativas é algo que o motiva muito a seguir em frente.
+            </p>
+            <div class="mensagemNathan" data-anime="left">
+                <img src="assets/icons/iconebin.jpg" class="iconeNathan">
+                <img src="assets/icons/mensagem.png" class="caixaMsg">
+                <p>A experiência de estudar na SPTech é realmente unica,
+                    incrivel como posso aprender a parte tecnica da melhor 
+                    maneira e ainda interagir com um grupo igualmente motivado
+                    e com ambições parecidas.
+                </p>
+            </div>
+            <span data-anime="left" class="nome">Nathan Rodrigo</span>
+            <span data-anime="left" class="desc">Programador e Artista Digital</span>
+        </div>
+        <div class="carrosselAutor" data-anime="right">
+            <img src="assets/destaque/arte1.png" class="imagem i1">
+            <img src="assets/destaque/arte2.png" class="imagem i2">
+            <img src="assets/destaque/arte3.png" class="imagem i3">
+            <img src="assets/destaque/arte4.png" class="imagem i4">
+            <img src="assets/destaque/arte5.png" class="imagem i5">
+            <img src="assets/destaque/arte6.png" class="imagem i6">
+        </div>
+    </div>
+    <div class="oqueGosto" >
+        <div class="eu" data-anime="left">
+            <h2>Coisas que eu gosto!</h2>
+            <p>Ao lado se encontram as coisas que mais gosto de fazer
+                durante o meu tempo livre.
+            </p>
+            <p id="fraseSobre">
+                League of Legends é o jogo que gosto de jogar com meus amigos
+                quando tenho tempo livre, comecei a jogar em 2016 e desde 
+                então nunca parei, assim como na vida real o jogo precisa de
+                bastante empenho e dedicação do time para se obter a vitória,
+                sendo o jogo mais jogado do mundo com cerca de 124 milhões pelo
+                mundo; Me dediquei bastante uma época ao jogo e consegui o feito
+                de estar entre os 10 melhores jogadores do Brasil com um determinado
+                personagem.
+            </p>
+        </div>
+        
+        <div class="imagemOqg" data-anime="right">
+            <div class="opcao">
+                <div class="nav">
+                    <img class="logoL" onclick="trocarLogo(1)" src="assets/icons/logol2.png">
+                    <img class="logoLI" onclick="trocarLogo(2)" src="assets/icons/logoli.png">
+                    <img class="logoM" onclick="trocarLogo(3)" src="assets/icons/logom.png">
+                    <img class="logoS" onclick="trocarLogo(4)" src="assets/icons/logos.png">
+                    <span class="circuloOpcao"></span>
+                </div>
+            </div>
+            <div id="divLol" class="lol ">
+                <span class="span1 degrau"></span>
+                <span class="span2 degrau"></span>
+                <span class="span3 degrau"></span>
+                <span class="span4 degrau"></span>
+                <span class="span5 degrau"></span>
+                <div class="caixa1 degrau"></div>
+                <div class="caixa2 degrau"></div>
+                <div class="caixa3 degrau"></div>
+                <div class="caixa4 degrau"></div>
+                <div class="caixa5 degrau"></div>
+            </div>
+            <div id="divSerie" class="series ">
+                <div class="navNetflix">
+                    <b class="liNet liHover">INÍCIO</b>
+                    <b class="liNet liHover">SÉRIES</b>
+                    <div class="netflixLogo"></div>
+                    <b class="liNet liHover">FILMES</b>
+                    <b class="myList liHover">MINHA LISTA</b>
+                </div>
+                <div class="serie s1"></div>
+                <div class="serie s2"></div>
+                <div class="serie s3"></div>
+                <div class="serie2 s4"></div>
+                <div class="serie2 s5"></div>
+                <div class="serie2 s6"></div>
+            </div>
+            <div id="divMusica" class="musicas ">
+                <div class="navSpotify">
+                    <b class="liNet liHover">INÍCIO</b>
+                    <b class="liNet liHover">PESQUISAR</b>
+                    <div class="spotifyLogo"></div>
+                    <b class="liNet liHover">PLAYLIST</b>
+                    <b class="myList liHover">PODCAST</b>
+                </div>
+                <div class="disco rock1"></div>
+                <div class="disco rock2"></div>
+                <div class="disco rock3"></div>
+                <div class="disco trap1"></div>
+                <div class="disco trap2"></div>
+                <div class="disco trap3"></div>
+                <div class="disco anime1"></div>
+                <div class="disco anime2"></div>
+                <div class="disco anime3"></div>
+                <div class="disco playlist1"></div>
+                <div class="disco playlist2"></div>
+                <div class="disco playlist3"></div>
+            </div>
+            <div id="divManga" class="mangas">
+                <div class="imgMenu">
+                    <img src="assets/icons/botao.png" class="menu">
+                    <div class="menuAba"></div>
+                </div>
+                <div class="pagina71 boxS">
+                    <div class="pagina72 boxS"></div>
+                    <div class="pagina73 boxS"></div>
+                    <div class="pagina74 boxS"></div>
+                </div>
+                <div class="pagina75 boxS">
+                    <div class="pagina76 boxS"></div>
+                    <div class="pagina77 boxS"></div>
+                    <div class="pagina78 boxS"></div>
+                </div>
+                <div class="pagina79 boxS">
+                    <div class="pagina80 boxS"></div>
+                    <div class="pagina81 boxS"></div>
+                    <div class="pagina82 boxS"></div>
+                </div>
+                <div class="pagina83 boxS">
+                    <div class="pagina84 boxS"></div>
+                    <div class="pagina85 boxS"></div>
+                    <div class="pagina86 boxS"></div>
+                </div>
+                <div class="pagina87 boxS">
+                    <div class="pagina88 boxS"></div>
+                    <div class="pagina89 boxS"></div>
+                    <div class="pagina90 boxS"></div>
+                </div>
+                <div class="pagina91 boxS">
+                    <div class="pagina92 boxS"></div>
+                    <div class="pagina93 boxS"></div>
+                    <div class="pagina94 boxS"></div>
+                </div>
+                <div class="pagina95 boxS">
+                    <div class="pagina96 boxS"></div>
+                    <div class="pagina97 boxS"></div>
+                    <div class="pagina98 boxS"></div>
+                </div>
+                <div class="pagina99 boxS">
+                    <div class="pagina100 boxS"></div>
+                    <div class="pagina101 boxS"></div>
+                    <div class="pagina102 boxS"></div>
+                </div>
+                <div class="pagina103 boxS">
+                    <div class="pagina104 boxS"></div>
+                    <div class="pagina105 boxS"></div>
+                    <div class="pagina106 boxS"></div>
+                </div>
+                <div class="pagina107 boxS">
+                    <div class="pagina108 boxS"></div>
+                    <div class="pagina109 boxS"></div>
+                    <div class="pagina110 boxS"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+ 
+    <!-- div apenas para carregar as imagens das animações -->
+    <div class="invisivel"> 
+        <div><img src="assets/destaque/animacao/f1.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/f2.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/f3.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/f4.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/f5.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/f6.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/f7.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/f8.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/f9.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/f10.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/f11.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/arcane1.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/arcane2.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/arcane3.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/himym1.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/himym2.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/himym3.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/suits1.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/suits2.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/suits3.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/s1.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/s2.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/s3.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/s4.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/s5.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/s6.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/s7.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/s8.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/s9.jpg" width="10px"></div>
+        <div><img src="assets/destaque/animacao/s10.jpg" width="10px"></div>
+       
+    </div>
+    
+</body>
+</html>
+<script>
+
+    function textoSobre(){
+        var texto = textoIntroducao.innerHTML.split('')
+        textoIntroducao.innerHTML = ''
+        texto.forEach((letra, i) => {
+            setTimeout(() => textoIntroducao.innerHTML += letra, 75 * i)
+        })
+        setTimeout(()=> idNathan.style.display = "block", 3525)
+    }
+    textoSobre()
+
+    const target = document.querySelectorAll('[data-anime]');
+    const animationClass = 'show';
+    function animacaoScroll(){
+        const windowTop = window.pageYOffset + 650
+        target.forEach(function(e) {
+            if((windowTop) > e.offsetTop){
+                e.classList.add(animationClass)
+            }else{
+                e.classList.remove(animationClass)
+            }         
+        })
+    }
+    if(target.length){
+        window.addEventListener('scroll', function(){
+            animacaoScroll()
+        })
+    }
+
+    function trocarLogo(id){
+        var lol = document.querySelector('.logoL')
+        var manga = document.querySelector('.logoLI')
+        var musica = document.querySelector('.logoM')
+        var serie = document.querySelector('.logoS')
+
+        if(id == 1){
+            lol.src = "assets/icons/logol2.png"
+            manga.src = "assets/icons/logoli.png"
+            musica.src = "assets/icons/logom.png"
+            serie.src = "assets/icons/logos.png"
+            lol.classList.add('logoAtiva')
+            manga.classList.remove('logoAtiva')
+            musica.classList.remove('logoAtiva')
+            serie.classList.remove('logoAtiva')
+            divLol.style.display = "flex"
+            divManga.style.display = "none"
+            divMusica.style.display = "none"
+            divSerie.style.display = "none"
+            fraseSobre.innerHTML = `League of Legends é o jogo que gosto de jogar com meus amigos
+                quando tenho tempo livre, comecei a jogar em 2016 e desde 
+                então nunca parei, assim como na vida real o jogo precisa de
+                bastante empenho e dedicação do time para se obter a vitória,
+                sendo o jogo mais jogado do mundo com cerca de 124 milhões pelo
+                mundo; Me dediquei bastante uma época ao jogo e consegui o feito
+                de estar entre os 10 melhores jogadores do Brasil com um determinado
+                personagem.`
+        }else if(id == 2){
+            lol.src = "assets/icons/logol.png"
+            manga.src = "assets/icons/logoli2.png"
+            musica.src = "assets/icons/logom.png"
+            serie.src = "assets/icons/logos.png"
+            lol.classList.remove('logoAtiva')
+            manga.classList.add('logoAtiva')
+            musica.classList.remove('logoAtiva')
+            serie.classList.remove('logoAtiva')
+            divLol.style.display = "none"
+            divManga.style.display = "flex"
+            divMusica.style.display = "none"
+            divSerie.style.display = "none"
+            fraseSobre.innerHTML = `Desde sempre gostei muito de acompanhar as
+                histórias dos mangás japoneses, já me emocionei bastante com essas
+                histórias que fazem parte da minha vida, e recentemente acabei pegando
+                o gosto por ler mangás coreanos, tenho o hábito de ler ja fazem muitos anos!`
+        }else if(id == 3){
+            lol.src = "assets/icons/logol.png"
+            manga.src = "assets/icons/logoli.png"
+            musica.src = "assets/icons/logom2.png"
+            serie.src = "assets/icons/logos.png"
+            lol.classList.remove('logoAtiva')
+            manga.classList.remove('logoAtiva')
+            musica.classList.add('logoAtiva')
+            serie.classList.remove('logoAtiva')
+            divLol.style.display = "none"
+            divManga.style.display = "none"
+            divMusica.style.display = "flex"
+            divSerie.style.display = "none" 
+            fraseSobre.innerHTML = `Meu estilo musical foi mudando bastante ao longo dos anos,
+            hoje em dia acabo escutando praticamente tudo dependendo do dia mas geralmente
+            dou preferência para o Rock.`  
+        }else{
+            lol.src = "assets/icons/logol.png"
+            manga.src = "assets/icons/logoli.png"
+            musica.src = "assets/icons/logom.png"
+            serie.src = "assets/icons/logos2.png"
+            lol.classList.remove('logoAtiva')
+            manga.classList.remove('logoAtiva')
+            musica.classList.remove('logoAtiva')
+            serie.classList.add('logoAtiva')
+            divLol.style.display = "none"
+            divManga.style.display = "none"
+            divMusica.style.display = "none"
+            divSerie.style.display = "flex"
+            fraseSobre.innerHTML = `Atualmente não tenho assistido muito mas também gosto muito
+            de assistir uma boa série no final de semana e descansar. <br> Suits,  Arcane e How I Met
+            your Mother são as minhas favoritas atualmente.`
+        }
+
+    }
+
+    const imagens = document.querySelectorAll('.imagem');
+    var cont1 = 0
+    var cont2 = 1
+    var cont3 = 2
+    var cont4 = 3
+    var cont5 = 4
+    var cont6 = 5
+
+    function carrosselAutor(){
+        imagens[cont1].classList.remove('i1')
+        imagens[cont1].classList.add('i2')
+        cont1--
+        imagens[cont2].classList.remove('i2')
+        imagens[cont2].classList.add('i3')
+        cont2--
+        imagens[cont3].classList.remove('i3')
+        imagens[cont3].classList.add('i4')
+        cont3--
+        imagens[cont4].classList.remove('i4')
+        imagens[cont4].classList.add('i5')
+        cont4--
+        imagens[cont5].classList.remove('i5')
+        imagens[cont5].classList.add('i6')
+        cont5--
+        imagens[cont6].classList.remove('i6')
+        imagens[cont6].classList.add('i1')
+        cont6--
+
+        if(cont1 < 0){
+            cont1 = 5
+        }
+        if(cont2 < 0){
+            cont2 = 5
+        }
+        if(cont3 < 0){
+            cont3 = 5
+        }
+        if(cont4 < 0){
+            cont4 = 5
+        }
+        if(cont5 < 0){
+            cont5 = 5
+        }
+        if(cont6 < 0){
+            cont6 = 5
+        }
+    }
+    setInterval(carrosselAutor, 3000)
+
+</script>
+<script>//Window onload
+    window.onload = function() {
+        verificarLogin();
+    }; 
+</script>
+<script>//Função de logar e deslogar
+    function entrar() {
+        var erro = document.querySelector('.erroLogin')
+
+        var emailVar = inEmail.value;
+        var senhaVar = inSenha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NICKNAME_USUARIO = json.nickname;
+                    sessionStorage.IDUSUARIO_USUARIO = json.idUsuario;
+                    sessionStorage.ICONE_USUARIO = json.icone;
+                    sessionStorage.IDPERFIL_USUARIO = json.idUsuario;
+
+                        window.location = "/perfil.html";
+                })
+            } else {
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function deslogar(){
+        sessionStorage.removeItem('EMAIL_USUARIO')
+        sessionStorage.removeItem('NICKNAME_USUARIO')
+        sessionStorage.removeItem('IDUSUARIO_USUARIO')
+        sessionStorage.removeItem('ICONE_USUARIO')
+        sessionStorage.removeItem('fecharModal')
+
+        window.location = "/index.html";
+    }
+</script>
+<script>//Aparecer Modal Login
+    sessionStorage.removeItem('fecharModal')
+    function iniciarModal(id){
+        if(sessionStorage.fecharModal !== id){
+            const modal = document.getElementById(id);
+            modal.classList.add('mostrar');
+            modal.addEventListener('click', (e) => {
+                if(e.target.id == id){
+                    modal.classList.remove('mostrar')
+                    sessionStorage.fecharModal = id
+                }
+            })
+        }
+    }
+
+    /* const botaoLogin = document.querySelector('.liLogin')
+    botaoLogin.addEventListener('click', function() {
+        sessionStorage.clear()
+        iniciarModal('modalL')
+    })
+
+    function modalLogin(){
+        var login1 = document.querySelector('.userModal')
+        login1.classList.toggle('mostrarModal1')
+    } */
+</script>
+<script>//Aparição do Header
+
+    function verificarLogin(){
+        var idUsuario = sessionStorage.getItem('IDUSUARIO_USUARIO');
+        var icone = sessionStorage.getItem('ICONE_USUARIO');
+        var nome = sessionStorage.getItem('NICKNAME_USUARIO');
+        var logado = document.querySelector('.logado');
+        var deslogado = document.querySelector('.deslogado');
+
+        if(idUsuario != null){
+            deslogado.classList.add('esconder');
+            logado.classList.remove('esconder');
+            userName.innerHTML = nome
+            iconeUser.src = icone
+            iconeUser2.src = icone
+            sessionStorage.fecharModal = 'modalL'
+        }else{
+            deslogado.classList.remove('esconder');
+            logado.classList.add('esconder');
+            sessionStorage.removeItem('fecharModal')
+        }
+    }
+
+    function perfilUsuario(){
+        var idUsuario = sessionStorage.getItem('IDUSUARIO_USUARIO');
+        sessionStorage.removeItem('IDPERFIL_USUARIO');
+        sessionStorage.IDPERFIL_USUARIO = idUsuario
+
+        window.location = "/perfil.html";
+    }
+
+</script>
+<script src="js/funcoes.js"></script>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="assets/icons/lgo3.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <script src="js/script.js"></script>
+    
+</head>
+<body>
+
+    <div class="formulario">
+        <div class="fContainer">
+            <div class="fHeader">
+                <div class="fLogo">
+                    <a href="index.html"><img class="imgfLogo" src="assets/icons/lgo3.png"></a>
+                    <h1><b class="tBin">BIN</b><b class="tStation">STATION</b></h1>
+                </div>
+                <div class="entrar">
+                    <p>Já é cadastrado?<a href="login.html"> Entre</a></p>
+                </div>
+            </div>
+            
+            <div class="titulo">
+                <h2>Cadastre-se</h2>
+                <p>Cadastre-se agora e fique por dentro<br> do maior portal de artes digital!</p>
+            </div>
+            <div class="fCampo">
+                <label for="inNome">*Nome de Usuario</label>
+                <input id="inNome" type="text" placeholder="Insira seu nome">
+            </div>
+            <div class="fCampo">
+                <label for="fEmail">*E-mail</label>
+                <input id="fEmail" type="email" placeholder="N.l.bin@sptech.school">
+            </div>
+            <div class="fCampo">
+                <label for="inSenha">*Senha</label>
+                <input id="inSenha" onkeyup="return verify()" type="password" placeholder="*********">
+            </div>
+            <div class="validacao">
+                <div class="pValidacao"><img class="imgTraco" id="imgT1" src="assets/icons/traco.png"><p>Pelo menos 6 caracteres</p></div>
+                <div class="pValidacao"><img class="imgTraco" id="imgT2" src="assets/icons/traco.png"><p>Conter caracter especial</p></div>
+                <div class="pValidacao"><img class="imgTraco" id="imgT3" src="assets/icons/traco.png"><p>Conter numero</p></div>
+                <div class="pValidacao"><img class="imgTraco" id="imgT4" src="assets/icons/traco.png"><p>Conter letra maiúscula/minuscula</p></div>
+            </div>
+            <div class="verificacao">
+                <input type="checkbox" id="inCheck"><p>Você concorda com os <a onclick="termos(1)">termos de serviço</a> e <a onclick="termos(2)">política de privacidade</a>.</p> 
+            </div>
+            <div class="botao">
+                <button onclick="cadastrar()">Criar Conta</button>
+            </div>
+        </div>
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+    </div>
+    <div class="condicao" onclick="fechar()">
+        <div class="termos primeiro">
+            <h3>Termos de serviço</h3>
+            <span></span>
+            <p>1. Mantenha o respeito pelo site e pelos outros, não desenhe algo que incomodará os outros.</p>
+            <p>2. Não poste artes que não pertecem a você.</p>
+            <p>3. Esse site é um prototipo inicial, não se atente muito aos possiveis erros e bugs que encontrar.</p>
+            <p>4. Divitar-se.</p>
+            <p class="fModal">*Clique em qualquer lugar para fechar</p>
+        </div>
+        <div class="termos segundo">
+            <h3>Politica de privacidade</h3>
+            <span></span>
+            <p>1. Informações fornecidas pelo usuario não seram divulgadas.</p>
+            <p>2. A senha fornecida pelo usuario serão armazenadas com criptografia no banco de dados.</p>
+            <p>3. Os dados serão armazenados até que o nosso servidor da Azure seja desligado.</p>
+            <p>4. Divitar-se.</p>
+            <p class="fModal">*Clique em qualquer lugar para fechar</p>
+        </div>
+    </div>
+    <div class="erroLogin">
+        <p id="msgSpan">Erro ao entrar!<br>Email ou Senha incorretas.</p>
+        <video src="assets/gif/GifRed.mp4" id="videoLogin" width="50px"></video>
+        <span id="loading"></span>
+    </div>
+    <div class="codigoSeguranca">
+        <div class="caixaConfirmacao">
+            <h3>Cadastrado realizado com sucesso!</h3>
+            <span></span>
+            <p>Código de recuperação de senha</p>
+            <div class="resultado">
+                <p id="codigoSeg"></p>
+            </div>
+            <p>Guarda esse código de segurança!<br>
+            Você irá precisar dele para recuperar sua senha.</p>
+            <button onclick="irLogar()" class="irLogin">Login</button>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+
+    function termos(id){
+        var condicao = document.querySelector('.condicao')
+        var primeiro = document.querySelector('.primeiro')
+        var segundo = document.querySelector('.segundo')
+
+        if(id == 1){
+            condicao.style.display = "block"
+            primeiro.style.display = "flex"
+        }else{
+            condicao.style.display = "block"
+            segundo.style.display = "flex"
+        }
+    }
+    function fechar(){
+        var condicao = document.querySelector('.condicao')
+        var primeiro = document.querySelector('.primeiro')
+        var segundo = document.querySelector('.segundo')
+
+        condicao.style.display = "none"
+        primeiro.style.display = "none"
+        segundo.style.display = "none"
+    }
+
+    function cadastrar() {
+        var nomeVar = inNome.value;
+        var emailVar = fEmail.value;
+        var senhaVar = inSenha.value;
+        var verifyEmail = emailVar.toLowerCase().indexOf('@sptech.school') >= 0
+        var verifySenha = (senhaVar.match(/[0-9]/)) && (senhaVar.match(/[A-Z]/)) && (senhaVar.match(/[!\@\#\$\%\&\*]/)) && (senhaVar.length >= 6)
+        var erro = document.querySelector('.erroLogin')
+        var chk = document.querySelector('#inCheck')
+        var validarChk = chk.checked
+
+        if (nomeVar == "" || !(verifyEmail) || !(verifySenha) || !(validarChk)) {
+            if(nomeVar == ""){
+                msgSpan.innerHTML = `Erro ao cadastrar!<br>Nome de Usuario vazio.`
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+
+                return false
+            }
+            else if(!verifyEmail){
+                msgSpan.innerHTML = `Email precisa conter @sptech.school.`
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+
+                return false
+            }
+            else if(!verifySenha){
+                msgSpan.innerHTML = `A senha não é forte o suficiente.`
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+
+                return false
+            }else if(!validarChk){
+                msgSpan.innerHTML = `Você precisa concordar com os termos.`
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+
+                return false
+            }
+            return false;
+        }
+        else {
+            var sucesso = document.querySelector('.codigoSeguranca')
+            var codSeguranca =  recuperarSenha()
+            codigoSeg.innerHTML = codSeguranca
+        
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    nomeServer: nomeVar,
+                    emailServer: emailVar,
+                    senhaServer: senhaVar,
+                    codigo : codSeguranca
+                })
+            }).then(function (resposta) {
+                console.log("resposta: ", resposta);
+                if (resposta.ok) {
+                    sucesso.style.display = "block"
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                msgSpan.innerHTML = `Usuario ou Email ja cadastrado.`
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+
+                return false
+                console.log(`#ERRO: ${resposta}`);
+            });
+            return false;
+        }
+    }
+
+    function irLogar(){
+        window.location = "./login.html"
+    }
+
+    function recuperarSenha(){
+        var n1 = parseInt(Math.random() * 10)
+        var n2 = parseInt(Math.random() * 10)
+        var n3 = parseInt(Math.random() * 10)
+        var n4 = parseInt(Math.random() * 10)
+        var n5 = parseInt(Math.random() * 10)
+
+        var codigo = `${n1}${n2}${n3}${n4}${n5}`
+
+        return codigo
+    }
+
+</script>

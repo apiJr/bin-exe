@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINSTATION</title>
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/gridDesenho.css">
+    <link rel="shortcut icon" href="assets/icons/lgo3.png" type="image/x-icon">
+    <script src="js/script.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="https://kit.fontawesome.com/d8b9cb0dbc.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <div class="main deslogado" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li class="liLogin"><button><img src="assets/icons/in.png" width="30px">Login</button></li>
+                    <li class="liCadastro"><a href="cadastro.html"><img src="assets/icons/on.png" width="25px">Cadastre-se</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main logado esconder" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa2" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li><a href="upload.html"><button class="userOption"><i class="fa-solid fa-upload"></i></button></a></li>
+                    <li><button class="userOption"><i class="fa-solid fa-bell"></i></button></li>
+                    <li><button class="userOption"><i class="fa-solid fa-paper-plane"></i></button></li>
+                    <div class="divLi" onclick="modalLogin()">
+                        <li><img src="" class="userButton" id="iconeUser"></li>
+                        <li class="userSeta"><i class="fa-solid fa-angle-down"></i></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="userModal">
+                <div class="modalHeader">
+                    <img onclick="perfilUsuario()" src="" class="userButton" id="iconeUser2">
+                    <div class="userInfo">
+                        <p id="userName"></p>
+                        <div class="userPerfil">
+                            <button onclick="perfilUsuario()" class="userProfile">Ver Perfil</button>
+                            <button class="userProfile">Editar Perfil</button>
+                        </div>
+                    </div>
+                </div>
+                <span></span>
+                <button class="userModalOption"><i class="fa-solid fa-palette"></i>Meus Desenhos</button>
+                <button class="userModalOption"><i class="fa-solid fa-heart"></i>Meus Likes</button>
+                <button class="userModalOption"><i class="fa-solid fa-scroll"></i>Histórico</button>
+                <button class="userModalOption"><i class="fa-solid fa-gear"></i>Opções</button>
+                <button onclick="deslogar()" class="userModalOption"><i class="fa-solid fa-right-from-bracket"></i>Sair</button>
+            </div>
+        </div>
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalL" class="modalLogin">
+        <div class="lFormulario">
+            <div class="lHeader">
+                <img src="assets/icons/lgo3.png" width="100px" alt="">
+                <h1><b class="tBin">BIN</b><b class="tStation">STATION</b></h1>
+            </div>
+            <div class="lCampo">
+                <label for="inEmail">Seu E-mail</label>
+                <input type="email" id="inEmail" placeholder="N.l.Bin@sptech.school">
+            </div>
+            <div class="lCampo">
+                <label for="inSenha">Sua senha</label>
+                <input type="password" id="inSenha" placeholder="********">
+            </div>
+            <button id="bEntrar" onclick="entrar()">Entrar</button>
+            <div class="lFooter">
+                <div><b><a href="login.html">Esqueceu a senha?</a></b></div>
+                <div><b><a href="cadastro.html">Cadastre-se</a></b></div>
+            </div>
+        </div>
+    </div>
+    <div class="erroLogin">
+        <p>Erro ao entrar!<br>Email ou Senha incorretas.</p>
+        <video src="assets/gif/GifRed.mp4" id="videoLogin" width="50px"></video>
+        <span id="loading"></span>
+    </div>
+
+
+   <div  class="estrutura">
+
+
+        <div class="destaques">
+            <div class="emDestaque e1">
+                <img src="assets/destaque/capa18.jpg" alt="" class="imgDestaque">
+                <div class="destaqueHover">
+                    <b>Advance</b><br>
+                    <p>MingChen Shen</p>
+                </div>
+            </div>
+            <div class="emDestaque e2">
+                <img src="assets/destaque/capa28.jpg" alt="" class="imgDestaque">
+                <div class="destaqueHover">
+                    <b>KDA Fanart</b><br>
+                    <p>MingChen Shen</p>
+                </div>
+            </div>
+            <div class="emDestaque e3">
+                <img src="assets/destaque/capa30.jpg" alt="" class="imgDestaque">
+                <div class="destaqueHover">
+                    <b>Cidade Industrial</b><br>
+                    <p>Aobo Wang</p>
+                </div>
+            </div>
+            <div class="emDestaque e4">
+                <img src="assets/destaque/capa38.jpg" alt="" class="imgDestaque">
+                <div class="destaqueHover">
+                    <b>Rain of Soul</b><br>
+                    <p>Kan Liu</p>
+                </div>
+            </div>
+            <div class="emDestaque e5">
+                <img src="assets/destaque/capa42.jpg" alt="" class="imgDestaque">
+                <div class="destaqueHover">
+                    <b>Core Boat</b><br>
+                    <p>Kan Liu</p>
+                </div>
+            </div>
+            <div class="emDestaque e6">
+                <img src="assets/destaque/capa45.jpg" alt="" class="imgDestaque">
+                <div class="destaqueHover">
+                    <b>Sylvanas</b><br>
+                    <p>Sora Kim</p>
+                </div>
+            </div>
+            <div class="emDestaque e7">
+                <img src="assets/destaque/capa46.jpg" alt="" class="imgDestaque">
+                <div class="destaqueHover">
+                    <b>Dragon Slayer</b><br>
+                    <p>XiaoGuang Sun</p>
+                </div>
+            </div>
+            <div class="emDestaque e8">
+                <img src="assets/destaque/capa48.jpg" alt="" class="imgDestaque">
+                <div class="destaqueHover">
+                    <b>White & Gold</b><br>
+                    <p>Dan Kendi</p>
+                </div>
+            </div>
+            <div class="emDestaque e9">
+                <img src="assets/destaque/capa50.jpg" alt="" class="imgDestaque">
+                <div class="destaqueHover">
+                    <b>Chung Hua</b><br>
+                    <p>Dan Kendi</p>
+                </div>
+            </div>
+            <div class="emDestaque e10">
+                <img src="assets/destaque/capabin1.jpg" alt="" class="imgDestaque">
+                <div class="destaqueHover">
+                    <b>Mage of Circle</b><br>
+                    <p>Bin</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="artes">
+            <ul>
+                <li><button class="bArtes b1 active1" onclick="artesTF()">Recentes</button></li>
+                <li><button class="bArtes b2" onclick="imagensTrending()">Trending</button></li>
+                <li><button class="bArtes b3" onclick="desenhosCanvas()">Comunidade</button></li>
+            </ul>            
+
+            <div id="minhaLista" class="desenhos">
+                
+            </div>
+            <div id="idTrend" class="trend">
+
+            </div>
+            <div id="desenhosCanva" class="canvasDesenho">
+
+            </div>
+        </div>
+        <div class="divulgacao">
+            <div class="divul" data-anime="left">
+                <img src="assets/destaque/mountain.jpg" alt="" class="imgDivulgacao">
+                <img src="assets/icons/mvv1.jpg" class="mvv">
+                <div class="divulHover">
+                    <b>Missão</b><br>
+                    <p>Proporcionar uma comunidade para que nossos usuarios
+                        possam interagir entre si compartilhando seus trabalhos
+                        e conhecimentos.
+                    </p>
+                </div>
+            </div>
+            <div class="divul" data-anime="middle">
+                <img src="assets/destaque/vision.jpg" alt="" class="imgDivulgacao">
+                <img src="assets/icons/mvv2.jpg" class="mvv">
+                <div class="divulHover">
+                    <b>Visão</b><br>
+                    <p>Planejamos nos tornar uma rede social que reune os 
+                        melhores artistas e estudios pelo mundo mostrando 
+                        seus estilos únicos e criativos para que assim possamos
+                        evoluir juntos!
+                    </p>
+                </div>
+            </div>
+            <div class="divul" data-anime="right">
+                <img src="assets/destaque/worth.jpg" alt="" class="imgDivulgacao">
+                <img src="assets/icons/mvv3.jpg" class="mvv">
+                <div class="divulHover">
+                    <b>Valores</b><br><br>
+                    <p>1- Criatividade, acreditamos que esse é o pilar essêncial que 
+                        cada artista deve possuir! <br>
+                        2- Honestidade, aqui a cola e plágio não tem vez! Respeite os
+                        outros artistas e mantenha sempre o seu estilo. <br>
+                        3- Respeito, devemos sempre prezar pelo bem estar do próximo
+                        pra que nosso ambiente seja sempre saudável e agradável
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <img class="logoRuneterra" src="assets/destaque/Legends_of_Runeterra_logo.png" alt="">
+            <img class="barraInferior" src="assets/destaque/barraRuneterra.png" alt="">
+            <img class="barraLateralLeft" src="assets/destaque/barraleft.png" alt="">
+            <img class="barraLateralRight" src="assets/destaque/barraright.png" alt="">
+            <div class="carrossel c1">
+                <img src="assets/destaque/vila500.jpg" alt="" class="imgCarrossel">
+                <div class="hoverCarrossel"><b>Vila de Ionia</b></div>
+            </div>
+            <div class="carrossel c2">
+                <img src="assets/destaque/dice500.jpg" alt="" class="imgCarrossel">
+                <div class="hoverCarrossel"><b>Nami Cleric</b></div>
+            </div>
+            <div class="carrossel c3">
+                <img src="assets/destaque/sera500.jpg" alt="" class="imgCarrossel">
+                <div class="hoverCarrossel"><b>Seraphine</b></div>
+            </div>
+            <div class="carrossel c4">
+                <img src="assets/destaque/jax500.jpg" alt="" class="imgCarrossel">
+                <div class="hoverCarrossel"><b>JAX</b></div>
+            </div>
+            <div class="carrossel c5">
+                <img src="assets/destaque/library500.jpg" alt="" class="imgCarrossel">
+                <div class="hoverCarrossel"><b>Biblioteca de Piltover</b></div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="mensagem" data-anime="left">
+                <p>Novo no BinStation?<br>
+                Receba semanalmente notificações<br>
+                e atualizações em seu e-mail!</p>
+            </div>
+            <div class="campo" data-anime="right">
+                <input type="email" id="idEmail" class="inEmail" placeholder="EMAIL">
+                <button onclick="newsletter()">Registre-se</button>
+                <div id="idResposta" class="resposta">
+                    <video src="assets/gif/gif2.mp4" class="videoC" id="videoCheck" width="40px"></video>
+                    <p>Email cadastrado com sucesso!</p>
+                </div>
+                <div id="idErro" class="resposta">
+                    <video src="assets/gif/GifRed.mp4" class="videoC" id="videoCheckR" width="40px"></video>
+                    <p>Insira o email corretamente!</p>
+                </div>
+                <div id="idErro2" class="resposta">
+                    <video src="assets/gif/GifRed.mp4" class="videoC" id="videoCheckRR" width="40px"></video>
+                    <p>Email ja cadastrado!</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span></span>
+            <div class="foot" data-anime="bottom">
+                <img src="assets/icons/lgo3.png" alt="" class="imgL">
+                <h3><b class="tBin">BIN</b><b class="tStation">STATION</b></h3>
+                <img class="imgIcon" src="assets/icons/instagram.png" alt="">
+                <img class="imgIcon" src="assets/icons/github.png" alt="">
+                <img class="imgIcon" src="assets/icons/link1.png" alt="">
+                <img class="imgIcon" src="assets/icons/email.png" alt="">
+                <div class="contato">
+                    <b class="pContato">Contato</b>
+                    <img src="assets/icons/whats.png" alt="" class="imgW">
+                    <b class="pNumero">+55 11 98321-5789</b>
+                </div>
+            </div>
+            <div class="roda">
+                <p>Rua Haddock Lobo, 595 - 01414-001</p>
+                <p>Desenvolvido por Nathan "Bin" Lopes - &copy; Copyright</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>//Window onload
+    window.onload = function() {
+        embaralhar();
+        verificarLogin();
+        artesTF();
+    }; 
+</script>
+<script>//Aparição do Header
+
+    function verificarLogin(){
+        var idUsuario = sessionStorage.getItem('IDUSUARIO_USUARIO');
+        var icone = sessionStorage.getItem('ICONE_USUARIO');
+        var nome = sessionStorage.getItem('NICKNAME_USUARIO');
+        var logado = document.querySelector('.logado');
+        var deslogado = document.querySelector('.deslogado');
+
+        if(idUsuario != null){
+            deslogado.classList.add('esconder');
+            logado.classList.remove('esconder');
+            userName.innerHTML = nome
+            iconeUser.src = icone
+            iconeUser2.src = icone
+            sessionStorage.fecharModal = 'modalL'
+        }else{
+            deslogado.classList.remove('esconder');
+            logado.classList.add('esconder');
+            sessionStorage.removeItem('fecharModal')
+        }
+    }
+
+    function perfilUsuario(){
+        var idUsuario = sessionStorage.getItem('IDUSUARIO_USUARIO');
+        sessionStorage.removeItem('IDPERFIL_USUARIO');
+        sessionStorage.IDPERFIL_USUARIO = idUsuario
+
+        window.location = "/perfil.html";
+    }
+
+</script>
+<script>//Aparecer Modal Login
+    sessionStorage.removeItem('fecharModal')
+    function iniciarModal(id){
+        if(sessionStorage.fecharModal !== id){
+            const modal = document.getElementById(id);
+            modal.classList.add('mostrar');
+            modal.addEventListener('click', (e) => {
+                if(e.target.id == id){
+                    modal.classList.remove('mostrar')
+                    sessionStorage.fecharModal = id
+                }
+            })
+        }
+    }
+
+    const botaoLogin = document.querySelector('.liLogin')
+    botaoLogin.addEventListener('click', function() {
+        sessionStorage.clear()
+        iniciarModal('modalL')
+    })
+
+    document.addEventListener('scroll', () => {
+        if(window.pageYOffset > 600){
+            iniciarModal('modalL')
+        }
+    })
+
+
+    function modalLogin(){
+        var login1 = document.querySelector('.userModal')
+        login1.classList.toggle('mostrarModal1')
+    }
+</script>
+<script>//Animação nas divs
+    const target = document.querySelectorAll('[data-anime]');
+    const animationClass = 'show';
+    function animacaoScroll(){
+        const windowTop = window.pageYOffset + 500
+        target.forEach(function(e) {
+            if((windowTop) > e.offsetTop){
+                e.classList.add(animationClass)
+            }else{
+                e.classList.remove(animationClass)
+            }         
+        })
+    }
+    if(target.length){
+        window.addEventListener('scroll', function(){
+            animacaoScroll()
+        })
+    }
+
+</script>
+<script>//Animação na navbar
+    const liB1 = document.querySelector('.b1');
+    const liB2 = document.querySelector('.b2');
+    const liB3 = document.querySelector('.b3');
+    function tirarClass(){
+        liB1.classList.remove('active1');
+        liB2.classList.remove('active2');
+        liB3.classList.remove('active3');
+    }
+    liB1.addEventListener('click', function(){
+        tirarClass();
+        liB1.classList.add('active1')
+    })
+    liB2.addEventListener('click', function(){
+        tirarClass();
+        liB2.classList.add('active2')     
+    })
+    liB3.addEventListener('click', function(){
+        tirarClass();
+        liB3.classList.add('active3')
+    })
+
+</script>
+<script>//Carrossel debaixo
+
+    
+
+    const cArray = document.querySelectorAll('.carrossel')
+    var contador1 = 0
+    var contador2 = 1
+    var contador3 = 2
+    var contador4 = 3
+    var contador5 = 4
+    
+    function trocarClasses(){    
+        cArray[contador1].classList.remove('c1');
+        cArray[contador1].classList.add('c2');
+        contador1--
+        cArray[contador2].classList.remove('c2');
+        cArray[contador2].classList.add('c3');
+        contador2--
+        cArray[contador3].classList.remove('c3');
+        cArray[contador3].classList.add('c4');
+        contador3--
+        cArray[contador4].classList.remove('c4');
+        cArray[contador4].classList.add('c5');
+        contador4--
+        cArray[contador5].classList.remove('c5');
+        cArray[contador5].classList.add('c1');
+        contador5--
+
+
+        if(contador1 < 0){
+            contador1 = 4
+        }
+        if(contador2 < 0){
+            contador2 = 4
+        }
+        if(contador3 < 0){
+            contador3 = 4
+        }
+        if(contador4 < 0){
+            contador4 = 4
+        }
+        if(contador5 < 0){
+            contador5 = 4
+        }
+    }
+
+    setInterval(trocarClasses, 3000);
+</script>
+<script>//Carrossel Destaques
+    const destaques = document.querySelectorAll('.emDestaque');
+    var cont1 = 0
+    var cont2 = 1
+    var cont3 = 2
+    var cont4 = 3
+    var cont5 = 4
+    var cont6 = 5
+    var cont7 = 6
+    var cont8 = 7
+    var cont9 = 8
+    var cont10 = 9
+
+    function carrosselDestaque(){
+        destaques[cont1].classList.remove('e1');
+        destaques[cont1].classList.add('e2');
+        cont1--
+        destaques[cont2].classList.remove('e2');
+        destaques[cont2].classList.add('e3');
+        cont2--
+        destaques[cont3].classList.remove('e3');
+        destaques[cont3].classList.add('e4');
+        cont3--
+        destaques[cont4].classList.remove('e4');
+        destaques[cont4].classList.add('e5');
+        cont4--
+        destaques[cont5].classList.remove('e5');
+        destaques[cont5].classList.add('e6');
+        cont5--   
+        destaques[cont6].classList.remove('e6');
+        destaques[cont6].classList.add('e7');
+        cont6-- 
+        destaques[cont7].classList.remove('e7');
+        destaques[cont7].classList.add('e8');
+        cont7-- 
+        destaques[cont8].classList.remove('e8');
+        destaques[cont8].classList.add('e9');
+        cont8-- 
+        destaques[cont9].classList.remove('e9');
+        destaques[cont9].classList.add('e10');
+        cont9-- 
+        destaques[cont10].classList.remove('e10');
+        destaques[cont10].classList.add('e1');
+        cont10--   
+
+        if(cont1 < 0){
+            cont1 = 9
+        }
+        if(cont2 < 0){
+            cont2 = 9
+        }
+        if(cont3 < 0){
+            cont3 = 9
+        }
+        if(cont4 < 0){
+            cont4 = 9
+        }
+        if(cont5 < 0){
+            cont5 = 9
+        }
+        if(cont6 < 0){
+            cont6 = 9
+        }
+        if(cont7 < 0){
+            cont7 = 9
+        }
+        if(cont8 < 0){
+            cont8 = 9
+        }
+        if(cont9 < 0){
+            cont9 = 9
+        }
+        if(cont10 < 0){
+            cont10 = 9
+        }
+    }
+    setInterval(carrosselDestaque, 5000)
+</script>
+<script>//Função de logar e deslogar
+    function entrar() {
+        var erro = document.querySelector('.erroLogin')
+
+        var emailVar = inEmail.value;
+        var senhaVar = inSenha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NICKNAME_USUARIO = json.nickname;
+                    sessionStorage.IDUSUARIO_USUARIO = json.idUsuario;
+                    sessionStorage.ICONE_USUARIO = json.icone;
+                    sessionStorage.IDPERFIL_USUARIO = json.idUsuario;
+
+                        window.location = "/perfil.html";
+                })
+            } else {
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function deslogar(){
+        sessionStorage.removeItem('EMAIL_USUARIO')
+        sessionStorage.removeItem('NICKNAME_USUARIO')
+        sessionStorage.removeItem('IDUSUARIO_USUARIO')
+        sessionStorage.removeItem('ICONE_USUARIO')
+        sessionStorage.removeItem('fecharModal')
+
+        window.location = "/index.html";
+    }
+</script>
+<script>//Função de carregar imagens
+
+    function artesTF(){
+
+        fetch("/artwork/carregar").then(function (resposta) {
+            if(resposta.ok) {
+                resposta.json().then(function (response) {
+                    minhaLista.innerHTML = ''
+                    for(var i = 0; i < response.length; i++){
+                        var posicao = validacaoClass()
+                        desenhosCanva.style.display = "none"
+                        idTrend.style.display = "none"
+                        minhaLista.style.display = "grid"
+                        minhaLista.innerHTML += `
+                        <div onclick="levarArtwork(${posicao[1]})" class="imgArtes ${posicao[0]}">
+                            <p class="idPost">${response[i].idPostagem}</p>
+                            <img src="${response[i].capa}">
+                            <div class="destaqueHover">
+                                <b>${response[i].titulo}</b><br>
+                                <p>${response[i].nickname}</p>
+                            </div>
+                        </div> 
+                        `
+                    }
+                })     
+            }else{
+                console.error('Nenhum dado encontrado ou erro na API')
+            }
+        })
+    }
+</script>
+<script>//Ultimos desenhos
+
+
+    function desenhosCanvas(){
+
+        fetch("/canvas/carregarDesenho").then(function (resposta) {
+            if(resposta.ok){
+                resposta.json().then(function (response) {
+                    var atual = JSON.parse((JSON.stringify(response)))
+                    minhaLista.style.display = "none"
+                    idTrend.style.display = "none"
+                    desenhosCanva.style.display = "grid"
+                    desenhosCanva.innerHTML = ''
+                    for(var i = 0; i < response.length; i++){
+                        desenhosCanva.innerHTML += `
+                        <div onclick="levarArtworkD(${i+1})" class="draw f${i+1}">
+                            <p class="idDesen">${atual[i].idDesenho}</p>
+                            <img src="${atual[i].desenhoBase64}" height="270px">
+                            <div class="destaqueHover">
+                                <b>${atual[i].titulo}</b><br>
+                                <p>${atual[i].nickname}</p>
+                            </div>
+                        </div>
+                        `
+                    }
+                })
+            }
+        })
+    }
+</script>
+<script>//Trending
+
+    function imagensTrending(){
+
+        fetch("/artwork/trending").then(function (resposta) {
+            if(resposta.ok){
+                resposta.json().then(function (response) {
+                    var atual = JSON.parse((JSON.stringify(response)))
+                    minhaLista.style.display = "none"
+                    desenhosCanva.style.display = "none"
+                    idTrend.style.display = "flex"
+                    idTrend.innerHTML = ''
+                    for(var i = 0; i < response.length; i++){
+                        idTrend.innerHTML += `
+                        <div onclick="levarArtworkT(${i+1})" class="draw2 g${i+1}">
+                            <p class="idTrending">${atual[i].idPostagem}</p>
+                            <img src="${atual[i].capa}" width="100%">
+                            <div class="destaqueHover">
+                                <b>${atual[i].titulo}</b><br>
+                                <p>${atual[i].nickname}</p>
+                                <span>Likes: ${atual[i].likes}</span>
+                            </div>
+                        </div>
+                        `
+                    }
+                })
+            }
+        })
+    }
+
+</script>
+<script>//Newllester
+    function newsletter(){
+        var cadEmail = idEmail.value.toLowerCase()
+        var sptech = cadEmail.toLowerCase().indexOf('@sptech.school') >= 0;
+
+        if(!sptech){
+            idErro.style.top = "65px";
+            videoCheckR.play()
+            idResposta.style.top = "0px"
+            idErro2.style.top = "0px"
+            return false
+        }else{
+            fetch("/usuarios/newsletter", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        email : cadEmail
+                    })
+                }).then(function (resposta){
+                    if(resposta.ok){
+                        idResposta.style.top = "65px";
+                        videoCheck.play()
+                        idErro.style.top = "0px"
+                        idErro2.style.top = "0px"
+                        return false
+                    }else{
+                        idErro2.style.top = "65px";
+                        videoCheckRR.play()
+                        idResposta.style.top = "0px"
+                        idErro.style.top = "0px"
+                        return false
+                    }
+                })
+        }
+    }
+</script>
+<script>//Pesquisar
+    function irPesquisar(){
+        var user = sessionStorage.getItem('IDUSUARIO_USUARIO')
+        var logado = user != null
+        if(logado){
+            var textoPesquisa = inPesquisa2.value
+    
+            sessionStorage.removeItem('CONTEUDO_PESQUISA')
+            sessionStorage.CONTEUDO_PESQUISA = textoPesquisa
+    
+            window.location = "./pesquisar.html";
+
+        }else{
+            var textoPesquisa = inPesquisa.value
+    
+            sessionStorage.removeItem('CONTEUDO_PESQUISA')
+            sessionStorage.CONTEUDO_PESQUISA = textoPesquisa
+    
+            window.location = "./pesquisar.html";
+        }
+    }
+</script>

@@ -1,0 +1,309 @@
+body{
+    background-color: rgb(21,21,21);
+}
+.aContainer{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.art{
+    width: 73%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(10, 10, 10);
+}
+.caixaImagem{
+    /* max-height: 1300px; */
+    max-height: 150vh;
+    margin-bottom: 10px;
+    
+}
+.imgWork{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.descricao{
+    width: 27%;
+    background-color: rgb(21,21,21);
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    border-left: 1px solid #757575;
+}
+.artista{
+    margin-top: 10px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+}
+.autor{
+    border-radius: 50px;
+    width: 60px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.info h2{
+    cursor: pointer;
+}
+.descricao .bFollow{
+    height: 23px;
+    width: 80px;
+    margin: 10px 0 0 95px;
+    background-color: rgb(34,34,34);
+    border: 1px solid #757575 ;
+    color: white;
+    border-radius: 3px;
+}
+.avaliacao button{
+    height: 30px;
+    width: 130px;
+}
+.bLike{
+    color: white;
+    background-color: rgb(86, 190, 86);
+    border: none;
+    border-radius: 4px;
+}
+button i{
+    margin-right: 5px;
+}
+.bColecao{
+    color: white;
+    background-color: #0053af;
+    border: none;
+    border-radius: 4px;
+}
+.avaliacao{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.sobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.sobre h2{
+    font-size: 25px;
+    color: white;
+    margin-bottom: 5px;
+}
+.sobre p{
+    font-size: 17px;
+    color: #bebebe;
+    padding: 0 10px;
+    text-align: justify;
+}
+.status{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    color: #757575;
+}
+.comentarios{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    color: white;
+
+    margin-top: 20px;
+}
+.campoComentario{
+   /*  margin-top: 15px; */
+    display: flex;
+    flex-direction: column;
+    
+}
+.comentarPost{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 90px;
+    min-height: 90px;
+    border: none;
+    outline: none;
+    background-color: rgb(34,34,34);
+    padding: 5px;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+    margin-top: 4px;
+}
+.comentar{
+    height: 30px;
+    border-radius: 6px;
+    background-color: #0053af;
+    border: none;
+    outline: none;
+    margin: 5px 0;
+    color: white;
+}
+.comentarioUser{
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-start;
+    animation: comentario 1s ease-in-out;
+}
+@keyframes comentario {
+    from{
+        opacity: 0;
+        transform: translateX(-10px)
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.imgID{
+    width: 40px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+.caixa b{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding-left: 3px;
+}
+.caixa p{
+    color: #757575;
+    font-size: 16px;
+    padding-left: 3px;
+}
+.caixa{
+    background-color: rgb(34, 34, 34);
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.buttonExcluir{
+    display: none;
+    position: absolute;
+    width: 130px;
+    height: 27px;
+    background-color: rgb(230, 81, 81);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    right: 25px;
+    top: 180px;
+    color: white;
+}
+button:hover{
+    transition: 0.5s;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.confirmarApagar{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.432);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.caixaApagar{
+    width: 20vw;
+    height: 20vh;
+    background-color: rgb(34,34,34);
+    border-radius: 10px;
+    position: absolute;
+    top: 40vh;
+    left: 40vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.caixaApagar span{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.divBotoes{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+.divBotoes button{
+    background-color: #0053af;
+    color: white;
+    font-size: 18px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s ease-in-out;
+}
+.divBotoes button:hover{
+    opacity: 0.8;
+}
+.imgPublicada{
+    width: 400px;
+    height: 100px;
+    background-color: rgb(21,21,21);
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 250px;
+    left: 483px;
+    animation: publicado 1s ease-in-out;
+    border-radius: 10px;
+    z-index: 500;
+}
+.imgPublicada p{
+    font-size: 50px;
+    color: white;
+    margin-left: 10px;
+}
+.imgPublicada span{
+    color: #757575;
+}
+@keyframes publicado {
+    0%{
+        transform: translate(-50px,0);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+.imgPublicada video{
+    border-radius: 10px 10px 10px 10px;
+}
+.apagar{
+    background-color: rgb(231, 75, 75) !important;
+}
+.tag{
+    width: 100px;
+    height: 25px;
+    background-color: rgb(34,34,34);
+    border: 1px solid #757575;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b8b8b8;
+}
+.tag p{
+    font-size: 13px;
+}
+.tituloTag{
+    color: #d1d1d1;
+    font-size: 17px;
+    margin: 5px 10px;
+}

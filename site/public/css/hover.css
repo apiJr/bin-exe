@@ -1,0 +1,335 @@
+.emDestaque:hover .imgDestaque{
+    opacity: 1;
+}
+.emDestaque:hover .destaqueHover{
+    opacity: 1;
+    bottom: 0;
+}
+.imgArtes:hover .destaqueHover{
+    opacity: 1;
+}
+.draw:hover .destaqueHover{
+    opacity: 1;
+}
+.draw2:hover .destaqueHover{
+    opacity: 1;
+}
+
+.emDestaque{
+    position: relative;
+    transition: all 0.4s ease;
+}
+.imgArtes{
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.destaqueHover{   
+    transition: 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    height: 90px;   
+    bottom: 15px;
+    width: 250px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    /* padding-bottom: 10px; */
+    color: white;
+    background-image: linear-gradient(to top, #000000, rgba(32, 32, 32, 0.034));
+}
+.emDestaque .destaqueHover{
+    bottom: 0px;
+}
+
+.imgArtes .destaqueHover{   
+    transition: 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;   
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    /* text-align: center; */
+    color: white;
+    border-radius: 0;
+    background-image: linear-gradient(to top, #000000, rgba(32, 32, 32, 0));
+}
+
+.draw .destaqueHover{
+    transition: 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80%;   
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    color: white;
+    border-radius: 0;
+    background-image: linear-gradient(to top, #0000007a, rgba(32, 32, 32, 0));
+
+}
+.draw2 .destaqueHover{
+    transition: 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80%;   
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    color: white;
+    border-radius: 0;
+    background-image: linear-gradient(to top, #0000007a, rgba(32, 32, 32, 0));
+}
+.draw2 .destaqueHover b{
+    font-size: 40px;
+    margin-bottom: -20px;
+}
+.draw2 .destaqueHover p{
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+.draw2 .destaqueHover span{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.imgDestaque {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* transition: .5s ease;
+    backface-visibility: hidden; */
+  }
+
+.destaqueHover b{
+    font-size: 30px;
+}
+
+.imgArtes .destaqueHover b{
+    font-size: 20px;
+    margin-bottom: -25px;
+}
+.destaqueHover p{
+    font-size: 20px;
+}
+.imgArtes .destaqueHover p{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.teste{
+    width: 50px;
+    border-radius: 180px;
+}
+.d7 .destaqueHover{   
+    transition: 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    height: 80px;   
+    left: 0;
+    top: 190px;
+    width: 100%;
+   text-align: center;
+    color: white;
+    background-image: linear-gradient(to top, #000000, rgba(32, 32, 32, 0.034));
+}
+.d7 .destaqueHover b{
+    font-size: 30px;
+}
+.d7 .destaqueHover p{
+    font-size: 20px;
+}
+.d18 .destaqueHover{   
+    transition: 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    height: 80px;   
+    left: 0;
+    top: 190px;
+    width: 100%;
+   text-align: center;
+    color: white;
+    background-image: linear-gradient(to top, #000000, rgba(32, 32, 32, 0.034));
+}
+.d18 .destaqueHover b{
+    font-size: 30px;
+}
+.d18 .destaqueHover p{
+    font-size: 20px;
+}
+.d31 .destaqueHover{   
+    transition: 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    height: 80px;   
+    left: 0;
+    top: 190px;
+    width: 100%;
+   text-align: center;
+    color: white;
+    background-image: linear-gradient(to top, #000000, rgba(32, 32, 32, 0.034));
+}
+.d31 .destaqueHover b{
+    font-size: 30px;
+}
+.d31 .destaqueHover p{
+    font-size: 20px;
+}
+.d12 .destaqueHover{   
+    transition: 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    height: 80px;   
+    left: 0;
+    top: 190px;
+    width: 100%;
+   text-align: center;
+    color: white;
+    background-image: linear-gradient(to top, #000000, rgba(32, 32, 32, 0.034));
+}
+.d12 .destaqueHover b{
+    font-size: 30px;
+}
+.d12 .destaqueHover p{
+    font-size: 20px;
+}
+
+.container a:hover {
+    color: #0053af;
+    /* background-color: #75757548; */
+    
+}
+.divul:hover{
+    transform: scale(110%);
+}
+.divul{
+    position: relative;
+    transition: all 0.4s ease;
+}
+.divulHover{   
+    transition: 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    height: 100%;   
+    bottom: 4px;
+    padding-top: 80%;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 0 0 10px 10px;
+    background-image: linear-gradient(to top, #121212, rgba(255, 255, 255, 0));
+}
+.divul:hover .divulHover{
+    opacity: 1;
+}
+.divulHover b{
+    font-size: 30px;
+}
+.divulHover p{
+    font-size: 20px;
+}
+.active1::after{
+    content: '';
+    width: 73px;
+    height: 4px;
+    background-color: #0053af;
+    display: block;
+    margin-top: 4px;
+    animation: active1 0.6s ease;
+    position: absolute;
+    top: 27px;
+    left: 0px;
+}
+.active2::after{
+    content: '';
+    width: 71px;
+    height: 4px;
+    background-color: #0053af;
+    display: block;
+    margin-top: 4px;
+    animation: active2 0.6s ease;
+    position: absolute;
+    top: 27px;
+    left: 91px;
+}
+.active3::after{
+    content: '';
+    width: 104px;
+    height: 4px;
+    background-color: #0053af;
+    display: block;
+    margin-top: 4px;
+    position: absolute;
+    top: 27px;
+    left: 177px;
+    animation: active3 0.6s ease-in-out;
+}
+@keyframes active1 {
+    from{
+        width: 0px;
+    }
+    to{
+        width: 73px;
+    }
+}
+@keyframes active2 {
+    from{
+        width: 0px;
+    }
+    to{
+        width: 71px;
+    }
+}
+@keyframes active3 {
+    from{
+        width: 0px;
+    }
+    to{
+        width: 101px;
+    }
+}
+
+.pesquisa:focus-within .barraPesquisa{
+    display: block;
+}
+.barraPesquisa ul a:hover{
+    color: white;
+    transition: 0.3s;
+}
+.campo button:hover{
+    background-color: #0058bd;
+}
+.campo button:active{
+    background-color: #01346e;
+}
+.imgIcon:hover{
+    transform: scale(105%);
+}
+.imgW:hover{
+    transform: scale(105%);
+}
+.pContato::after{
+    content: '';
+    width: 150%;
+    left: -60px;
+    position: relative;
+    height: 4px;
+    background-color: #0053af;
+    display: block;
+    margin-top: 4px;
+}
+

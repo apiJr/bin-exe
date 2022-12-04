@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINSTATION</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="shortcut icon" href="assets/icons/lgo3.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d8b9cb0dbc.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/perfil.js"></script>
+    <script src="js/grid.js"></script>
+</head>
+<body>
+
+    <div class="main deslogado" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li class="liLogin"><button><img src="assets/icons/in.png" width="30px">Login</button></li>
+                    <li class="liCadastro"><a href="cadastro.html"><img src="assets/icons/on.png" width="25px">Cadastre-se</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main logado esconder" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa2" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li><a href="upload.html"><button class="userOption"><i class="fa-solid fa-upload"></i></button></a></li>
+                    <li><button class="userOption"><i class="fa-solid fa-bell"></i></button></li>
+                    <li><button class="userOption"><i class="fa-solid fa-paper-plane"></i></button></li>
+                    <div class="divLi" onclick="modalLogin()">
+                        <li><img src="" class="userButton" id="iconeUser"></li>
+                        <li class="userSeta"><i class="fa-solid fa-angle-down"></i></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="userModal">
+                <div class="modalHeader">
+                    <img onclick="perfilUsuario()" src="" class="userButton" id="iconeUser2">
+                    <div class="userInfo">
+                        <p id="userName"></p>
+                        <div class="userPerfil">
+                            <button onclick="perfilUsuario()" class="userProfile">Ver Perfil</button>
+                            <button class="userProfile">Editar Perfil</button>
+                        </div>
+                    </div>
+                </div>
+                <span></span>
+                <button class="userModalOption"><i class="fa-solid fa-palette"></i>Meus Desenhos</button>
+                <button class="userModalOption"><i class="fa-solid fa-heart"></i>Meus Likes</button>
+                <button class="userModalOption"><i class="fa-solid fa-scroll"></i>Histórico</button>
+                <button class="userModalOption"><i class="fa-solid fa-gear"></i>Opções</button>
+                <button onclick="deslogar()" class="userModalOption"><i class="fa-solid fa-right-from-bracket"></i>Sair</button>
+            </div>
+        </div>
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalL" class="modalLogin">
+        <div class="lFormulario">
+            <div class="lHeader">
+                <img src="assets/icons/lgo3.png" width="100px" alt="">
+                <h1><b class="tBin">BIN</b><b class="tStation">STATION</b></h1>
+            </div>
+            <div class="lCampo">
+                <label for="inEmail">Seu E-mail</label>
+                <input type="email" id="inEmail" placeholder="N.l.Bin@sptech.school">
+            </div>
+            <div class="lCampo">
+                <label for="inSenha">Sua senha</label>
+                <input type="password" id="inSenha" placeholder="********">
+            </div>
+            <button id="bEntrar" onclick="entrar()">Entrar</button>
+            <div class="lFooter">
+                <div><b><a href="login.html">Esqueceu a senha?</a></b></div>
+                <div><b><a href="cadastro.html">Cadastre-se</a></b></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="erroLogin">
+        <p>Erro ao entrar!<br>Email ou Senha incorretas.</p>
+        <video src="assets/gif/GifRed.mp4" id="videoLogin" width="50px"></video>
+        <span id="loading"></span>
+    </div>
+
+    <div class="editar">
+        <button class="bAttPerfil"><i class="fa-solid fa-user-pen"></i>Editar Perfil</button>
+    </div>
+    <div id="modalE" class="modalEditar">
+        <div class="editarPerfil">
+            <div class="divC">
+                <div class="divBanner">
+                    <span>Mudar Imagem de fundo</span>
+                    <img src="" id="mudarBanner">
+                    <label for="inImagemBanner"><i class="fa-solid fa-file-arrow-up"></i></label>
+                    <input type="file" id="inImagemBanner"  onchange="converterImagemFundo()">         
+                </div>
+            </div>
+            <div class="divCaixa">
+                <div class="divIcon">
+                    <span>Mudar Icone</span>
+                    <img src="" id="mudarIcone">
+                    <label for="inImagemIcone"><i class="fa-solid fa-file-arrow-up"></i></label>
+                    <input type="file" id="inImagemIcone" onchange="converterImagemIcone()">
+                    
+                </div>
+                <div class="divNick">
+                    <span>Mudar nickname</span>
+                    <input type="text" id="inNick">
+                    <span>Código de recuperação</span>
+                    <input type="password" id="inCodigo">
+                    <button onclick="mostrarCodigo()" class="mostrarCodigo"><i class="fa-solid fa-eye"></i></button>
+                    <p style="color: white;">*Esse campo não será alterado</p>
+                </div>
+                <div class="divDesc">
+                    <span>Mudar descrição de perfil</span>
+                    <textarea id="inDesc" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <button onclick="atualizarPerfil()" class="buttonAtt">Editar Perfil</button>
+    
+        </div>
+    </div>
+
+    <div class="perfil">
+        <img src="" class="fundoBanner">
+        <div class="gradienteBanner">
+            <div class="info">
+                <img id="iconeAutor" class="icon" src="">
+                <h3 id="nickAutor"></h3>
+                <span id="descAutor"></span>
+                <span id="localAutor"></span>
+                <span id="linkAutor"></span>
+            </div>
+        </div>
+    </div>
+    <div class="pNavbar">
+        <ul>
+            <li class="active"><button onclick="exibirPortifolio(1)" class="bLi b11 active11">Portifolio</button> </li>
+            <li><button onclick="exibirPortifolio(2)" class="bLi b12">Sobre</button></li>
+            <li><button onclick="exibirPortifolio(3)" class="bLi b13">Likes (<b id="qtdLikes">0</b>)</button></li>
+            <li><button onclick="exibirPortifolio(4)" class="bLi b14">Seguindo (<b id="qtdSeguindo">0</b>)</button></li>
+            <li><button onclick="exibirPortifolio(5)" class="bLi b15">Seguidores (<b id="qtdSeguidores">0</b>)</button></li>
+            <button class="bFollow" onclick="seguirUser()"><i class="fa-solid fa-user-plus"></i>Seguir</button>
+            <button class="msg" onclick=""><i class="fa-solid fa-paper-plane"></i>Mensagem</button>
+            <span class="slide"></span>
+        </ul>
+    </div>
+    <div class="conteudos">
+        <div id="idEstrutura" class="estrutura">
+            
+        </div>
+        <div id="idSobre" class="sobre">
+            <div class="containerSobre">
+                <div class="sumario">
+                    <h3>Sumario</h3>
+                    <p id="descAutorSobre"></p>      
+                </div>
+                <div class="contatos">
+                    <h3>Contato</h3>
+                    <p id="emailAutor"></p>
+                </div>
+            </div>
+        </div>
+        <div id="idLikes" class="likes">
+
+        </div>
+        <div id="idSeguindo" class="seguindo">  
+
+        </div>
+        <div id="idSeguidores" class="seguidores">
+            
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var userL = sessionStorage.getItem('IDUSUARIO_USUARIO');
+    var perfilAtual = sessionStorage.getItem('IDPERFIL_USUARIO');
+    if(userL == perfilAtual){
+        var botaoEditar = document.querySelector('.editar')
+        var bFollow = document.querySelector('.bFollow')
+        var msg = document.querySelector('.msg')
+
+        botaoEditar.style.display = "block"
+        bFollow.style.display = "none"
+        msg.style.display = "none"
+    }
+
+    function iniciarModal(id){
+        if(sessionStorage.fecharModal !== id){
+            const modal = document.getElementById(id);
+            modal.classList.add('mostrar');
+            modal.addEventListener('click', (e) => {
+                if(e.target.id == id){
+                    modal.classList.remove('mostrar')
+                    sessionStorage.fecharModal = id
+                }
+            })
+        }
+    }
+
+    window.onload = function() {
+        verificarLogin();
+        portifolio();
+        seguidor();
+        perfilSeguindo();
+        perfilSeguidores();
+    }; 
+
+    const liB11 = document.querySelector('.b11');
+    const liB12 = document.querySelector('.b12');
+    const liB13 = document.querySelector('.b13');
+    const liB14 = document.querySelector('.b14');
+    const liB15 = document.querySelector('.b15');
+
+    function tirarClass(){
+        liB11.classList.remove('active11');
+        liB12.classList.remove('active12');
+        liB13.classList.remove('active13');
+        liB14.classList.remove('active14');
+        liB15.classList.remove('active15');
+    }
+    liB11.addEventListener('click', function(){
+        tirarClass();
+        liB11.classList.add('active11')
+    })
+    liB12.addEventListener('click', function(){
+        tirarClass();
+        liB12.classList.add('active12')
+    })
+    liB13.addEventListener('click', function(){
+        tirarClass();
+        liB13.classList.add('active13')
+    })
+    liB14.addEventListener('click', function(){
+        tirarClass();
+        liB14.classList.add('active14')
+    })
+    liB15.addEventListener('click', function(){
+        tirarClass();
+        liB15.classList.add('active15')
+    })
+
+</script>
+<script>//Função de logar e deslogar
+    function entrar() {
+        var erro = document.querySelector('.erroLogin')
+
+        var emailVar = inEmail.value;
+        var senhaVar = inSenha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NICKNAME_USUARIO = json.nickname;
+                    sessionStorage.IDUSUARIO_USUARIO = json.idUsuario;
+                    sessionStorage.ICONE_USUARIO = json.icone;
+                    sessionStorage.IDPERFIL_USUARIO = json.idUsuario;
+
+                        window.location = "/perfil.html";
+                })
+            } else {
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function deslogar(){
+        sessionStorage.removeItem('EMAIL_USUARIO')
+        sessionStorage.removeItem('NICKNAME_USUARIO')
+        sessionStorage.removeItem('IDUSUARIO_USUARIO')
+        sessionStorage.removeItem('ICONE_USUARIO')
+        sessionStorage.removeItem('fecharModal')
+
+        window.location = "/index.html";
+    }
+</script>
+<script>
+    var iconeAtual = ''
+    var fundoAtual = ''
+
+    function portifolio(){
+        var idArtista = sessionStorage.getItem('IDPERFIL_USUARIO');
+        var idUsuarioAtual = sessionStorage.getItem('IDUSUARIO_USUARIO')
+        var fundo = document.querySelector('.fundoBanner');
+        var posicoes = []
+
+        fetch(`/artwork/selectPerfil/${idArtista}`).then(function (resposta) {
+            if (resposta.ok) {
+                resposta.json().then(function (response) {
+                    var infoPerfil = JSON.parse((JSON.stringify(response)))
+                    iconeAutor.src = `${infoPerfil[0].icone}`
+                    mudarIcone.src = `${infoPerfil[0].icone}`
+                    nickAutor.innerHTML =  `${infoPerfil[0].nickname}`
+                    inNick.value = `${infoPerfil[0].nickname}`
+                    descAutor.innerHTML =  `${infoPerfil[0].descricaoAutor}`
+                    inDesc.value = `${infoPerfil[0].descricaoAutor}`
+                    linkAutor.innerHTML =  `${infoPerfil[0].email}`
+                    fundo.src = `${infoPerfil[0].backgroundImage}`
+                    mudarBanner.src = `${infoPerfil[0].backgroundImage}`
+                    descAutorSobre.innerHTML = `${infoPerfil[0].descricaoAutor}`
+                    emailAutor.innerHTML = `${infoPerfil[0].email}`
+                    inCodigo.value = `${infoPerfil[0].recuperacao}`
+                    iconeAtual = `${infoPerfil[0].icone}`
+                    fundoAtual = `${infoPerfil[0].backgroundImage}`
+                    if(idArtista == idUsuarioAtual){
+                        sessionStorage.removeItem('ICONE_USUARIO')
+                        sessionStorage.ICONE_USUARIO = `${infoPerfil[0].icone}`
+                    }
+                    curtidos(infoPerfil.length)
+                    if(infoPerfil[0].idPostagem != null){
+                        for(var i = 0; i < response.length; i++){
+                            idEstrutura.innerHTML += `
+                            <div onclick="levarArtwork(${i + 1})" class="portifolio">
+                                <p class="idPost">${infoPerfil[i].idPostagem}</p>
+                                <img class="artePortifolio" src="${infoPerfil[i].capa}">
+                                <div class="destaqueHover">
+                                    <b>${infoPerfil[i].tituloPost}</b><br>
+                                    <p>${infoPerfil[i].nickname}</p>
+                                </div>
+                            </div> 
+                            `
+                        }
+                    }
+                })
+            }else {
+                console.error('Nenhum dado encontrado ou erro na API')
+            }
+        }).then(
+            fetch(`/artwork/selectPerfill/${idArtista}`).then(function (resposta){
+                if(resposta.ok){
+                    resposta.json().then(function (response) {
+                        var info = JSON.parse((JSON.stringify(response)))
+                        
+                        if(info[0].idDesenho != null){
+                            for(var j = 0; j < response.length; j++){
+                                idEstrutura.innerHTML += `
+                                <div onclick="levarArtworkD(${j + 1})" class="portifolio">
+                                    <p class="idDesen">${info[j].idDesenho}</p>
+                                    <img class="artePortifolio" src="${info[j].desenhoBase64}">
+                                    <div class="destaqueHover">
+                                        <b>${info[j].tituloDese}</b><br>
+                                        <p>${info[j].nickname}</p>
+                                    </div>
+                                </div> 
+                                `
+                            }
+                            
+                        }
+                    })
+                }else{
+                    console.error('Nenhum dado encontrado ou erro na API')
+                }
+            })
+        )
+    }
+
+    
+
+</script>
+<script>//editar perfil
+
+    function mostrarCodigo(){
+        var botao = document.querySelector('.mostrarCodigo')
+
+        if(inCodigo.type == "password"){
+            inCodigo.type = "text"
+            botao.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`
+        }else{
+            inCodigo.type = "password"
+            botao.innerHTML = `<i class="fa-solid fa-eye"></i>`
+        }
+    }
+
+    function iniciarModalEditar(id){
+        const modal = document.getElementById(id);
+        modal.classList.add('mostrar');
+        modal.addEventListener('click', (e) => {
+            if(e.target.id == id){
+                modal.classList.remove('mostrar')
+            }
+        })
+    }
+    const botaoAtt = document.querySelector('.bAttPerfil')
+    botaoAtt.addEventListener('click', function() {
+        iniciarModalEditar('modalE')
+    })
+
+    function converterImagemIcone(){
+        var arquivoInput = document.querySelector('#inImagemIcone').files;
+    
+        if(arquivoInput.length > 0){
+            var imagemIcone = arquivoInput[0];
+
+            var lerImagem = new FileReader();
+            
+
+            lerImagem.onload = function(icone){
+                var novoIcone = icone.target.result
+                iconeAtual = novoIcone;
+                var iconeTrocar = document.querySelector('#mudarIcone')
+
+                iconeTrocar.src = novoIcone;
+            }
+
+            lerImagem.readAsDataURL(imagemIcone);
+        
+        }
+    }
+
+    function converterImagemFundo(){
+        var arquivoInput = document.querySelector('#inImagemBanner').files;
+
+        if(arquivoInput.length > 0){
+            var imagemFundo = arquivoInput[0];
+
+            var lerImagem = new FileReader();
+            
+
+            lerImagem.onload = function(fundo){
+                var novoFundo = fundo.target.result
+                fundoAtual = novoFundo;
+                var fundoTrocar = document.querySelector('#mudarBanner')
+
+                fundoTrocar.src = novoFundo;
+            }
+
+            lerImagem.readAsDataURL(imagemFundo);
+        
+        }
+    }
+
+    function atualizarPerfil(){
+        var novoNick = inNick.value
+        var novaDesc = inDesc.value
+        var iconeNovo = iconeAtual
+        var fundoNovo = fundoAtual
+
+        fetch(`/usuarios/atualizarPerfil/${sessionStorage.getItem("IDUSUARIO_USUARIO")}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                novoNick,
+                novaDesc,
+                iconeNovo,
+                fundoNovo
+            })
+        }).then(function (resposta) {
+            if (resposta.ok) {
+                window.location = "/perfil.html";
+            }else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+
+    function seguidor(){
+        var idArtista = sessionStorage.getItem('IDUSUARIO_USUARIO')
+        var userPostagem = sessionStorage.getItem('IDPERFIL_USUARIO')
+        var bFollow = document.querySelector('.bFollow')
+        
+        fetch(`/artwork/selectSeguindo/${idArtista}`).then(function (resposta){
+                if(resposta.ok){
+                    resposta.json().then(function (response) {
+                        var userSeguindo = JSON.parse((JSON.stringify(response)))
+
+                        for(var i = 0; i < userSeguindo.length; i++){
+                           if(userPostagem == userSeguindo[i].fkUsuarioSeguido){
+                                console.log('Achou!')
+                                bFollow.innerHTML = `<i class="fa-solid fa-check"></i>Seguindo`
+                           }
+                        }
+                        
+                    })
+                }else{
+                    console.error('Nenhum dado encontrado ou erro na API')
+                }
+            })
+    }
+
+    function curtidos(contador){
+        var idArtista = sessionStorage.getItem('IDPERFIL_USUARIO')
+        
+        fetch(`/artwork/curtidos/${idArtista}`).then(function (resposta){
+                if(resposta.ok){
+                    resposta.json().then(function (response) {
+                        var curtidos = JSON.parse((JSON.stringify(response)))
+
+                        for(var i = 0; i < curtidos.length; i++){
+                            idLikes.innerHTML += `
+                            <div onclick="levarArtwork(${contador + i + 1})" class="portifolio">
+                                <p class="idPost">${curtidos[i].fkPostagem}</p>
+                                <img class="artePortifolio" src="${curtidos[i].capa}">
+                                <div class="destaqueHover">
+                                    <b>${curtidos[i].tituloPost}</b><br>
+                                    <p>${curtidos[i].nickname}</p>
+                                </div>
+                            </div> 
+                            `
+                        }
+                        qtdLikes.innerHTML = curtidos.length
+                    })
+                }else{
+                    console.error('Nenhum dado encontrado ou erro na API')
+                }
+            })
+    }
+
+    function perfilSeguindo(){
+        var idArtista = sessionStorage.getItem('IDPERFIL_USUARIO')
+        
+        fetch(`/usuarios/perfilSeguindo/${idArtista}`).then(function (resposta){
+                if(resposta.ok){
+                    resposta.json().then(function (response) {
+                        var seguindo = JSON.parse((JSON.stringify(response)))
+
+                        for(var i = 0; i < seguindo.length; i++){
+                            idSeguindo.innerHTML += `
+                            <div class="artista">
+                                <div class="capa">
+                                    <img src="${seguindo[i].backgroundImage}">
+                                </div>
+                                <img class="icone" src="${seguindo[i].icone}">
+                                <h4>${seguindo[i].nickname}</h4>
+                                <p>${seguindo[i].descricaoAutor}</p>
+                                <button onclick="levarPerfil(${seguindo[i].idUsuario})">Ver Perfil</button>
+                            </div>
+                            `
+                        }
+                        qtdSeguindo.innerHTML = seguindo.length
+                    })
+                }else{
+                    console.error('Nenhum dado encontrado ou erro na API')
+                }
+            })
+    }
+
+    function perfilSeguidores(){
+        var idArtista = sessionStorage.getItem('IDPERFIL_USUARIO')
+        
+        fetch(`/usuarios/perfilSeguidores/${idArtista}`).then(function (resposta){
+                if(resposta.ok){
+                    resposta.json().then(function (response) {
+                        var seguindo = JSON.parse((JSON.stringify(response)))
+
+                        for(var i = 0; i < seguindo.length; i++){
+                            idSeguidores.innerHTML += `
+                            <div class="artista">
+                                <div class="capa">
+                                    <img src="${seguindo[i].backgroundImage}">
+                                </div>
+                                <img class="icone" src="${seguindo[i].icone}">
+                                <h4>${seguindo[i].nickname}</h4>
+                                <p>${seguindo[i].descricaoAutor}</p>
+                                <button onclick="levarPerfil(${seguindo[i].idUsuario})">Ver Perfil</button>
+                            </div>
+                            `
+                        }
+                        qtdSeguidores.innerHTML = seguindo.length
+                    })
+                }else{
+                    console.error('Nenhum dado encontrado ou erro na API')
+                }
+            })
+    }
+
+    function levarPerfil(perfil){
+        sessionStorage.removeItem('IDPERFIL_USUARIO')
+        sessionStorage.IDPERFIL_USUARIO = perfil
+        
+        window.location = "/perfil.html";
+    }
+
+
+    function seguirUser(){
+        var userAtual = sessionStorage.getItem('IDUSUARIO_USUARIO');
+        var userTela = sessionStorage.getItem('IDPERFIL_USUARIO');
+        var bFollow = document.querySelector('.bFollow')
+
+        fetch("/usuarios/seguirUser", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                userAtual,
+                userTela
+            })
+        }).then(function (resposta) {
+            if(resposta.ok){
+                console.log('Funcionou!!!')
+            }
+        })
+
+        
+
+        bFollow.innerHTML = `<i class="fa-solid fa-check"></i>Seguindo`
+        
+    }
+</script>
+<script src="js/funcoes.js"></script>

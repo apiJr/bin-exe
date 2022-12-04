@@ -1,0 +1,292 @@
+body{
+    background-color: rgb(34,34,34);
+}
+*{
+    outline: none;
+}
+.conteudo{
+    margin-top: 100px;
+}
+.cPesquisa{
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    /* background-color: rgb(21,21,21); */
+    background-image: url(../assets/destaque/backgroundPesquisar.png);
+    background-size: cover;
+}
+
+.areaPesquisa{
+    width: 60%;
+    height: 80px;
+    border-radius: 10px;
+    border: 1px solid #757575;
+    background-color: rgb(34,34,34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+}
+
+.imgLupaM{
+    width: 80px;
+    margin-right: 10px
+}
+.areaPesquisa input{
+    width: 88%;
+    border: none;
+    padding: 5px;
+    height: 75px;
+    background-color: rgb(34,34,34);
+    font-size: 33px;
+    color: white;
+    outline: none;
+}
+
+.cPesquisa ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+    max-height: 30px;
+
+}
+.cPesquisa li{
+    list-style: none;
+    margin: 0 20px;
+    font-size: 22px;
+}
+
+.active11::after{
+    content: '';
+    width: 64px;
+    left: 17px;
+    top: 40px;
+    height: 6px;
+    background-color: #0053af;
+    position: absolute;
+    animation: active11 0.4s ease-in-out;
+}
+.active12::after{
+    content: '';
+    width: 90px;
+    left: 115px;
+    top: 40px;
+    height: 6px;
+    background-color: #0053af;
+    position: absolute;
+    animation: active12 0.4s ease-in-out;
+}
+.active13::after{
+    content: '';
+    width: 110px;
+    left: 240px;
+    top: 40px;
+    height: 6px;
+    background-color: #0053af;
+    position: absolute;
+    animation: active13 0.4s ease-in-out;
+}
+@keyframes active11 {
+    from{
+        width: 0px;
+    }
+    to{
+        width: 64px;
+    }
+}
+@keyframes active12 {
+    from{
+        width: 0px;
+    }
+    to{
+        width: 90px;
+    }
+}
+@keyframes active13 {
+    from{
+        width: 0px;
+    }
+    to{
+        width: 110px;
+    }
+}
+
+li button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 26px;
+}
+.filtro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+.show{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    color: white;
+}
+.checkB{
+    margin: 0 5px;
+}
+#selOrdenar{
+    margin: 10px 20px;
+    width: 210px;
+    height: 40px;
+    font-size: 16px;
+    background-color: rgb(34,34,34);
+    color: white;
+}
+
+#selTipo{
+    margin: 10px 20px;
+    width: 210px;
+    height: 40px;
+    font-size: 16px;
+    background-color: rgb(34,34,34);
+    color: white;
+}
+.resultado{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+    min-height: 440px;
+}
+.resultado img{
+    width: 100%;
+}
+.resultado p{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+}
+
+.portifolio{
+    position: relative;
+    flex-basis: 20%;
+    height: 41vh;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+}
+.artePortifolio{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.portifolio .destaqueHover{
+    transition: 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    height: 130px;   
+    left: 0;
+    top: 160px;
+    width: 100%;
+   text-align: center;
+    color: white;
+    border-radius: 0 0 0px 0px;
+    background-image: linear-gradient(to top, #000000, rgba(32, 32, 32, 0.034));
+
+}
+.portifolio p{
+    font-size: 22px;
+}
+.portifolio:hover .destaqueHover{
+    opacity: 1 !important;
+}
+.resultado{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+.imgLupaG{
+    width: 200px !important;
+    margin-left: 330px;
+}
+.semResultado{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+}
+.draw3{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+    flex-basis: 20%;
+    object-fit: cover;
+    height: 250px;
+}
+.artePortifolio{
+    width: 100%;
+}
+
+.draw3 .destaqueHover{
+    transition: 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80%;   
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    color: white;
+    border-radius: 0;
+    background-image: linear-gradient(to top, #0000007a, rgba(32, 32, 32, 0));
+
+}
+.draw3:hover .destaqueHover{
+    opacity: 1 !important;
+}
+.naoDisponivel{
+    width: 200px;
+    height: 90px;
+    border-radius: 6px;
+    background-color: rgb(25,25,25);
+    position: fixed;
+    top: 250px;
+    left: -300px;
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    animation: msg 5s ease-in-out;
+    border: 1px solid #757575;
+}
+.naoDisponivel p{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 5px;
+}
+.naoDisponivel span{
+    width: 100%;
+    height: 3px;
+    background-color: #0053af;
+    margin-top: 10px;
+    animation: span 4s ease-in-out;
+}
+@keyframes span {
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+@keyframes msg {
+    0%, 100%{left: -300px;}
+    30%,70%{left: 30px;}
+}

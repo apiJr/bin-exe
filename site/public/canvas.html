@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINSTATION</title>
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="assets/icons/lgo3.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/canvas.css">
+    <script src="js/script.js"></script>
+    <script src="js/canvas.js"></script>
+
+    <script src="https://kit.fontawesome.com/d8b9cb0dbc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="main deslogado" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li class="liLogin"><button><img src="assets/icons/in.png" width="30px">Login</button></li>
+                    <li class="liCadastro"><a href="cadastro.html"><img src="assets/icons/on.png" width="25px">Cadastre-se</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main logado esconder" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa2" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li><a href="upload.html"><button class="userOption"><i class="fa-solid fa-upload"></i></button></a></li>
+                    <li><button class="userOption"><i class="fa-solid fa-bell"></i></button></li>
+                    <li><button class="userOption"><i class="fa-solid fa-paper-plane"></i></button></li>
+                    <div class="divLi" onclick="modalLogin()">
+                        <li><img src="" class="userButton" id="iconeUser"></li>
+                        <li class="userSeta"><i class="fa-solid fa-angle-down"></i></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="userModal">
+                <div class="modalHeader">
+                    <img onclick="perfilUsuario()" src="" class="userButton" id="iconeUser2">
+                    <div class="userInfo">
+                        <p id="userName"></p>
+                        <div class="userPerfil">
+                            <button onclick="perfilUsuario()" class="userProfile">Ver Perfil</button>
+                            <button class="userProfile">Editar Perfil</button>
+                        </div>
+                    </div>
+                </div>
+                <span></span>
+                <button class="userModalOption"><i class="fa-solid fa-palette"></i>Meus Desenhos</button>
+                <button class="userModalOption"><i class="fa-solid fa-heart"></i>Meus Likes</button>
+                <button class="userModalOption"><i class="fa-solid fa-scroll"></i>Histórico</button>
+                <button class="userModalOption"><i class="fa-solid fa-gear"></i>Opções</button>
+                <button onclick="deslogar()" class="userModalOption"><i class="fa-solid fa-right-from-bracket"></i>Sair</button>
+            </div>
+        </div>
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalL" class="modalLogin">
+        <div class="lFormulario">
+            <div class="lHeader">
+                <img src="assets/icons/lgo3.png" width="100px" alt="">
+                <h1><b class="tBin">BIN</b><b class="tStation">STATION</b></h1>
+            </div>
+            <div class="lCampo">
+                <label for="inEmail">Seu E-mail</label>
+                <input type="email" id="inEmail" placeholder="N.l.Bin@sptech.school">
+            </div>
+            <div class="lCampo">
+                <label for="inSenha">Sua senha</label>
+                <input type="password" id="inSenha" placeholder="********">
+            </div>
+            <button id="bEntrar" onclick="entrar()">Entrar</button>
+            <div class="lFooter">
+                <div><b><a href="login.html">Esqueceu a senha?</a></b></div>
+                <div><b><a href="cadastro.html">Cadastre-se</a></b></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="erroLogin">
+        <p>Erro ao entrar!<br>Email ou Senha incorretas.</p>
+        <video src="assets/gif/GifRed.mp4" id="videoLogin" width="50px"></video>
+        <span id="loading"></span>
+    </div>
+
+        <div class="modalUpload">
+            <div class="modalContainer">
+                <div class="uploadTitulo">
+                    <input id="tituloF" type="text" class="tituloDesenho" placeholder="Titulo">
+                </div>
+                <div class="uploadImagem">
+                    <img id="imgDesenho" src="">
+                </div>
+                <div class="botaoModal">
+                    <button onclick="voltar()">Voltar</button>
+                    <button onclick="canvasBase64()">Publicar Imagem</button>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="modalT">
+            <div class="tools">
+                <div class="iconsT">
+                    <i class="fa-solid fa-pen"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-solid fa-eraser"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-solid fa-paint-roller"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-solid fa-paintbrush"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-solid fa-minus"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-solid fa-magnifying-glass-minus"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-solid fa-lasso-sparkles"></i>
+                </div>
+                <div class="iconsT"></div>
+                <div class="iconsT"></div>
+                <div class="iconsT"></div>
+            </div>
+        </div>
+        <div id="modalC">
+            <div class="colors">
+                <div onclick="mudarCor(this)" id="white" class="iconsT" style="background-color: white;"></div>
+                <div onclick="mudarCor(this)" id="black" class="iconsT" style="background-color: black;"></div>
+                <div onclick="mudarCor(this)" id="#0053af" class="iconsT" style="background-color: #0053af;"></div>
+                <div onclick="mudarCor(this)" id="orangered" class="iconsT" style="background-color: orangered;"></div>
+                <div onclick="mudarCor(this)" id="red" class="iconsT" style="background-color: red;"></div>
+                <div onclick="mudarCor(this)" id="green" class="iconsT" style="background-color: green;"></div>
+                <div onclick="mudarCor(this)" id="yellow" class="iconsT" style="background-color: yellow;"></div>
+                <div onclick="mudarCor(this)" id="purple" class="iconsT" style="background-color: purple;"></div>
+                <div onclick="mudarCor(this)" id="aquamarine" class="iconsT" style="background-color: aquamarine;"></div>
+                <div onclick="mudarCor(this)" id="pink" class="iconsT" style="background-color: pink;"></div>
+                <div onclick="mudarCor(this)" id="grey" class="iconsT" style="background-color: grey;"></div>
+                <div onclick="mudarCor(this)" id="crimson" class="iconsT" style="background-color: crimson;"></div>
+            </div>
+        </div>
+        <div id="modalF">
+            <div class="formas">
+                <div class="iconsT">
+                    <i class="fa-regular fa-square"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-regular fa-sun"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-regular fa-moon"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-regular fa-circle"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-solid fa-diamond"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-solid fa-snowflake"></i>
+                </div>
+                <div class="iconsT">
+                    <i class="fa-solid fa-hotel"></i>
+                </div>
+            </div>
+        </div>
+        <div id="modalZ">
+            <div class="zoom">
+                <button onclick="base64()">Publicar Desenho!</button>
+                <p>Tamanho da linha</p>
+                <input type="range" min="1" max="10" oninput="mudarTamanho(this)">
+
+            </div>
+        </div>
+
+    <div class="estruturaC">
+        <div class="mainC">
+           <!--  <div class="colors">
+
+            </div> -->
+            <div class="optionsC">
+                <div class="coluna">
+                    <button class="bTela bTool"><i class="fa-solid fa-screwdriver-wrench"></i></button>
+                    <button class="bTela bColors"><i class="fa-solid fa-palette"></i></button>
+                    <button class="bTela bApagar" onclick="apagar()"><i class="fa-solid fa-circle-xmark"></i></button>
+                    <button class="bTela bFormas"><i class="fa-solid fa-shapes"></i></i></button>
+                    <button class="bTela bZoom"><i class="fa-solid fa-layer-group"></i></button>
+                </div>
+                
+            </div>
+            <canvas id="tela" class="tDesenho"></canvas>
+        </div>
+    </div>
+    
+    <div id="divResposta" class="imgPublicada">
+        <video id="confirmacao" src="assets/gif/gif2.mp4"></video>
+        <p>BIN<span>STATION</span></p>
+    </div>
+
+    <script>//Modais das opções
+        function iniciarModal(id){
+            const modal = document.getElementById(id);
+            modal.classList.add('mostrar');
+            modal.addEventListener('click', (e) => {
+                if(e.target.id == id){
+                    modal.classList.remove('mostrar')
+                }      
+            })
+        }
+        
+        function fecharM(id){
+            const modal = document.getElementById(id);
+
+            modal.classList.remove('mostrar')
+        }
+            
+        const botaoTools = document.querySelector('.bTool');
+        botaoTools.addEventListener('click', function() {
+            iniciarModal('modalT');
+        });
+
+        const botaoColors = document.querySelector('.bColors');
+        botaoColors.addEventListener('click', function() {
+            iniciarModal('modalC');
+        });
+        
+        const botaoFormas = document.querySelector('.bFormas');
+        botaoFormas.addEventListener('click', function() {
+            iniciarModal('modalF');
+        })
+
+        const botaoZoom = document.querySelector('.bZoom');
+        botaoZoom.addEventListener('click', function() {
+            iniciarModal('modalZ')
+        })
+
+        
+    </script>
+
+    
+</body>
+</html>
+<script>
+    
+    var logado = sessionStorage.getItem('IDUSUARIO_USUARIO');
+    if(logado == null){
+        iniciarModal('modalL')
+    }
+
+    function iniciarModal(id){
+        if(sessionStorage.fecharModal !== id){
+            const modal = document.getElementById(id);
+            modal.classList.add('mostrar');
+            modal.addEventListener('click', (e) => {
+                if(e.target.id == id){
+                    modal.classList.remove('mostrar')
+                    sessionStorage.fecharModal = id
+                }
+            })
+        }
+    }
+
+    window.onload = function() {
+        verificarLogin();
+    }; 
+
+    function canvasBase64(){
+        const tela = document.querySelector('#tela');
+        var b64 = tela.toDataURL();
+        var idUsu = sessionStorage.getItem('IDUSUARIO_USUARIO');
+        var titulo = tituloF.value
+        var msgResposta = document.querySelector('.imgPublicada')
+        
+        fetch("/canvas/guardarCanvas", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                canvasServer: b64,
+                idServer: idUsu,
+                tituloServer: titulo
+            })
+        }).then(function (resposta) {
+            console.log("resposta: ", resposta);
+
+            divResposta.style.display = "flex"
+            confirmacao.play()
+            setTimeout(() => {
+                alert('Publicado com sucesso!')
+                window.location = "canvas.html";
+                },2000)
+            if (resposta.ok) {
+                console.log("entrou")
+                
+            } else {
+                throw ("Houve um erro ao tentar guardar o canvas no banco!");
+            }
+            }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            });
+
+            return false;
+    }
+
+    
+    function voltar(){
+        let modalU = document.querySelector('.modalUpload');
+
+        modalU.classList.remove('show')
+    }
+
+</script>
+<script>//Função de logar e deslogar
+    function entrar() {
+        var erro = document.querySelector('.erroLogin')
+
+        var emailVar = inEmail.value;
+        var senhaVar = inSenha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NICKNAME_USUARIO = json.nickname;
+                    sessionStorage.IDUSUARIO_USUARIO = json.idUsuario;
+                    sessionStorage.ICONE_USUARIO = json.icone;
+                    sessionStorage.IDPERFIL_USUARIO = json.idUsuario;
+
+                        window.location = "/perfil.html";
+                })
+            } else {
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function deslogar(){
+        sessionStorage.removeItem('EMAIL_USUARIO')
+        sessionStorage.removeItem('NICKNAME_USUARIO')
+        sessionStorage.removeItem('IDUSUARIO_USUARIO')
+        sessionStorage.removeItem('ICONE_USUARIO')
+        sessionStorage.removeItem('fecharModal')
+
+        window.location = "/index.html";
+    }
+</script>
+<script src="js/funcoes.js"></script>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINSTATION</title>
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/analytics.css">
+    <link rel="shortcut icon" href="assets/icons/lgo3.png" type="image/x-icon">
+    <script src="js/script.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="https://kit.fontawesome.com/d8b9cb0dbc.js" crossorigin="anonymous"></script>
+</head>
+    <body>
+        <div class="main deslogado" >
+            <div class="header" >
+                <a href="index.html"><div class="logo">
+                    <div><img src="assets/BinLogo2.png"></div>
+                    <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+                </div></a>
+                <div class="pesquisa">
+                    <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                    <input type="text" id="inPesquisa" class="pesquisa" placeholder="Pesquisa">
+                    <div class="barraPesquisa">
+                        <ul>
+                            <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                            <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                            <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ulHeader">
+                    <ul>
+                        <li class="liLogin"><button><img src="assets/icons/in.png" width="30px">Login</button></li>
+                        <li class="liCadastro"><a href="cadastro.html"><img src="assets/icons/on.png" width="25px">Cadastre-se</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="subHeader">
+                <div class="container" >
+                    <ul >
+                        <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                        <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                        <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                        <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                        <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                        <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="main logado esconder" >
+            <div class="header" >
+                <a href="index.html"><div class="logo">
+                    <div><img src="assets/BinLogo2.png"></div>
+                    <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+                </div></a>
+                <div class="pesquisa">
+                    <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                    <input type="text" id="inPesquisa2" class="pesquisa" placeholder="Pesquisa">
+                    <div class="barraPesquisa">
+                        <ul>
+                            <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                            <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                            <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ulHeader">
+                    <ul>
+                        <li><a href="upload.html"><button class="userOption"><i class="fa-solid fa-upload"></i></button></a></li>
+                        <li><button class="userOption"><i class="fa-solid fa-bell"></i></button></li>
+                        <li><button class="userOption"><i class="fa-solid fa-paper-plane"></i></button></li>
+                        <div class="divLi" onclick="modalLogin()">
+                            <li><img src="" class="userButton" id="iconeUser"></li>
+                            <li class="userSeta"><i class="fa-solid fa-angle-down"></i></li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="userModal">
+                    <div class="modalHeader">
+                        <img onclick="perfilUsuario()" src="" class="userButton" id="iconeUser2">
+                        <div class="userInfo">
+                            <p id="userName"></p>
+                            <div class="userPerfil">
+                                <button onclick="perfilUsuario()" class="userProfile">Ver Perfil</button>
+                                <button class="userProfile">Editar Perfil</button>
+                            </div>
+                        </div>
+                    </div>
+                    <span></span>
+                    <button class="userModalOption"><i class="fa-solid fa-palette"></i>Meus Desenhos</button>
+                    <button class="userModalOption"><i class="fa-solid fa-heart"></i>Meus Likes</button>
+                    <button class="userModalOption"><i class="fa-solid fa-scroll"></i>Histórico</button>
+                    <button class="userModalOption"><i class="fa-solid fa-gear"></i>Opções</button>
+                    <button onclick="deslogar()" class="userModalOption"><i class="fa-solid fa-right-from-bracket"></i>Sair</button>
+                </div>
+            </div>
+            <div class="subHeader">
+                <div class="container" >
+                    <ul >
+                        <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                        <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                        <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                        <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                        <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                        <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div id="modalL" class="modalLogin">
+            <div class="lFormulario">
+                <div class="lHeader">
+                    <img src="assets/icons/lgo3.png" width="100px" alt="">
+                    <h1><b class="tBin">BIN</b><b class="tStation">STATION</b></h1>
+                </div>
+                <div class="lCampo">
+                    <label for="inEmail">Seu E-mail</label>
+                    <input type="email" id="inEmail" placeholder="N.l.Bin@sptech.school">
+                </div>
+                <div class="lCampo">
+                    <label for="inSenha">Sua senha</label>
+                    <input type="password" id="inSenha" placeholder="********">
+                </div>
+                <button id="bEntrar" onclick="entrar()">Entrar</button>
+                <div class="lFooter">
+                    <div><b><a href="login.html">Esqueceu a senha?</a></b></div>
+                    <div><b><a href="cadastro.html">Cadastre-se</a></b></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="erroLogin">
+            <p>Erro ao entrar!<br>Email ou Senha incorretas.</p>
+            <video src="assets/gif/GifRed.mp4" id="videoLogin" width="50px"></video>
+            <span id="loading"></span>
+        </div>
+        
+        <div class="conteudo">
+            <div class="navbarLateral">
+                <button onclick="curtidos()" class="bOpcao">Mais Curtidos</button>
+                <button onclick="visualizados()">Mais Visualizados</button>
+                <button onclick="recentes()">Mais Recentes</button>
+                <button onclick="site()">Estasticas do Site</button>
+            </div>
+            <div class="content">
+                <div id="topPostagem" class="topPostagem">
+                   
+                </div>
+                <div id="topDesenho" class="topDesenho">
+                   
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    function iniciarModal(id){
+        if(sessionStorage.fecharModal !== id){
+            const modal = document.getElementById(id);
+            modal.classList.add('mostrar');
+            modal.addEventListener('click', (e) => {
+                if(e.target.id == id){
+                    modal.classList.remove('mostrar')
+                    sessionStorage.fecharModal = id
+                }
+            })
+        }
+    }
+
+    window.onload = function(){
+        verificarLogin();
+    }
+
+    function curtidos(){
+
+        fetch(`/analytics/curtidos`).then(function (resposta) {
+                if (resposta.ok) {
+                    resposta.json().then(function (response) {
+                        topPostagem.innerHTML = `<h3>Postagens</h3>`
+
+                        topPostagem.innerHTML += `
+                                <div class="top">
+                                    <img src="${response[1].capa}">
+                                    <div class="dHover">
+                                        <p class="nomeAutor">${response[1].nickname}</p>
+                                        <p class="infoSelect">Likes: ${response[1].likes}</p>
+                                    </div>
+                                </div>
+                                <div class="top primeiro">
+                                    <img src="${response[0].capa}">
+                                    <div class="dHover">
+                                        <p class="nomeAutor">${response[0].nickname}</p>
+                                        <p class="infoSelect">Likes: ${response[0].likes}</p>
+                                    </div>
+                                </div>
+                                <div class="top">
+                                    <img src="${response[2].capa}">
+                                    <div class="dHover">
+                                        <p class="nomeAutor">${response[2].nickname}</p>
+                                        <p class="infoSelect">Likes: ${response[2].likes}</p>
+                                    </div>
+                                </div>
+                                `
+
+                        response.reverse();
+                    })
+                }else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+
+            fetch("/analytics/dCurtidos").then(function(resposta2){
+                if(resposta2.ok){
+                    resposta2.json().then(function(response2){
+                        topDesenho.innerHTML = `<h3>Desenhos</h3>`
+
+                        topDesenho.innerHTML += `
+                                <div class="top">
+                                    <img src="${response2[1].desenhoBase64}">
+                                    <div class="dHover">
+                                        <p class="nomeAutor">${response2[1].nickname}</p>
+                                        <p class="infoSelect">Likes: ${response2[1].likes}</p>
+                                    </div>
+                                </div>
+                                <div class="top primeiro">
+                                    <img src="${response2[0].desenhoBase64}">
+                                    <div class="dHover">
+                                        <p class="nomeAutor">${response2[0].nickname}</p>
+                                        <p class="infoSelect">Likes: ${response2[0].likes}</p>
+                                    </div>
+                                </div>
+                                <div class="top">
+                                    <img src="${response2[2].desenhoBase64}">
+                                    <div class="dHover">
+                                        <p class="nomeAutor">${response2[2].nickname}</p>
+                                        <p class="infoSelect">Likes: ${response2[2].likes}</p>
+                                    </div>
+                                </div>
+                                `
+
+                        response.reverse();
+                    })
+                }else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+
+    }
+
+
+    function visualizados(){
+
+    fetch(`/analytics/visualizados`).then(function (resposta) {
+        if (resposta.ok) {
+            resposta.json().then(function (response) {
+                topPostagem.innerHTML = `<h3>Postagens</h3>`
+
+                topPostagem.innerHTML += `
+                    <div class="top">
+                        <img src="${response[1].capa}">
+                        <div class="dHover">
+                            <p class="nomeAutor">${response[1].nickname}</p>
+                            <p class="infoSelect">Views: ${response[1].visualizacao}</p>
+                        </div>
+                    </div>
+                    <div class="top primeiro">
+                        <img src="${response[0].capa}">
+                        <div class="dHover">
+                            <p class="nomeAutor">${response[0].nickname}</p>
+                            <p class="infoSelect">Views: ${response[0].visualizacao}</p>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <img src="${response[2].capa}">
+                        <div class="dHover">
+                            <p class="nomeAutor">${response[2].nickname}</p>
+                            <p class="infoSelect">Views: ${response[2].visualizacao}</p>
+                        </div>
+                    </div>
+                    `
+
+                response.reverse();
+            })
+        }else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+
+    fetch(`/analytics/dVisualizados`).then(function (resposta2) {
+        if (resposta2.ok) {
+            resposta2.json().then(function (response2) {
+                topDesenho.innerHTML = `<h3>Desenhos</h3>`
+
+                topDesenho.innerHTML += `
+                    <div class="top">
+                        <img src="${response2[1].desenhoBase64}">
+                        <div class="dHover">
+                            <p class="nomeAutor">${response2[1].nickname}</p>
+                            <p class="infoSelect">Views: ${response2[1].visualizacao}</p>
+                        </div>
+                    </div>
+                    <div class="top primeiro">
+                        <img src="${response2[0].desenhoBase64}">
+                        <div class="dHover">
+                            <p class="nomeAutor">${response2[0].nickname}</p>
+                            <p class="infoSelect">Views: ${response2[0].visualizacao}</p>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <img src="${response2[2].desenhoBase64}">
+                        <div class="dHover">
+                            <p class="nomeAutor">${response2[2].nickname}</p>
+                            <p class="infoSelect">Views: ${response2[2].visualizacao}</p>
+                        </div>
+                    </div>
+                    `
+
+                response2.reverse();
+            })
+        }else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+
+}
+
+function recentes(){
+
+    fetch(`/analytics/recentes`).then(function (resposta) {
+        if (resposta.ok) {
+            resposta.json().then(function (response) {
+                topPostagem.innerHTML = `<h3>Postagens</h3>`
+
+                topPostagem.innerHTML += `
+                    <div class="top">
+                        <img src="${response[1].capa}">
+                        <div class="dHover">
+                            <p class="nomeAutor">${response[1].nickname}</p>
+                            <p class="infoSelect">Data: ${response[1].dia}</p>
+                        </div>
+                    </div>
+                    <div class="top primeiro">
+                        <img src="${response[0].capa}">
+                        <div class="dHover">
+                            <p class="nomeAutor">${response[0].nickname}</p>
+                            <p class="infoSelect">Data: ${response[0].dia}</p>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <img src="${response[2].capa}">
+                        <div class="dHover">
+                            <p class="nomeAutor">${response[2].nickname}</p>
+                            <p class="infoSelect">Data: ${response[2].dia}</p>
+                        </div>
+                    </div>
+                    `
+
+                response.reverse();
+            })
+        }else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+
+    fetch(`/analytics/dRecentes`).then(function (resposta2) {
+        if (resposta2.ok) {
+            resposta2.json().then(function (response2) {
+                topDesenho.innerHTML = `<h3>Postagens</h3>`
+
+                topDesenho.innerHTML += `
+                    <div class="top">
+                        <img src="${response2[1].desenhoBase64}">
+                        <div class="dHover">
+                            <p class="nomeAutor">${response2[1].nickname}</p>
+                            <p class="infoSelect">ID: ${response2[1].idDesenho}</p>
+                        </div>
+                    </div>
+                    <div class="top primeiro">
+                        <img src="${response2[0].desenhoBase64}">
+                        <div class="dHover">
+                            <p class="nomeAutor">${response2[0].nickname}</p>
+                            <p class="infoSelect">ID: ${response2[0].idDesenho}</p>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <img src="${response2[2].desenhoBase64}">
+                        <div class="dHover">
+                            <p class="nomeAutor">${response2[2].nickname}</p>
+                            <p class="infoSelect">ID: ${response2[2].idDesenho}</p>
+                        </div>
+                    </div>
+                    `
+
+                response2.reverse();
+            })
+        }else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+
+}
+
+var infosSite = []
+var seguido = 7
+
+async function site(){
+
+    await fetch(`/analytics/site`).then(function (resposta) {
+        if (resposta.ok) {
+            resposta.json().then(function (response) {
+                infosSite.push(response[0].usuarios)
+                infosSite.push(response[0].avaliacao)
+                infosSite.push(response[0].estrelas)
+            })
+        }else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+    await fetch(`/analytics/site2`).then(function (resposta2) {
+        if (resposta2.ok) {
+            resposta2.json().then(function (response2) {
+                infosSite.push(response2[0].desenhos)        
+            })
+        }else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }  
+    })
+
+    await fetch(`/analytics/site3`).then(function (resposta3) {
+        if (resposta3.ok) {
+            resposta3.json().then(function (response3) {
+                infosSite.push(response3[0].postagens) 
+                infosSite.push(response3[0].imagens) 
+                infosSite.push(response3[0].likes) 
+                infosSite.push(response3[0].visualizacao) 
+                infosSite.push(response3[0].comentarios) 
+            })
+        }else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+    await fetch(`/analytics/site4`).then(function (resposta4) {
+        if (resposta4.ok) {
+            resposta4.json().then(function (response4) {
+                
+                infosSite.push(response4[0].seguido)
+
+            })
+        }else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+
+    topPostagem.innerHTML = `
+    <div class="statusSite">
+            <div class="infos">
+                <p>Total de Usuarios</p>
+                <span id="dado1">${infosSite[0]}</span>
+            </div>
+            <div class="infos">
+                <p>Total de Avaliações</p>
+                <span id="dado2">${infosSite[1]}</span>
+            </div>
+            <div class="infos">
+                <p>Media de Estrelas nas Avaliações</p>
+                <span id="dado3">${infosSite[2]}</span>
+            </div>
+            <div class="infos">
+                <p>Total de Desenhos</p>
+                <span id="dado4">${infosSite[3]}</span>
+            </div>
+            <div class="infos">
+                <p>Total de Postagens</p>
+                <span id="dado5">${infosSite[4]}</span>
+            </div>
+        </div>
+    `
+    topDesenho.innerHTML = `
+        <div class="statusSite">
+            <div class="infos">
+                <p>Total de Imagens</p>
+                <span>${infosSite[5]}</span>
+            </div>
+            <div class="infos">
+                <p>Total de Likes</p>
+                <span>${infosSite[6]}</span>
+            </div>
+            <div class="infos">
+                <p>Total de Vizualizações</p>
+                <span>${infosSite[7]}</span>
+            </div>
+            <div class="infos">
+                <p>Total de Comentarios</p>
+                <span>${infosSite[8]}</span>
+            </div>
+            <div class="infos">
+                <p>Usuario com mais follows</p>
+                <span>${seguido}</span>
+            </div>
+        </div>
+    `
+}
+
+
+site()
+
+</script>
+<script>//Função de logar e deslogar
+    function entrar() {
+        var erro = document.querySelector('.erroLogin')
+
+        var emailVar = inEmail.value;
+        var senhaVar = inSenha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NICKNAME_USUARIO = json.nickname;
+                    sessionStorage.IDUSUARIO_USUARIO = json.idUsuario;
+                    sessionStorage.ICONE_USUARIO = json.icone;
+                    sessionStorage.IDPERFIL_USUARIO = json.idUsuario;
+
+                        window.location = "/perfil.html";
+                })
+            } else {
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function deslogar(){
+        sessionStorage.removeItem('EMAIL_USUARIO')
+        sessionStorage.removeItem('NICKNAME_USUARIO')
+        sessionStorage.removeItem('IDUSUARIO_USUARIO')
+        sessionStorage.removeItem('ICONE_USUARIO')
+        sessionStorage.removeItem('fecharModal')
+
+        window.location = "/index.html";
+    }
+</script>
+<script src="js/funcoes.js"></script>

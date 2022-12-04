@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINSTATION</title>
+    <link rel="stylesheet" href="css/artwork.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="assets/icons/lgo3.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d8b9cb0dbc.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="main deslogado" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li class="liLogin"><button><img src="assets/icons/in.png" width="30px">Login</button></li>
+                    <li class="liCadastro"><a href="cadastro.html"><img src="assets/icons/on.png" width="25px">Cadastre-se</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main logado esconder" >
+        <div class="header" >
+            <a href="index.html"><div class="logo">
+                <div><img src="assets/BinLogo2.png"></div>
+                <h1><B class="tBin">BIN</B><B class="tStation">STATION</B></h1>
+            </div></a>
+            <div class="pesquisa">
+                <button class="lupaPesquisar" onclick="irPesquisar()"><img src="assets/lupaCinza.png" width="25px"></button>
+                <input type="text" id="inPesquisa2" class="pesquisa" placeholder="Pesquisa">
+                <div class="barraPesquisa">
+                    <ul>
+                        <li><a href="pesquisar.html">Pesquise por Artes</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Artistas</a></li>
+                        <li><a href="pesquisar.html">Pesquise por Estúdios</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ulHeader">
+                <ul>
+                    <li><a href="upload.html"><button class="userOption"><i class="fa-solid fa-upload"></i></button></a></li>
+                    <li><button class="userOption"><i class="fa-solid fa-bell"></i></button></li>
+                    <li><button class="userOption"><i class="fa-solid fa-paper-plane"></i></button></li>
+                    <div class="divLi" onclick="modalLogin()">
+                        <li><img src="" class="userButton" id="iconeUser"></li>
+                        <li class="userSeta"><i class="fa-solid fa-angle-down"></i></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="userModal">
+                <div class="modalHeader">
+                    <img onclick="perfilUsuario()" src="" class="userButton" id="iconeUser2">
+                    <div class="userInfo">
+                        <p id="userName"></p>
+                        <div class="userPerfil">
+                            <button onclick="perfilUsuario()" class="userProfile">Ver Perfil</button>
+                            <button class="userProfile">Editar Perfil</button>
+                        </div>
+                    </div>
+                </div>
+                <span></span>
+                <button class="userModalOption"><i class="fa-solid fa-palette"></i>Meus Desenhos</button>
+                <button class="userModalOption"><i class="fa-solid fa-heart"></i>Meus Likes</button>
+                <button class="userModalOption"><i class="fa-solid fa-scroll"></i>Histórico</button>
+                <button class="userModalOption"><i class="fa-solid fa-gear"></i>Opções</button>
+                <button onclick="deslogar()" class="userModalOption"><i class="fa-solid fa-right-from-bracket"></i>Sair</button>
+            </div>
+        </div>
+        <div class="subHeader">
+            <div class="container" >
+                <ul >
+                    <li><a href="sobre.html"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                    <li><a href="canvas.html"><i class="fa-solid fa-palette"></i>Desenhe</a> </li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-paintbrush"></i>Artes</a></li>
+                    <li><a href="pesquisar.html"><i class="fa-solid fa-graduation-cap"></i>Artistas</a></li>
+                    <li><a href="avaliacao.html"><i class="fa-solid fa-clipboard"></i>Avaliar Site</a></li>
+                    <li><a href="analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalL" class="modalLogin">
+        <div class="lFormulario">
+            <div class="lHeader">
+                <img src="assets/icons/lgo3.png" width="100px" alt="">
+                <h1><b class="tBin">BIN</b><b class="tStation">STATION</b></h1>
+            </div>
+            <div class="lCampo">
+                <label for="inEmail">Seu E-mail</label>
+                <input type="email" id="inEmail" placeholder="N.l.Bin@sptech.school">
+            </div>
+            <div class="lCampo">
+                <label for="inSenha">Sua senha</label>
+                <input type="password" id="inSenha" placeholder="********">
+            </div>
+            <button id="bEntrar" onclick="entrar()">Entrar</button>
+            <div class="lFooter">
+                <div><b><a href="login.html">Esqueceu a senha?</a></b></div>
+                <div><b><a href="cadastro.html">Cadastre-se</a></b></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="erroLogin">
+        <p id="msgSpan">Erro ao entrar!<br>Email ou Senha incorretas.</p>
+        <video src="assets/gif/GifRed.mp4" id="videoLogin" width="50px"></video>
+        <span id="loading"></span>
+    </div>
+
+    <button onclick="confirmar()" class="buttonExcluir"><i class="fa-solid fa-trash"></i>Excluir Postagem</button>
+    <div class="aContainer">
+        <div class="art">
+            
+        </div>
+        <div class="descricao">
+            <div class="artista">
+                <img onclick="levarPerfil()" src="" id="imagemAutor"  class="autor">
+                <div class="info">
+                    <h2 onclick="levarPerfil()" id="nomeAutor"></h2>
+                    <p id="descricaoAutor"></p>
+                </div>
+            </div>
+            <button class="bFollow" onclick="seguirUser()"><i class="fa-solid fa-user-plus"></i>Follow</button>
+            <div class="avaliacao">
+                <button class="bLike" onclick="likes()"><i class="fa-solid fa-heart"></i>Like</button>
+                <button class="bColecao" onclick=""><i class="fa-solid fa-bookmark"></i>Add na coleção</button>
+            </div>
+            <div class="sobre">
+                <h2 id="nomePost"></h2>
+                <p id="descricaoPost"></p>
+            </div>
+            <p class="tituloTag">Tags</p>
+            <div class="tags">
+                
+            </div>
+            <div class="status">
+                <p><p id="like">0</p> Likes</p>
+                <p><p id="visualizacao">0</p> Views</p>
+                <p><p id="comentarioV">0</p> Comentarios</p>
+            </div>
+            <div class="comentarios">
+                <textarea class="comentarPost" id="comentarPost" cols="30" rows="10" placeholder="Comentar a publicação"></textarea>
+                <button onclick="comentar()" class="comentar">Comentar</button>
+                <p><b id="comentario2"></b> Comentarios</p>
+                <div class="campoComentario">
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="confirmarApagar">
+        <div class="caixaApagar">
+            <span>Essa ação não tem volta!<br>Deseja confirmar?</span>
+            <div class="divBotoes">
+                <button onclick="voltar()">Voltar</button>
+                <button onclick="excluirPostagem()" class="apagar">Apagar</button>
+            </div>
+        </div>
+    </div>
+    <div id="divResposta" class="imgPublicada">
+        <video id="confirmacao" src="assets/gif/gif2.mp4"></video>
+        <p>BIN<span>STATION</span></p>
+    </div>
+</body>
+</html>
+<script>
+    function confirmar(){
+        var caixa = document.querySelector('.confirmarApagar')
+        caixa.style.display = "block"
+    }
+
+    function voltar(){
+        var caixa = document.querySelector('.confirmarApagar')
+        caixa.style.display = "none"
+    }
+
+    function verificarSeguindo(){
+        var usuario = sessionStorage.getItem('IDUSUARIO_USUARIO')
+        var donoPost = sessionStorage.getItem('IDPERFIL_USUARIO')
+        if(usuario == donoPost){
+            var botaoExcluir = document.querySelector('.buttonExcluir')
+            botaoExcluir.style.display = "block"
+        }
+        
+    }
+
+    function iniciarModal(id){
+        if(sessionStorage.fecharModal !== id){
+            const modal = document.getElementById(id);
+            modal.classList.add('mostrar');
+            modal.addEventListener('click', (e) => {
+                if(e.target.id == id){
+                    modal.classList.remove('mostrar')
+                    sessionStorage.fecharModal = id
+                }
+            })
+        }
+    }
+
+    function seguirUser(){
+        var userAtual = sessionStorage.getItem('IDUSUARIO_USUARIO');
+        var userTela = sessionStorage.getItem('IDPERFIL_USUARIO');
+        var bFollow = document.querySelector('.bFollow')
+
+        fetch("/usuarios/seguirUser", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                userAtual,
+                userTela
+            })
+        }).then(function (resposta) {
+            if(resposta.ok){
+                console.log('Funcionou!!!')
+            }
+        })
+
+        
+
+        bFollow.innerHTML = `<i class="fa-solid fa-check"></i>Seguindo`
+        
+    }
+
+    var iPost = sessionStorage.getItem('IDIMAGEM_IMAGEM')
+    var imgsR = []
+
+    fetch(`/artwork/imgPostagem/${iPost}`).then(function(resposta){
+        if(resposta.ok){
+            resposta.json().then(function(response){
+                for(var i = 0; i < response.length; i++){
+                    imgsR.push(response[i].fkImagem)
+                }
+            })
+        }
+    })
+
+    async function excluirPostagem(){
+        var postagem = sessionStorage.getItem('IDIMAGEM_IMAGEM')
+        var desenhoAtual = sessionStorage.getItem('IDDESENHO_DESENHO')
+
+        if(postagem != null){
+            await fetch(`/artwork/deletarPostagem/${postagem}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }).then(function (resposta) {
+                if (resposta.ok) {
+                    console.log('Post deletado!')
+                }else {
+                    throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+            for(var i = 0; i < imgsR.length; i++){
+                await fetch(`/artwork/deletarImagem/${imgsR[i]}`, {
+                    method: "DELETE",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                }).then(function(resposta){
+                        if(resposta.ok){
+                            console.log('imagem deletada')
+                        }else{
+                            console.log('não deletou')
+                            return false
+                        }
+                    })
+            }
+
+            divResposta.style.display = "flex"
+            confirmacao.play()
+            setTimeout(()=>{
+                window.location = "/perfil.html";
+            },3000)
+        }else{
+            fetch(`/artwork/deletarDesenho/${desenhoAtual}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }).then(function (resposta) {
+                if (resposta.ok) {
+                    window.location = "/perfil.html";
+                }else {
+                    throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+        }
+    }
+
+
+    function artwork(){
+        var idPostagem = sessionStorage.getItem('IDIMAGEM_IMAGEM');
+        var idDesenhoCanvas = sessionStorage.getItem('IDDESENHO_DESENHO');
+        var imagens = document.querySelector('.art');
+        var iconAutor = document.querySelector('#imagemAutor');
+
+        if(idPostagem != null){
+            fetch(`/artwork/selectPost/${idPostagem}`).then(function (resposta) {
+                if (resposta.ok) {
+                    resposta.json().then(function (response) {
+                        /* console.log(JSON.parse((JSON.stringify(response)))[0].likes) */
+                        iconAutor.src = `${JSON.parse((JSON.stringify(response)))[0].icone}`
+                        nomeAutor.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].nickname}`
+                        descricaoAutor.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].descricaoAutor}`
+                        nomePost.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].titulo}`
+                        descricaoPost.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].descricaoPost}`
+                        like.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].likes}`
+                        visualizacao.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].visualizacao}`
+                        comentarioV.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].comentarios}`
+                        sessionStorage.removeItem('IDPERFIL_USUARIO');
+                        sessionStorage.IDPERFIL_USUARIO = `${JSON.parse((JSON.stringify(response)))[0].fkUsuario}`
+                        sessionStorage.IDIMAGEM_PRIMEIRA = `${JSON.parse((JSON.stringify(response)))[0].fkImagem}`
+                        
+                        for(var i = 0; i < response.length; i++){
+                            imagens.innerHTML += `
+                            <div class="caixaImagem">
+                            <img src="${JSON.parse((JSON.stringify(response)))[i].imagemBase64}" class="imgWork">
+                            </div>
+                            `
+                        }
+
+                        response.reverse();
+                    })
+                }else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+        }else{
+            fetch(`/artwork/selectDesenho/${idDesenhoCanvas}`).then(function (resposta) {
+                if (resposta.ok) {
+                    resposta.json().then(function (response) {
+                        /* console.log(JSON.parse((JSON.stringify(response)))[0].likes) */
+                        iconAutor.src = `${JSON.parse((JSON.stringify(response)))[0].icone}`
+                        nomeAutor.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].nickname}`
+                        descricaoAutor.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].descricaoAutor}`
+                        nomePost.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].titulo}`
+                        /* descricaoPost.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].descricaoPost}` */
+                        like.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].likes}`
+                        visualizacao.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].visualizacao}`
+                        comentario.innerHTML = `${JSON.parse((JSON.stringify(response)))[0].comentarios}`
+                        sessionStorage.removeItem('IDPERFIL_USUARIO');
+                        sessionStorage.IDPERFIL_USUARIO = `${JSON.parse((JSON.stringify(response)))[0].fkUsuario}`
+                        
+                        for(var i = 0; i < response.length; i++){
+                            imagens.innerHTML += `<img src="${JSON.parse((JSON.stringify(response)))[i].desenhoBase64}" class="imgWork">`
+                        }
+
+                        response.reverse();
+                    })
+                }else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+        }
+        
+    }
+
+    function tags(){
+        var post = sessionStorage.getItem('IDIMAGEM_IMAGEM')
+        var tags = document.querySelector('.tags')
+   
+        fetch(`/artwork/tags/${post}`).then(function(resposta){
+            if(resposta.ok){
+                resposta.json().then(function(response){
+                    tags.innerHTML = `
+                    <div class="tag"><p>${response[0].nome}</p></div>
+                    `
+                })
+            }
+        })
+    }
+
+    function seguidor(){
+        var idArtista = sessionStorage.getItem('IDUSUARIO_USUARIO')
+        var userPostagem = sessionStorage.getItem('IDPERFIL_USUARIO')
+        var bFollow = document.querySelector('.bFollow')
+        
+        fetch(`/artwork/selectSeguindo/${idArtista}`).then(function (resposta){
+                if(resposta.ok){
+                    resposta.json().then(function (response) {
+                        var userSeguindo = JSON.parse((JSON.stringify(response)))
+
+                        for(var i = 0; i < userSeguindo.length; i++){
+                           if(userPostagem == userSeguindo[i].fkUsuarioSeguido){
+                                console.log('Achou!')
+                                bFollow.innerHTML = `<i class="fa-solid fa-check"></i>Seguindo`
+                           }
+                        }
+                        
+                    })
+                }else{
+                    console.error('Nenhum dado encontrado ou erro na API')
+                }
+            })
+    }
+
+    function curtiu(){
+        var idArtista = sessionStorage.getItem('IDUSUARIO_USUARIO')
+        var idPostagem = sessionStorage.getItem('IDIMAGEM_IMAGEM')
+        var bLike = document.querySelector('.bLike')
+        
+
+        
+        fetch(`/artwork/curtiu/${idArtista}`).then(function (resposta){
+                if(resposta.ok){
+                    resposta.json().then(function (response) {
+                        var curtido = JSON.parse((JSON.stringify(response)))
+
+                        for(var i = 0; i < curtido.length; i++){
+                           if(idPostagem == curtido[i].fkPostagem){                                                     
+                                bLike.innerHTML = `<i class="fa-solid fa-check"></i>Curtido`
+                           }
+                        }
+                        
+                    })
+                }else{
+                    console.error('Nenhum dado encontrado ou erro na API')
+                }
+            })
+    }
+
+    function likes(){
+        var idArtista = sessionStorage.getItem('IDUSUARIO_USUARIO')
+        var userPostagem = sessionStorage.getItem('IDPERFIL_USUARIO')
+        var postagemAtual = sessionStorage.getItem('IDIMAGEM_IMAGEM')
+        var imagemAtual = sessionStorage.getItem('IDIMAGEM_PRIMEIRA')
+        var bLike = document.querySelector('.bLike')
+        var qLikes = Number(like.innerHTML)
+
+        fetch("/artwork/curtirPostagem", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idArtista,
+                userPostagem,
+                postagemAtual,
+                imagemAtual
+            })
+        }).then(function (resposta) {
+            if(resposta.ok){
+                console.log('Funcionou!!!')
+                qLikes = qLikes + 1
+                like.innerHTML = qLikes
+            }
+        })
+
+        bLike.innerHTML = `<i class="fa-solid fa-check"></i>Curtido`
+    }
+
+    function comentar(){
+        var usuarioLogado = sessionStorage.getItem('IDUSUARIO_USUARIO')
+        var fkPostagem = sessionStorage.getItem('IDIMAGEM_IMAGEM')
+        var donoPostagem = sessionStorage.getItem('IDPERFIL_USUARIO')
+        var fkImagem = sessionStorage.getItem('IDIMAGEM_PRIMEIRA')
+        var mensagem = comentarPost.value
+        var erro = document.querySelector('.erroLogin')
+
+        if(usuarioLogado == null){
+            msgSpan.innerHTML = `Erro ao comentar!<br>Você não está logado.`
+            erro.style.display = "flex"
+            loading.style.display = "block"
+            videoLogin.play()
+            setTimeout(() => {
+                erro.style.display = "none"
+                loading.style.display = "none"
+            }, 8000)
+            return false
+        }else if(mensagem == ''){
+            msgSpan.innerHTML = `Erro ao comentar!<br>Você preencher o comentario.`
+            erro.style.display = "flex"
+            loading.style.display = "block"
+            videoLogin.play()
+            setTimeout(() => {
+                erro.style.display = "none"
+                loading.style.display = "none"
+            }, 8000)
+            return false
+        }else{
+            fetch("/artwork/comentar", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        fkUser : usuarioLogado,
+                        fkPostagem,
+                        fkDono : donoPostagem,
+                        fkImagem,
+                        mensagem
+                    })
+                }).then(function(resposta){
+                    if(resposta.ok){
+                        atualizarComentario(fkPostagem)
+                        comentario()
+                        mensagem.value = ''
+                    }
+                })
+        }
+    }
+
+    function atualizarComentario(id){
+        var numComentario = Number(comentarioV.innerHTML)
+        fetch(`/artwork/atualizarComentario`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                id
+            })
+        }).then(function(resposta){
+            if(resposta.ok){
+                console.log('atualizou')
+                comentarioV.innerHTML = (numComentario + 1)
+            }
+        })
+    }
+
+    function comentario(){
+        var fkPostagem = sessionStorage.getItem('IDIMAGEM_IMAGEM')
+        var campoComentario = document.querySelector('.campoComentario')
+
+        fetch(`/artwork/comentario/${fkPostagem}`).then(function(resposta){
+            if(resposta.ok){
+                resposta.json().then(function(response){
+                    /* comentario2.innerHTML = response.length */
+                    campoComentario.innerHTML = ''
+                    for(var i = 0; i < response.length; i++){
+                        var atual = response[i]
+                        campoComentario.innerHTML += `
+                        <div class="comentarioUser">
+                            <img src="${atual.icone}" class="imgID">
+                            <div class="caixa">
+                                <b id="nomeComentario">${atual.nickname}</b>
+                                <p id="comentario">${atual.mensagem}</p>
+                            </div>
+                        </div>
+                        `
+                    }
+                })
+            }
+        })
+    }
+
+
+    window.onload = function() {
+        artwork();
+        verificarLogin();
+        comentario();
+        tags();
+    };
+
+    setTimeout(()=>{
+        curtiu();
+        seguidor();
+    },500)
+
+    setTimeout(()=>{
+        verificarSeguindo();
+    },2000)
+
+</script>
+<script>//Função de logar e deslogar
+    function entrar() {
+        var erro = document.querySelector('.erroLogin')
+
+        var emailVar = inEmail.value;
+        var senhaVar = inSenha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NICKNAME_USUARIO = json.nickname;
+                    sessionStorage.IDUSUARIO_USUARIO = json.idUsuario;
+                    sessionStorage.ICONE_USUARIO = json.icone;
+                    sessionStorage.IDPERFIL_USUARIO = json.idUsuario;
+
+                        window.location = "/perfil.html";
+                })
+            } else {
+                msgSpan.innerHTML = `Erro ao entrar!<br>Email ou Senha incorretas.`
+                erro.style.display = "flex"
+                loading.style.display = "block"
+                videoLogin.play()
+                setTimeout(() => {
+                    erro.style.display = "none"
+                    loading.style.display = "none"
+                }, 8000)
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function deslogar(){
+        sessionStorage.removeItem('EMAIL_USUARIO')
+        sessionStorage.removeItem('NICKNAME_USUARIO')
+        sessionStorage.removeItem('IDUSUARIO_USUARIO')
+        sessionStorage.removeItem('ICONE_USUARIO')
+        sessionStorage.removeItem('fecharModal')
+
+        window.location = "/index.html";
+    }
+</script>
+<script>//Função de levar ao perfil
+    function levarPerfil(){
+        window.location = "/perfil.html";
+    }
+</script>
+<script src="js/funcoes.js"></script>

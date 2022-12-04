@@ -1,0 +1,538 @@
+.desenhos img{
+    width: 100%;
+}
+.desenhos{
+    display: grid;
+    grid-template-areas:
+    'd1 d2 d3 d4 d5 d6 d7 d7 d9 d10'
+    'd11 d12 d12 d14 d15 d16 d7 d7 d19 d20'
+    'd21 d12 d12 d24 d25 d26 d27 d28 d29 d30'
+    'd31 d31 d33 d34 d35 d36 d37 d38 d39 d40'
+    'd31 d31 d32 d8 d13 d22 d23 d17 d18 d18'
+    'd41 d42 d43 d44 d45 d46 d47 d48 d18 d18'
+}
+@keyframes animacao {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.d1{
+    grid-area: d1;
+    animation-name: animacao;
+    animation-duration: 1s;
+    
+}
+.d2{
+    grid-area: d2;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.d3{
+    grid-area: d3;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.d4{
+    grid-area: d4;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.d5{
+    grid-area: d5;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.d6{
+    grid-area: d6;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.d7{
+    grid-area: d7;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.d8{
+    grid-area: d8;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 320ms;
+}
+.d9{
+    grid-area: d9;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.d10{
+    grid-area: d10;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.d11{
+    grid-area: d11;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 150ms;
+}
+.d12{
+    grid-area: d12;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 150ms;
+}
+.d13{
+    grid-area: d13;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 320ms;
+}
+.d14{
+    grid-area: d14;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 150ms;
+}
+.d15{
+    grid-area: d15;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 150ms;
+}
+.d16{
+    grid-area: d16;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 150ms;
+}
+.d17{
+    grid-area: d17;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 320ms;
+}
+.d18{
+    grid-area: d18;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 320ms;
+}
+.d19{
+    grid-area: d19;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 150ms;
+}
+.d20{
+    grid-area: d20;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 150ms;
+}
+.d21{
+    grid-area: d21;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 220ms;
+}
+.d22{
+    grid-area: d22;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 320ms;
+}
+.d23{
+    grid-area: d23;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 320ms;
+}
+.d24{
+    grid-area: d24;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 220ms;
+}
+.d25{
+    grid-area: d25;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 220ms;
+}
+.d26{
+    grid-area: d26;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 220ms;
+}
+.d27{
+    grid-area: d27;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 220ms;
+}
+.d28{
+    grid-area: d28;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 220ms;
+}
+.d29{
+    grid-area: d29;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 220ms;
+}
+.d30{
+    grid-area: d30;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 220ms;
+}
+.d31{
+    grid-area: d31;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 270ms;
+}
+.d32{
+    grid-area: d32;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 320ms;
+}
+.d33{
+    grid-area: d33;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 270ms;
+    
+}
+.d34{
+    grid-area: d34;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 270ms;
+}
+.d35{
+    grid-area: d35;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 270ms;
+}
+.d36{
+    grid-area: d36;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 270ms;
+}
+.d37{
+    grid-area: d37;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 270ms;
+}
+.d38{
+    grid-area: d38;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 270ms;
+}
+.d39{
+    grid-area: d39;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 270ms;
+}
+.d40{
+    grid-area: d40;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 270ms;
+}
+
+.d41{
+    grid-area: d41;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 370ms;
+}
+.d42{
+    grid-area: d42;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 370ms;
+}
+.d43{
+    grid-area: d43;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 370ms;
+}
+.d44{
+    grid-area: d44;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 370ms;
+}
+.d45{
+    grid-area: d45;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 370ms;
+}
+.d46{
+    grid-area: d46;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 370ms;
+}
+.d47{
+    grid-area: d47;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 370ms;
+}
+.d48{
+    grid-area: d48;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 370ms;
+}
+
+.artes ul{
+    z-index: 2;
+}
+.canvasDesenho{
+    position: relative;
+    padding-top: 45px;
+    background-color: rgb(34,34,34);
+    height: 750px;
+    display: none;
+    grid-template-areas: 
+    'e1 e2 e3 e4 e5'
+    'e6 e7 e8 e9 e10'
+    'e11 e12 e13 e14 e15';
+}
+.draw{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+}
+
+.f1{
+    overflow: hidden;
+    grid-area: e1;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.f2{
+    overflow: hidden;
+    grid-area: e2;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.f3{
+    overflow: hidden;
+    grid-area: e3;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.f4{
+    overflow: hidden;
+    grid-area: e4;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.f5{
+    overflow: hidden;
+    grid-area: e5;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.f6{
+    overflow: hidden;
+    grid-area: e6;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 150ms;
+}
+.f7{
+    overflow: hidden;
+    grid-area: e7;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 150ms;
+}
+.f8{
+    overflow: hidden;
+    grid-area: e8;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 150ms;
+}
+.f9{
+    overflow: hidden;
+    grid-area: e9;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 150ms;
+}
+.f10{
+    overflow: hidden;
+    grid-area: e10;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 150ms;
+}
+.f11{
+    overflow: hidden;
+    grid-area: e11;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 300ms;
+}
+.f12{
+    overflow: hidden;
+    grid-area: e12;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 300ms;
+}
+.f13{
+    overflow: hidden;
+    grid-area: e13;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 300ms;
+}
+.f14{
+    overflow: hidden;
+    grid-area: e14;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 300ms;
+}
+.f15{
+    overflow: hidden;
+    grid-area: e15;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 300ms;
+}
+
+.trend{
+    position: relative;
+    padding-top: 45px;
+    background-color: rgb(34,34,34);
+    /* height: 750px; */
+    display: none;
+    /* grid-template-areas: 
+    'g1 g2 g3 g4'
+    'g5 g6 g7 g8'
+    'g9 g10 g11 g12'; */
+    flex-wrap: wrap;
+}
+.draw2{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+}
+
+.g1{
+    flex-basis: 25%;
+    overflow: hidden;
+    grid-area: g1;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+.g2{
+    flex-basis: 25%;
+    overflow: hidden;
+    grid-area: g2;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 100ms;
+}
+.g3{
+    flex-basis: 25%;
+    overflow: hidden;
+    grid-area: g3;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 200ms;
+}
+.g4{
+    flex-basis: 25%;
+    overflow: hidden;
+    grid-area: g4;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 300ms;
+}
+.g5{
+    flex-basis: 25%;
+    overflow: hidden;
+    grid-area: g5;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 400ms;
+}
+.g6{
+    flex-basis: 25%;
+    overflow: hidden;
+    grid-area: g6;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 500ms;
+}
+.g7{
+    flex-basis: 25%;
+    overflow: hidden;
+    grid-area: g7;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 600ms;
+}
+.g8{
+    flex-basis: 25%;
+    overflow: hidden;
+    grid-area: g8;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 700ms;
+}
+.g9{
+    flex-basis: 25%;
+    overflow: hidden;
+    grid-area: g9;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 800ms;
+}
+.g10{
+    flex-basis: 25%;
+    overflow: hidden;
+    grid-area: g10;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 900ms;
+}
+.g11{
+    flex-basis: 25%;
+    overflow: hidden;
+    grid-area: g11;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 1000ms;
+}
+.g12{
+    flex-basis: 25%;
+    overflow: hidden;
+    grid-area: g12;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation-delay: 1100ms;
+}

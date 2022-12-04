@@ -1,0 +1,846 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+.main2{
+    margin-top: 100px;
+}
+
+.header {
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid #757575;
+   
+}
+.header a{
+    text-decoration: none;
+}
+.logo img{
+    width: 70px;
+}
+.logo h1{
+    padding-left: 10px;
+    font-size: 20px;
+    
+}
+.tBin{
+    color: white;
+}
+.tStation{
+    color: #757575;
+}
+.logo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.pesquisa{
+    background-color: rgb(21, 21, 21);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 5px;
+    max-height: 45px;
+    border: 1px solid #757575;
+    width: 62%;
+}
+.pesquisa input{
+    height: 40px;
+    width: 99%;
+    background-color: rgb(21, 21, 21);
+    color: white;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    margin-left: 6px;  
+    font-size: 18px; 
+}
+
+.ulHeader a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.ulHeader button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.liLogin button{
+    background-color: transparent;
+    font-size: 18px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.header ul{
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+   
+}
+
+li{
+    color: white;
+    font-weight: bold;
+}
+
+
+.liCadastro{
+    padding: 10px;  
+    background-color: #0053af;
+    border-radius: 5px;
+    min-width: 140px;
+    font-size: 17px;  
+    margin-left: 5px; 
+     cursor: pointer;
+}
+.liCadastro a{
+    cursor: pointer;
+}
+li a{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+ul a{
+    text-decoration: none;
+
+}
+.userButton{
+    background-color: rgb(75,75,75);
+    border-radius: 50%;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    font-size: 28px;
+    overflow: hidden;
+}
+.userOption{
+    background-color: transparent;
+    font-size: 19px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgb(188, 188, 188);
+    transition: 0.3s;
+}
+.userOption:hover{
+    color: white;
+}
+.divLi{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    cursor: pointer;
+}
+.userSeta{
+    color: white;
+    font-size: 18px;
+    margin-left: 5px;
+}
+.userModal{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    opacity: 1;
+    top: 70px;
+    right: 15px;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(34,34,34);
+    border-radius: 10px;
+    border: 1px solid #757575;
+
+}
+.userModal.mostrarModal1{
+    display: flex;
+}
+.modalHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.modalHeader .userButton{
+    width: 50px;
+    height: 50px;
+    font-size: 45px;
+}
+.userInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.userInfo p{
+    font-size: 19px;
+    color: white;
+    margin-left: 10px;
+}
+.userPerfil{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 190px;
+}
+.userProfile{
+    background-color: transparent;
+    color: rgb(105,105,105);
+    font-size: 19px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.userProfile:hover{
+    color: rgb(200,200,200);
+}
+.userModal span{
+    content: '';
+    background-color: #757575;
+    width: 85%;
+    height: 3px;
+    align-self: center;
+}
+.userModalOption{
+    width: 270px;
+    margin: 5px 0 0 15px;
+    height: 35px;
+    text-align: start;
+    padding-left: 10px;
+    font-size: 19px;
+    color: rgb(225,225,225);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    transition: 0.2s;
+}
+.userModalOption i{
+    margin-right: 10px;
+}
+.userModalOption:hover{
+    background-color: #525252;
+}
+
+
+.subHeader{
+    background-color: rgb(21,21,21);
+    border-bottom: 1px solid #757575;
+    height: 37px;
+    
+}
+.container li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container ul li i{
+    margin-right: 8px;
+}
+.imgIconSub{
+    margin-right: 7px;
+}
+.container ul {
+    display: flex;
+    padding-top: 8px;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+.estrutura{
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.destaques{
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+
+    width: 1500px;
+}
+.emDestaque{
+    position: absolute;
+    /* transition: all 0.6s ease-out; */
+    
+}
+.imgDestaque{
+    border-radius: 10px;
+}
+.e1{
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+.e2{
+    opacity: 0;
+    transition: all 0.6s ease;
+    left: 1350px;
+    height: 250px;
+    width: 250px;
+}
+.e3{
+    left: 1080px;
+    transition: 0.6s;
+}
+.e4{
+    left: 815px;
+    transition: all 0.6s ease;
+}
+.e5{
+    left: 550px;
+    transition: all 0.6s ease;
+    transform: scale(110%);
+}
+.e5 .destaqueHover{
+    opacity: 1;
+    bottom: 0px;
+}
+.e6{
+    left: 285px;
+    transition: all 0.6s ease;
+}
+.e7{
+    left: 20px;
+    transition: all 0.6s ease;
+}
+.e8{
+    left: -270px;
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+.e9{
+    opacity: 0;
+}
+.e10{
+    opacity: 0;
+}
+
+.imgArtes{
+    height: 135px;
+}
+
+.artes ul{
+    display: flex;
+    padding-top: 6px;
+    justify-content: space-between;
+    width: 280px;
+    margin: 0 25px;
+    list-style: none;
+    margin-bottom: 15px;
+}
+.artes{
+    background-color: rgb(34, 34, 34);
+    
+}
+.divulgacao{
+    display: flex;
+    justify-content: space-evenly;
+    height: 600px;
+    align-items: center;
+    background-image: url(img/ef.jpg);
+}
+.divul img{
+    border-radius: 10px;
+}
+
+[data-anime]{
+    opacity: 0;
+    transition: .3s;
+}
+[data-anime="left"]{
+    transform: translate3d(-50px,0,0);
+}
+[data-anime="right"]{
+    transform: translate3d(20px,0,0);
+}
+[data-anime="bottom"]{
+    transform: translate3d(0,10px,0);
+}
+[data-anime="middle"]{
+    transform: translate3d(0,20px,0);
+}
+[data-anime].show{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+[data-anime="right"] .divulHover{
+    padding-top: 190px;
+}
+.texto{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    align-self: flex-start;
+    margin-top: 3%;
+    color: white;
+    background-color: rgba(34,34,34,0.5);
+    border-radius: 10px;
+    padding: 0 10px;
+    
+}
+.texto h3{
+    font-size: 3rem;
+}
+.texto p{
+    font-size: 1.5rem;
+}
+.mvv{
+    border-radius: 50px;
+    width: 70px;
+    position: absolute;
+    top: 20px;
+    left: 150px;
+}
+
+
+.slide{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(34, 34, 34);
+    height: 400px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+.logoRuneterra{
+    position: absolute;
+    top: 10px;
+    height: 70px;
+}
+.barraInferior{
+    position: absolute;
+    height: 70px;
+    top: 350px;
+}
+.barraLateralLeft{
+    position: absolute;
+    top: 30px;
+    left: 260px;
+    width: 300px;
+}
+.barraLateralRight{
+    position: absolute;
+    top: 30px;
+    left: 790px;
+    width: 300px;
+}
+.carrossel img{
+    border-radius: 5px;
+}
+.carrossel{
+    position: absolute;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.hoverCarrossel{
+    position: absolute;
+    /* top: 220px; */
+    font-size: 25px;
+    color: white;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.hoverCarrossel b{
+    margin-top: 220px;
+}
+.hoverCarrossel:hover{
+    opacity: 1;
+    border-radius: 0 0 5px 5px;
+    background-image: linear-gradient(to top, #00000088, rgba(255, 255, 255, 0));
+}
+.c1{
+    left: 1355px;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+.c2{
+    left: 905px;
+    transition: all 0.6s ease;
+}
+.c3{
+    left: 463px;
+    transition: all 0.6s ease;
+}
+.c4{
+    left: 20px;
+    transition: all 0.6s ease;
+}
+.c5{
+    left: -430px;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+
+
+.banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(img/back1440.jpg);
+    height: 340px;
+}
+.mensagem{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+.campo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.campo input{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    height: 70px;
+    color: white;
+    width: 300px;
+    background-color: rgb(21, 21, 21);
+    font-size: 20px;
+    padding: 0 8px;
+    border-radius: 5px 0 0 5px;
+}
+.inEmail{
+    z-index: 2;
+}
+.campo button{
+    z-index: 2;
+}
+.videoC{
+    margin-right: 10px;
+}
+.campo button{
+    background-color: #0053af;
+    height: 70px;
+    width: 120px;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+.resposta{
+    position: absolute;
+    display: flex;
+    background-color: rgb(34, 34, 34);
+    height: 60px;
+    left: 0;
+    width: 100%;
+    top: 0px;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0px 7px 7px;
+
+    transition: 1s;
+    color: white;
+}
+.footer{
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer span{
+    width: 80%;
+    border-bottom: #0053af solid 7px;
+    margin: 30px 0;
+}
+
+.foot .imgIcon{
+    width: 75px;
+    height:70px;
+    transition: 0.5s;
+}
+.foot .imgW{
+    width: 45px;
+    height:40px;
+   transition: 0.5s;
+}
+.foot .imgL{
+    width: 145px;
+    
+}
+.foot h3{
+    font-size: 30px;
+}
+.foot{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.contato{
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+    'contato contato'
+    'whats numero'
+
+}
+.pContato{
+    grid-area: contato;
+    margin-left: 65px;
+    color: white;
+}
+.imgW{
+    grid-area: whats;
+}
+.pNumero{
+    grid-area: numero;
+    color: white;
+}
+.roda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.artes{
+    position: relative;
+}
+.artes ul {
+    position: absolute;
+    top: 0px;
+    left: 7px;
+}
+.desenhos{
+    padding-top: 45px;
+}
+
+.barraPesquisa{
+    position: absolute;
+    top: 52px;
+    left: 261px;
+    width: 837px;
+    height: 90px;
+    background-color: #121212;
+    display: none;
+    border:1px solid #757575;
+}
+.barraPesquisa ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   
+    width: 100%;
+}
+.barraPesquisa ul li{   
+    border-bottom: 1px solid #757575;
+    background-color: #121212;
+    width: 100%;
+    padding: 5px 0;   
+}
+.barraPesquisa ul a{
+    color: #757575;
+    margin: 0 5px;
+}
+.bArtes{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.modalLogin{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 60;
+    background-color: rgba(0,0,0,.6);
+    display: none;
+}
+.modalLogin.mostrar{
+    display: flex;
+}
+.mostrar .lFormulario{
+    animation: animModal 1s;
+}
+@keyframes animModal {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.lFormulario{
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(34, 34, 34);
+    height: 470px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+    padding: 10px;
+}
+.lHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.lCampo{
+    display: flex;
+    flex-direction: column;
+
+}
+.lCampo input{
+    height: 60px;
+    width: 280px;
+    background-color: rgb(21, 21, 21);
+    border-radius: 5px;
+    outline: 0;
+    box-shadow: 0,0,0,0;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+.lFormulario button{
+    background-color: #0053af;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+}
+.lFormulario button:hover{
+    opacity: 0.8;
+}
+.lFormulario .lFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+.lFormulario a{
+    transition: 0.3s ease;
+}
+.lFormulario a:hover{
+    color: #0053af;
+}
+.lCampo label{
+    color: white;
+    font-size: 18px;
+    margin: 7px 0;
+}
+.lFooter a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin: 27px;
+}
+
+.esconder{
+    display: none;
+}
+
+.idPost{
+    display: none;
+}
+.idTrending{
+    display: none;
+}
+.idDesen{
+    display: none;
+}
+.erroLogin{
+    width: 300px;
+    height: 140px;
+    background-color: rgb(34,34,34);
+    border-radius: 7px;
+    position: fixed;
+    top: 250px;
+    z-index: 500;
+    left: -300px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    overflow: hidden;
+    animation: erroLogin 7s ease-in-out;
+}
+.erroLogin span{
+    height: 10px;
+    width: 100%;
+    animation: loading 5s ease-in-out;
+    background-color: rgb(231, 75, 75);
+    display: none;
+}
+@keyframes loading {
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+@keyframes erroLogin {
+    0%, 100%{left: -300px;}
+    20%, 80%{left: 50px;}
+}
+.lupaPesquisar{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
